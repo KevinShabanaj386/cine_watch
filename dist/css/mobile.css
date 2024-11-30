@@ -4,10 +4,9 @@
     }
 
     form {
+        height: 95%;
         width: 90%;
-        left: 50%;
-        overflow: auto;
-    }
+     }
 
     .logo {
         display: none;
