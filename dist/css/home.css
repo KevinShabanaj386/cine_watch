@@ -46,3 +46,28 @@ body{
   transform: translateY(-10px); 
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
+.linkat a{
+  text-align: right;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 400;
+}
+
+.linkat a:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.linkat{
+  margin-left: auto;
+  margin-right: 50px;
+}
