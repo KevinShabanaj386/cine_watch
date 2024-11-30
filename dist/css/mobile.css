@@ -17,4 +17,7 @@
     .text-section p {
         display: none;
     }
+    .icons{
+        display: none;
+    }
 }
