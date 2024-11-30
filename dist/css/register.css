@@ -1,0 +1,17 @@
+.register-title{
+    float: left;
+}
+.sing-up-subtitle{
+    float:left;
+    margin-bottom: 5px;
+}
+
+.register-icons {
+    gap: 3.5rem;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.icons{
+    width: 50% !important;
+}
