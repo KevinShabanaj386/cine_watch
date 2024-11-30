@@ -4,8 +4,9 @@
     }
 
     form {
-        height: 95%;
         width: 90%;
+        left: 50%;
+        height: 95%;
      }
 
     .logo {
