@@ -1,28 +1,20 @@
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 500px) {
+    .shape:first-child {
+        left: -280px;
+    }
+
     form {
         width: 90%;
-        top: 80%;
         left: 50%;
         overflow: auto;
     }
 
     .logo {
-        /* width: 40%;
-        object-fit: cover;
-        position: relative;
-        z-index: 1; */
         display: none;
     }
 
-    .text-section h1 {
-        font-size: 28px;
-        position: relative;
-        bottom: 13rem;
-    }
-    .text-section p {
-        font-size: 18px;
-        line-height: 1.5;
-        position: relative;
-        bottom: 13rem;
+    .text-section h1,
+    text-section p {
+        display: none;
     }
 }
