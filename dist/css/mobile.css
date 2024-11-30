@@ -14,7 +14,7 @@
     }
 
     .text-section h1,
-    text-section p {
+    .text-section p {
         display: none;
     }
 }
