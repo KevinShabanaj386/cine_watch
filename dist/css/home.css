@@ -1,6 +1,11 @@
+.main-home{
+    width: 100%;
+    height: 100vw;
+    background-image: url(/dist/images/home/bck1.jpg);
+    background-size: contain;
+}
+
 body{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-image: url(/dist/images/bck1.jpg);
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -47,7 +52,7 @@ body{
 }
 
 .nav {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   padding: 10px 10px;
   font-size: 13px;
