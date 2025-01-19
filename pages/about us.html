@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    
+    <div class="heading">
+        <h1>About us</h1>
+    </div>
+    <section class="about">
+        
+        <div class="content">
+            <h3>“Welcome to CineWatch: Your Movie Hub”</h3>
+            <p>We are passionate about bringing the magic of cinema to life, 
+                offering a platform that connects movie lovers across the globe. 
+                Whether you're searching for the latest box office hits, hidden gems, or timeless classics,
+                 CineWatch is here to guide you.
+                 At CineWatch, we believe movies are more than entertainment—they are a journey, an escape,
+                 and a window to endless possibilities. Let us help you find your next favorite film and create memories that last a lifetime.
+                  CineWatch: Your guide to the magic of movies.
+            </p>
+        </div>
+        <div class="navigation">
+            <button onclick="toggleVisibility('support')">Support Page</button>
+            <button onclick="toggleVisibility('contact')">Contact Us</button>
+
+        </div>
+    </section>
+    <section id="survey" class="survey hidden">
+        
+            <h1>We'd Love Your Feedback!</h1>
+        <div class="survey-form">
+            <form action="" method="POST">
+                <h3>Tell Us About Your Experience</h3>
+                
+                <label for="rating">How would you rate your overall experience with CineWatch?</label><br>
+                <input type="radio" id="1" name="rating" value="1"> 1
+                <input type="radio" id="2" name="rating" value="2"> 2
+                <input type="radio" id="3" name="rating" value="3"> 3
+                <input type="radio" id="4" name="rating" value="4"> 4
+                <input type="radio" id="5" name="rating" value="5"> 5
+                <br><br>
+                
+                <label for="suggestions">What improvements would you suggest for our website?</label><br>
+                <textarea name="suggestions" rows="4" cols="50" placeholder="Share your thoughts here..."></textarea><br><br>
+                
+                <label for="content">Did you find the content on our site helpful?</label><br>
+                <input type="radio" id="yes" name="content" value="yes"> Yes
+                <input type="radio" id="no" name="content" value="no"> No
+                <br><br>
+                
+                <label for="recommend">Would you recommend CineWatch to a friend?</label><br>
+                <input type="radio" id="recommendYes" name="recommend" value="yes"> Yes
+                <input type="radio" id="recommendNo" name="recommend" value="no"> No
+                <br><br>
+                
+                <input type="submit" value="Submit Your Feedback" class="btn">
+            </form>
+        </div>
+      </section>
+
+<section id="contact" class="contact hidden">
+        <h1>Contact Us</h1><br>
+    <div class="icons-container">
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>Our number</h3>
+            <a href="tel:+38344111111">+383 44 111 111</a><br>
+            <a href="tel:+38345111111">+383 45 111 111</a>
+        </div>
+        <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <a href="mailto:cinewatch@hotmail.com">cinewatch@hotmail.com</a>
+            <a href="mailto:cinewatch@gmail.com">cinewatch@gmail.com</a>
+        </div>
+    
+    <div class="message-form ">
+        <form action="">
+            <h3>Get in touch</h3>
+            <div class="inputBox">
+            <input type="text" placeholder="enter your name" class="box">
+            <input type="text" placeholder="enter your email" class="box">
+        </div>
+        <div class="inputBox">
+            <input type="number" placeholder="enter your number" class="box">
+            <input type="text" placeholder="enter your subject" class="box">
+        </div>
+        <textarea placeholder="your message" cols="30" rows="10"></textarea>
+        <input type="submit" value="send message" class="btn">
+
+        </form>
+    </div>
+
+</section>
+
+
+
+<script src="javascript.js"></script>
+
+</body>
+</html>
