@@ -54,6 +54,10 @@ body{
   margin: 10px 0;
 }
 
+.text-container a{
+  text-decoration: none;
+}
+
 .text-container a:hover {
   background-color: #c03c3c;
 }
