@@ -123,10 +123,16 @@ body{
   width: 96%;
   object-fit: cover;
   position: relative; 
+  transition: transform 0.3s ease;
 }
 
 .movie-card {
   position: relative;
+  overflow: hidden;
+}
+
+.movie-card:hover .poster {
+  transform: scale(1.1); 
 }
 
 .movie-info {
