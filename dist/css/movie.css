@@ -82,3 +82,15 @@ body{
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.heading{
+  margin-left: 80px;
+  margin-right: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2d2e37;
+  padding: 8px 14px;
+  margin-top: 30px;
+}
