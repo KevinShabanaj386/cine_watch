@@ -142,3 +142,53 @@ body{
   transition: color 0.25s, background-color 0.25s;
 }
 
+.card{
+  color: white;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.description{
+  width: 500px;
+}
+
+.titulli{
+  margin: 0 0 0 0;
+  height: 150px;
+}
+
+.kategorit{
+  color: rgba(255, 255, 255, 0.822);
+  font-size: 23px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.pershkrimi{
+  color: rgba(255, 255, 255, 0.822);
+}
+
+.trailer{
+  margin-right: 5px;
+  border: none;
+  background-color: #white;
+  color: red;
+  padding: 7px 15px 7px 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 2px solid red;
+}
+
+.watch{
+  border: none;
+  background-color: #fa1216;
+  color: white;
+  padding: 7px 15px 7px 15px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.icon{
+  margin: 0 0 0 0;
+  height: 20px;
+}
