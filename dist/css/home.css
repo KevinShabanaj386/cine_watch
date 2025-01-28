@@ -126,3 +126,19 @@ body{
 .search-input::placeholder {
   color: rgba(255, 255, 255, 0.68);;
 }
+
+.right-section{
+  margin-right: 100px;
+  margin-bottom: 30px;
+}
+
+.sign-in{
+  border: none;
+  background-color: #fa1216;
+  color: white;
+  padding: 7px 15px 7px 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.25s, background-color 0.25s;
+}
+
