@@ -19,3 +19,38 @@ body{
   opacity: 0.8;
   cursor: pointer;
 }
+
+.image-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 15px;
+  padding: 20px; 
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  margin: auto;
+}
+
+
+.poster{
+  width: 130px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 7px;
+  transition: transform 0.3s ease;
+}
+
+
+.poster:hover {
+  transform: translateY(-10px); 
+}
+
+.poster-active{
+  width: 130px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 7px;
+  transform: translateY(-15px); 
+}
