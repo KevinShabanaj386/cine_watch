@@ -17,7 +17,7 @@ let slideIndex = 0;
     
     function autoPlay() {
       changeSlide(1);
-      setTimeout(autoPlay, 7000); 
+      setTimeout(autoPlay, 10000); 
     }
 
     

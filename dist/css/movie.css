@@ -116,6 +116,7 @@ body{
   width: 100%;
   object-fit: cover;
   position: relative; 
+}
 
 .movie-card {
   position: relative;
@@ -146,4 +147,12 @@ body{
 
 .movie-play a:hover {
   background-color: #333;
+}
+
+.movie-title{
+  margin: 0 0 0 0;
+}
+
+.movie-description{
+  margin: 0 0 0 0;
 }
