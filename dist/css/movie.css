@@ -56,6 +56,10 @@ body{
 
 .text-container a{
   text-decoration: none;
+  color: white;
+  background-color: #1e1e2a;
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
 }
 
 .text-container a:hover {
@@ -117,7 +121,7 @@ body{
 
 .poster {
   height: 500px;
-  width: 100%;
+  width: 96%;
   object-fit: cover;
   position: relative; 
 }
