@@ -27,3 +27,11 @@ let slideIndex = 0;
     
     showSlide(slideIndex);
     autoPlay();
+
+  let currentPage = 1;
+    function changePage(page) {
+        currentPage = page;
+        updateButtons();
+        console.log("Switched to page " + page);
+    }
+    
