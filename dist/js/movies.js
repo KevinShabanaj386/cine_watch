@@ -1,31 +1,4 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.style.display = i === index ? 'block' : 'none';
-  });
-}
-
-function changeSlide(n) {
-  slideIndex = (slideIndex + n + totalSlides) % totalSlides;
-  showSlide(slideIndex);
-}
-
-function autoPlay() {
-  changeSlide(1);
-  setTimeout(autoPlay, 10000); 
-}
-
-document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-document.querySelector('.next').addEventListener('click', () => changeSlide(1));
-
-showSlide(slideIndex);
-autoPlay();
-
-
-let currentPage = 1;  
+let currentPage = 2;  
 
 function changePage(page) {
     if (page < 1 || page > 3) return;  
