@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body and Background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #363633;  
+    color: #f0f0f0; /* White text color */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20vw; /* Add some padding to prevent text from sticking to edges */
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.navigation button {
+    background-color: #d4a523;
+    color: rgb(20, 20, 20);
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%; /* Ensures buttons span across the full width */
+    box-sizing: border-box;
+}
+
+.navigation button:hover {
+    background-color: #b4a200;
+}
+
+header {
+    background: #d4a523;
+    color: #131211;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/* Add styles for the survey container box */
+.survey {
+    max-width: 800px;
+    background-color: #242323;
+    padding: 1.5rem;
+    margin: 0 2rem;
+    border-radius: 8px;
+    border: 1px solid #dbe736;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for a raised effect */
+}
+
+
+/* Header of the survey */
+.survey h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Style the form labels */
+.survey-form label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #f8f5f5;
+}
+.form-container {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    border: 1px solid #dbe736; /* Light border */
+}
+
+
+/* Style for radio button group */
+.survey-form .rating-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Style for input radio buttons */
+.survey-form .rating-group input[type="radio"] {
+    margin-right: 5px;
+}
+.contact {
+    
+    background-color: #131211; 
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 2px solid #c9d60e; /* Outline border for the whole section */
+    margin-bottom: 2rem;
+}
+.contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e4e714; /* Bottom border for heading */
+    padding-bottom: 1rem;
+    color: #131211; /* Heading text color */
+}          
+
+
+.message-form h3{
+ text-align: center;
+ font-size: 1.8rem;
+ margin-bottom: 1.5rem;
+}
+.message-form .inputBox {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Modify input box styling */
+.message-form .inputBox .box {
+    flex: 1 1 48%;
+    width: 48%;
+padding: 1rem 1.2rem;
+font-size: 1.4rem;
+border: 1px solid #cad807;
+color: #222;
+margin: .7rem 0;
+border-radius: 5px;
+
+}
+.survey-form textarea, .message-form textarea {
+    resize: vertical;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-family: Arial, sans-serif;
+    
+}
+
+.btn {
+    background-color: #d4a523;
+    color: rgb(20, 20, 20);
+    padding: 0.8rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center; /* Ensures the text is centered */
+    overflow-wrap: break-word;
+}
+.btn:hover {
+    background-color: #b4a200; /* Shared hover effect */
+}
+
+/* Styling for input box and textarea when they are focused */
+
+    .hidden {
+        display: none;
+    
+
+}
+

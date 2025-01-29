@@ -1,0 +1,23 @@
+@media only screen and (max-width: 500px) {
+    .shape:first-child {
+        left: -280px;
+    }
+
+    form {
+        width: 90%;
+        left: 50%;
+        height: 95%;
+     }
+
+    .logo {
+        display: none;
+    }
+
+    .text-section h1,
+    .text-section p {
+        display: none;
+    }
+    .icons{
+        display: none;
+    }
+}
