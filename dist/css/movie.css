@@ -183,6 +183,7 @@ body{
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
+  border: none;
 }
 
 .page.active{

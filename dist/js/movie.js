@@ -34,4 +34,14 @@ let slideIndex = 0;
         updateButtons();
         console.log("Switched to page " + page);
     }
-    
+    function updateButtons() {
+      document.querySelectorAll(".page").forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll(".page")[currentPage].classList.add("active");
+  }
+  document.getElementById("prev").addEventListener("click", () => {
+      if (currentPage > 1) changePage(currentPage - 1);
+  });
+  document.getElementById("next").addEventListener("click", () => {
+      if (currentPage < 3) changePage(currentPage + 1);
+  });
+  updateButtons();
