@@ -12,26 +12,21 @@ try {
     $pdo = new PDO($dsn, $db_user, $db_pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
-    // Show error in dev (comment this out or log in production)
     echo "Connection failed: " . $e->getMessage();
     exit;
 }
  
 
-// Initialize error and success messages
 $errors = [];
 $success_message = "";
 
-// Check if the form is submitted
 if (isset($_POST['submit'])) {
 
-    // Retrieve and sanitize form inputs
     $username    = trim($_POST['username'] ?? '');
     $email       = trim($_POST['email'] ?? '');
     $password    = trim($_POST['password'] ?? '');
     $confirmPass = trim($_POST['repeat_password'] ?? '');
 
-    // Basic validation
     if (empty($username) || empty($email) || empty($password) || empty($confirmPass)) {
         $errors[] = "All fields are required.";
     } 
@@ -42,10 +37,8 @@ if (isset($_POST['submit'])) {
         $errors[] = "Passwords do not match.";
     }
 
-    // If no errors so far, proceed
     if (empty($errors)) {
         try {
-            // Check if username or email already exists
             $checkQuery = "SELECT * FROM users WHERE username = :username OR email = :email LIMIT 1";
             $checkStmt  = $pdo->prepare($checkQuery);
             $checkStmt->execute([
@@ -55,7 +48,6 @@ if (isset($_POST['submit'])) {
             $existingUser = $checkStmt->fetch(PDO::FETCH_ASSOC);
 
             if ($existingUser) {
-                // If a row is found, either username or email is taken
                 if ($existingUser['username'] === $username) {
                     $errors[] = "Username already exists.";
                 }
@@ -63,7 +55,6 @@ if (isset($_POST['submit'])) {
                     $errors[] = "Email already exists.";
                 }
             } else {
-                // Insert new user
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
                 $insertQuery = "INSERT INTO users (username, email, password) 
@@ -75,7 +66,6 @@ if (isset($_POST['submit'])) {
                     ':password' => $hashedPassword
                 ]);
 
-                // On successful insert:
                 $success_message = "Registration successful! You can now log in.";
             }
         } catch (PDOException $e) {

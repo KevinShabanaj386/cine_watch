@@ -227,3 +227,9 @@
             accent-color: rgb(214, 154, 2);
             color: white;
         }
+
+
+        p.error-message{
+            background: tomato;
+            color: tomato !important;
+        }
