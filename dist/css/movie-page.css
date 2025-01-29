@@ -1,0 +1,98 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1A1A1A;
+  margin: 0;
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  padding: 0 100px;
+  flex-direction: row;
+}
+
+.image-container img {
+  max-height: 750px;
+  margin-left: 100px;
+}
+
+.description-cast {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.movie-description {
+  background-color: #262626;
+  height: 180px;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 50px 0;
+  margin-bottom: 20px;
+}
+
+.movie-cast {
+  background-color: #262626;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.movie-cast-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cast-item {
+  text-align: center;
+}
+
+.cast-photo {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.emrat {
+  margin-top: 10px;
+}
+
+.movie-info {
+  background-color: #262626;
+  width: 420px;
+  border-radius: 10px;
+  color: white;
+  padding: 20px 30px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-info .info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+}
+
+.movie-info .info-item:last-child {
+  border-bottom: none;
+}
+
+.movie-info .info-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.movie-info .info-content {
+  font-size: 14px;
+  font-weight: normal;
+  opacity: 0.8;
+}
