@@ -5,14 +5,14 @@
 }
 
 
-/* Body and Background */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #363633;  
-    color: #f0f0f0; /* White text color */
+    color: #f0f0f0; 
     line-height: 1.6;
     margin: 0;
-    padding: 20vw; /* Add some padding to prevent text from sticking to edges */
+    padding: 20vw; 
 }
 .navigation {
     display: flex;
@@ -29,7 +29,7 @@ body {
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 4px;
-    width: 100%; /* Ensures buttons span across the full width */
+    width: 100%; 
     box-sizing: border-box;
 }
 
@@ -46,8 +46,6 @@ header {
 }
 
 
-
-/* Add styles for the survey container box */
 .survey {
     max-width: 800px;
     background-color: #242323;
@@ -55,18 +53,18 @@ header {
     margin: 0 2rem;
     border-radius: 8px;
     border: 1px solid #dbe736;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for a raised effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 
-/* Header of the survey */
+
 .survey h1 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
-/* Style the form labels */
+
 .survey-form label {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
@@ -75,18 +73,18 @@ header {
 .form-container {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
-    border: 1px solid #dbe736; /* Light border */
+    border: 1px solid #dbe736; 
 }
 
 
-/* Style for radio button group */
+
 .survey-form .rating-group {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-/* Style for input radio buttons */
+
 .survey-form .rating-group input[type="radio"] {
     margin-right: 5px;
 }
@@ -96,17 +94,17 @@ header {
     padding: 2rem;
     margin-top: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border: 2px solid #c9d60e; /* Outline border for the whole section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 2px solid #c9d60e;
     margin-bottom: 2rem;
 }
 .contact h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
-    border-bottom: 2px solid #e4e714; /* Bottom border for heading */
+    border-bottom: 2px solid #e4e714; 
     padding-bottom: 1rem;
-    color: #131211; /* Heading text color */
+    color: #131211; 
 }          
 
 
@@ -121,7 +119,7 @@ header {
     flex-wrap: wrap;
 }
 
-/* Modify input box styling */
+
 .message-form .inputBox .box {
     flex: 1 1 48%;
     width: 48%;
@@ -152,14 +150,13 @@ border-radius: 5px;
     border-radius: 4px;
     width: 100%;
     margin-top: 1rem;
-    text-align: center; /* Ensures the text is centered */
+    text-align: center; 
     overflow-wrap: break-word;
 }
 .btn:hover {
-    background-color: #b4a200; /* Shared hover effect */
+    background-color: #b4a200; 
 }
 
-/* Styling for input box and textarea when they are focused */
 
     .hidden {
         display: none;
