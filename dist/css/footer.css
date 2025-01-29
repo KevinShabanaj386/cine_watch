@@ -12,3 +12,13 @@
   display: flex;
   flex-direction: column;
 }
+
+.informacion{
+  display: flex;
+  flex-direction: column;
+}
+
+.zhandrat{
+  display: flex;
+  flex-direction: column;
+}
