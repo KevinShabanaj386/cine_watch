@@ -172,7 +172,7 @@ if (isset($_POST['submit'])) {
             <div class="gh"><i class="fab fa-github"></i></div>
         </div>
         <div class="sign-up">
-            Already Registered? <a href="/index.html">Login</a>
+            Already Registered? <a href="/index.php">Login</a>
         </div>
     </form>
 

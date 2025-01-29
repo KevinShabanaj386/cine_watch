@@ -36,13 +36,21 @@ if (isset($_POST['submit'])) {
                 $errors[] = "Username not found.";
             } else {
                 if (password_verify($password, $user['password'])) {
-                    $_SESSION['user_id']   = $user['id'];
-                    $_SESSION['username']  = $user['username'];
+                    // Check if the user is an admin
+                    if ($user['is_admin'] == 0) {
+                        $errors[] = "You do not have admin privileges.";
+                    } else {
+                        // User is an admin, proceed with login
+                        $_SESSION['user_id']   = $user['id'];
+                        $_SESSION['username']  = $user['username'];
+                        $_SESSION['is_admin']  = $user['is_admin']; // Store admin status in session
 
-                     
-                         header("Location: /pages/home.html");
-                 } else {
-                     $errors[] = "Invalid password.";
+                        // Redirect to admin page or home page
+                        header("Location: ./pages/admin.php");
+                        exit();
+                    }
+                } else {
+                    $errors[] = "Invalid password.";
                 }
             }
         } catch (PDOException $e) {
@@ -78,8 +86,7 @@ if (isset($_POST['submit'])) {
 
     <!-- Login Form -->
     <form method="POST" action="">
-        <h3>Login</h3>
-        <div class="login-subtitle">Glad you're back!</div>
+        <h3>Admin Login</h3>
 
         <label for="username"></label>
         <input type="text"
@@ -115,30 +122,11 @@ if (isset($_POST['submit'])) {
         </div>
     <?php endif; ?>
 
-        <div class="forgot-password">
-            <a href="#">Forgot password?</a>
-        </div>
-
-        <div class="or">
-            <span>Or</span>
-        </div>
-        <div class="social">
-            <div class="go"><i class="fab fa-google"></i></div>
-            <div class="fb"><i class="fab fa-facebook"></i></div>
-            <div class="gh"><i class="fab fa-github"></i></div>
-        </div>
-        <div class="sign-up">
-            Don't have an account?
-            <a href="/register.php"><br> Sign up</a>
-        </div>
     </form>
 
     <div class="text-section">
-        <h1>Let the streaming begin</h1>
-        <p>Watch thousands of free movies and TV shows,<br>
-           as well as stream your own personal collection of movies,
-        </p>
-        <p>TV episodes, music, and podcasts!</p>
+        <h1>Login as an Admin Role</h1>
+
     </div>
 
     <!-- Load Javascript -->
