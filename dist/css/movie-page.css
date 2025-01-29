@@ -27,11 +27,25 @@ body {
 
 .movie-description {
   background-color: #262626;
-  height: 180px;
+  height: auto; 
   border-radius: 10px;
   color: white;
-  padding: 15px 50px 0;
+  padding: 30px 40px;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.movie-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.movie-description .movie-text {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.8;
+  margin-bottom: 15px;
 }
 
 .movie-cast {
