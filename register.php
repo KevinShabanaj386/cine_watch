@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
                 $success_message = "Registration successful! You can now log in.";
             }
         } catch (PDOException $e) {
-            $errors[] = "Database error: " . $e->getMessage();
+            $errors[] = "Database error: " . $e->getMessage();  
         }
     }
 }
@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>CineWhatch | Login Form</title>
     <link rel="stylesheet" href="/dist/css/login.css">
     <link rel="stylesheet" href="/dist/css/mobile.css">

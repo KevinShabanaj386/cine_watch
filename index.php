@@ -1,12 +1,10 @@
 <?php
-session_start(); // Start session to manage logged-in state
+session_start(); 
 
-// Show errors (Development only). Remove in production.
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// 1) Connect to Database
-echo "db_connection.php included!<br>"; // Debug line (remove if you want)
+echo "db_connection.php included!<br>"; 
 $dsn = "mysql:host=localhost;dbname=cineWhatch;charset=utf8mb4";
 $db_user = "root";
 $db_pass = "";
@@ -18,34 +16,26 @@ try {
     die("Connection failed: " . $e->getMessage());
 }
 
-// 2) Prepare Error/Success Variables
 $errors = [];
 $success = "";
 
-// 3) If the Form is Submitted
 if (isset($_POST['submit'])) {
-    // Grab user input
     $username = trim($_POST['username'] ?? '');
     $password = trim($_POST['password'] ?? '');
 
-    // Check if fields are empty
     if (empty($username) || empty($password)) {
         $errors[] = "Username and Password are required.";
     } else {
         try {
-            // 4) Search for user by username
             $query = "SELECT * FROM users WHERE username = :username LIMIT 1";
             $stmt  = $pdo->prepare($query);
             $stmt->execute([':username' => $username]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if (!$user) {
-                // No user found with that username
                 $errors[] = "Username not found.";
             } else {
-                // 5) Verify the password
                 if (password_verify($password, $user['password'])) {
-                    // 6) Success: set session data
                     $_SESSION['user_id']   = $user['id'];
                     $_SESSION['username']  = $user['username'];
 
@@ -86,21 +76,6 @@ if (isset($_POST['submit'])) {
         <div class="shape"></div>
     </div>
 
-    <!-- Display Errors or Success Messages -->
-    <?php if (!empty($errors)): ?>
-        <div style="color: red; text-align:center;">
-            <?php foreach ($errors as $error): ?>
-               <p><?php echo $error; ?></p>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if (!empty($success)): ?>
-        <div style="color: green; text-align:center;">
-            <p><?php echo $success; ?></p>
-        </div>
-    <?php endif; ?>
-
     <!-- Login Form -->
     <form method="POST" action="">
         <h3>Login</h3>
@@ -129,6 +104,16 @@ if (isset($_POST['submit'])) {
         </div>
 
         <button type="submit" name="submit">Login</button>
+
+        <?php if (!empty($errors)): ?>
+        <div class="error-box" style="margin-top: 2rem; color: tomato; text-align:center;">
+            <?php foreach ($errors as $error): ?>
+               <p style="background:#e74c3c; border-radius: 8px; padding: 1rem;">
+                <?php echo $error; ?>
+            </p>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 
         <div class="forgot-password">
             <a href="#">Forgot password?</a>
