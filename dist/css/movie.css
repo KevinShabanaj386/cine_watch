@@ -169,3 +169,10 @@ body{
 .movie-description{
   margin: 0 0 0 0;
 }
+
+.buttonat{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
