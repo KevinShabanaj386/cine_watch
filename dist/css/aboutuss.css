@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     font-family: Arial, sans-serif;
     background: url('/dist/images/about-us/aboutus.img') no-repeat center center fixed;
@@ -29,8 +27,6 @@ padding: 50px;
 color: #fff;
 text-align: center;
 }
-
-
 .about-image{
     width: 80%;
     max-width: 600px;
