@@ -528,6 +528,156 @@ const moviesData = {
     ratings: "4.6 out of 5",
     genre: "Drama"
   },
+  "JohnWick": {
+    title: "John Wick",
+    image: "/dist/images/movie-play/img33.jpg",
+    description: "John Wick is an action thriller about a retired hitman who is forced to return to the criminal underworld after his beloved dog, a final gift from his late wife, is killed by a group of Russian gangsters. Seeking revenge, John Wick unleashes a relentless and brutal pursuit of those responsible, leading to a series of high-intensity action sequences.",
+    cast: [
+      { name: "Keanu Reeves", role: "John Wick", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Michael Nyqvist", role: "Viggo Tarasov", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Alfie Allen", role: "Iosef Tarasov", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Willem Dafoe", role: "Marcus", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "October 24, 2014",
+    languages: "English",
+    ratings: "4.7 out of 5",
+    genre: "Action, Crime, Thriller"
+  },
+  "TheBlindSide": {
+    title: "The Blind Side",
+    image: "/dist/images/movie-play/img34.jpg",
+    description: "The Blind Side is a biographical sports drama that tells the story of Michael Oher, a homeless and troubled teenager who is taken in by the Tuohy family. With their support, Michael discovers his potential both as a person and a football player, eventually becoming an NFL star. The film highlights themes of kindness, family, and overcoming adversity.",
+    cast: [
+      { name: "Sandra Bullock", role: "Leigh Anne", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Quinton Aaron", role: "Michael Oher", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Tim McGraw", role: "Sean Tuohy", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Kathy Bates", role: "Miss Sue", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "November 20, 2009",
+    languages: "English",
+    ratings: "4.6 out of 5",
+    genre: "Biography, Drama, Sports"
+  },
+  "TheTerminator": {
+    title: "The Terminator",
+    image: "/dist/images/movie-play/img35.jpg",
+    description: "The Terminator is a science fiction action film in which a cyborg assassin, known as the Terminator, is sent from the future to kill Sarah Connor, whose son will one day lead a human resistance against a robotic uprising. A soldier from the future, Kyle Reese, is also sent back to protect her. The film follows their struggle for survival against the relentless Terminator.",
+    cast: [
+      { name: "Arnold Schwarzenegger", role: "The Terminator", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Linda Hamilton", role: " Sarah Connor", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Michael Biehn", role: "Kyle Reese", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Paul Winfield", role: "Lieutenant Traxler", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "November 20, 2009",
+    languages: "English",
+    ratings: "4.6 out of 5",
+    genre: "Biography, Drama, Sports"
+  },
+  "VenomTheLastDance": {
+    title: "Venom: The Last Dance",
+    image: "/dist/images/movie-play/img36.jpg",
+    description: "Venom: The Last Dance is the third installment in the Venom series, featuring Eddie Brock (Tom Hardy) and his symbiote, Venom. The film follows their journey as they are pursued by adversaries from both their worlds, leading to a pivotal decision that will determine their fate.",
+    cast: [
+      { name: "Tom Hardy", role: "Eddie Brock", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Chiwetel Ejiofor", role: "Knull", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Juno Temple", role: "Dr. Maria Hill", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Peggy Lu", role: "Mrs. Chen", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "October 25, 2024",
+    languages: "English",
+    ratings: "2.5 out of 5",
+    genre: "Action, Sci-Fi, Superhero"
+  },
+  "FastX": {
+    title: "Fast X",
+    image: "/dist/images/movie-play/img37.jpg",
+    description: "Fast X is the tenth installment in the Fast & Furious franchise, continuing the high-octane adventures of Dominic Toretto (Vin Diesel) and his crew. The film introduces new adversaries and challenges, further expanding the saga's global scale and emotional depth.",
+    cast: [
+      { name: "Vin Diese", role: "Dominic Toretto", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Michelle Rodriguez", role: "Letty Ortiz", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Tyrese Gibson", role: "Tyrese Gibson", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "John Cena", role: " Jakob Toretto", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "May 19, 2023",
+    languages: "English, with dubbed versions in various languages",
+    ratings: "3.5 out of 5",
+    genre: "Action, Adventure, Crime"
+  },
+  "Lembayung": {
+    title: "Lembayung",
+    image: "/dist/images/movie-play/img38.jpg",
+    description: "Lembayung is an Indonesian horror film directed by Baim Wong, inspired by a viral Twitter thread titled Diganggu Jin Poli Gigi (Disturbed by a Dentist Devil). The story follows two nursing students, Pica and Arum, who begin their internship at the recently reopened Lembayung Clinic.",
+    cast: [
+      { name: "Taskya Namya", role: "Pica", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Yasamin Jasem", role: "Arum", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Arya Saloka", role: "Doctor Teto", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Anna Jobling", role: " Jakob Toretto", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "September 19, 2024",
+    languages: "Indonesian",
+    ratings: "3.5 out of 5",
+    genre: "Horror, Thriller"
+  },
+  "TheHangover": {
+    title: "The Hangover",
+    image: "/dist/images/movie-play/img39.jpg",
+    description: "The Hangover is a comedy film that follows a group of friends who travel to Las Vegas for a bachelor party. The next morning, they wake up with no memory of the previous night and discover that the groom is missing. The trio must retrace their steps and figure out what happened during their wild night out, leading to a series of hilarious and unexpected events.",
+    cast: [
+      { name: "Bradley Cooper", role: "Phil Wenneck", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Ed Helms", role: "Stu Price", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Zach Galifianakis", role: "Alan Garner", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Justin Bartha", role: " Doug Billings", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "June 5, 2009",
+    languages: "English",
+    ratings: "4.5 out of 5",
+    genre: "Comedy"
+  },
+  "Spectre": {
+    title: "Spectre",
+    image: "/dist/images/movie-play/img40.jpg",
+    description: "Spectre is the 24th James Bond film, following the events of Skyfall. James Bond (Daniel Craig) is drawn into a secret organization known as SPECTRE, led by the mysterious Franz Oberhauser (Christoph Waltz). As Bond uncovers dark secrets from his past, he faces new threats and challenges that test his loyalty, courage, and personal resolve.",
+    cast: [
+      { name: "Daniel Craig", role: " James Bond", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Christoph Waltz", role: "Franz Oberhauser", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Ralph Fiennes", role: "M", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Naomie Harris", role: "Moneypenny", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "October 26, 2015",
+    languages: "English",
+    ratings: "4 out of 5",
+    genre: "Action, Adventure, Thriller"
+  },
+  "TheBreakUp": {
+    title: "The Break-Up",
+    image: "/dist/images/movie-play/img41.jpg",
+    description: "The Break-Up is a romantic comedy-drama that follows the story of Gary (Vince Vaughn) and Brooke (Jennifer Aniston), a couple who decide to break up after a long-term relationship, but continue living together in the same apartment. The film explores the awkwardness, humor, and emotional challenges of dealing with the aftermath of a breakup while still sharing the same space.",
+    cast: [
+      { name: "Vince Vaughn", role: " Gary Grobowski", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Jennifer Aniston", role: " Brooke Meyers", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Jon Favreau", role: "Chris", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Jason Bateman", role: "Joey", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "June 2, 2006",
+    languages: "English",
+    ratings: "3.5 out of 5",
+    genre: "Comedy, Romance, Drama"
+  },
+  "TheIrishman": {
+    title: "The Irishman",
+    image: "/dist/images/movie-play/img42.jpg",
+    description: "The Irishman is a crime drama directed by Martin Scorsese, based on the book I Heard You Paint Houses by Charles Brandt. The film follows Frank Sheeran (Robert De Niro), a hitman who looks back on his life, reflecting on his involvement with organized crime and his relationship with mob boss Russell Bufalino (Joe Pesci) and labor union leader Jimmy Hoffa (Al Pacino). The film explores themes of loyalty, betrayal, and the consequences of a life in crime.",
+    cast: [
+      { name: "Robert De Niro", role: "Frank Sheeran", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Al Pacino", role: "Jimmy Hoffa", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Joe Pesci", role: "Russell Bufalino", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Harvey Keitel", role: "Angelo Bruno", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "November 27, 2019",
+    languages: "English",
+    ratings: "4.5 out of 5",
+    genre: "Crime, Drama, Thriller"
+  },
 };
 
 if (moviesData[movie]) {
