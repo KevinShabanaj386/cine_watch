@@ -78,6 +78,96 @@ const moviesData = {
     ratings: " 4.2 out of 5",
     genre: "Action, Adventure, Comedy, Family"
   },
+  "GoodFellas": {
+    title: "GoodFellas",
+    image: "/dist/images/movie-play/img6.jpg",
+    description: "GoodFellas (1990) is a legendary crime drama directed by Martin Scorsese, based on the true story of Henry Hill, a young man who rises through the ranks of the mob, only to see his life spiral out of control due to crime, betrayal, and drugs. The film is widely considered one of the greatest gangster movies of all time. ",
+    cast: [
+      { name: "Ray Liotta", role: "Henry Hill", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Robert De Niro", role: "James Conway", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Joe Pesci", role: " Tommy DeVito", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Lorraine Bracco ", role: " Karen Hill", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "September 19, 1990 ",
+    languages: "English",
+    ratings: " 4.8 out of 5",
+    genre: "Crime, Drama, Biography"
+  },
+  "TheDarkKnight": {
+    title: "The Dark Knight",
+    image: "/dist/images/movie-play/img7.jpg",
+    description: "The Dark Knight (2008) is a legendary superhero film directed by Christopher Nolan, widely regarded as one of the greatest films ever made. It follows Batman as he faces his greatest challenge yet: The Joker, a chaotic and unpredictable criminal mastermind who seeks to plunge Gotham into anarchy. ",
+    cast: [
+      { name: "Christian Bale", role: "Bruce Wayne", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Heath Ledger", role: "The Joker", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Aaron Eckhart", role: " Harvey Dent", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Maggie Gyllenhaal ", role: "Rachel Dawes", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "July 18, 2008",
+    languages: "English",
+    ratings: " 4.9 out of 5",
+    genre: "Action, Crime, Drama, Thriller"
+  },
+  "ForrestGump": {
+    title: "Forrest Gump",
+    image: "/dist/images/movie-play/img8.jpg",
+    description: "Forrest Gump (1994) is a heartwarming drama directed by Robert Zemeckis, based on the novel by Winston Groom. The film follows Forrest Gump, a kind-hearted man with a low IQ, who unwittingly influences major historical events while pursuing his lifelong love, Jenny Curran. His journey takes him through the Vietnam War, the civil rights movement, and even a career in shrimp fishing, all with his simple yet profound perspective on life. ",
+    cast: [
+      { name: "Tom Hanks", role: "Forrest Gump", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Robin Wright", role: "Jenny Curran", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Gary Sinise", role: "Lieutenant Dan Taylor", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Sally Field", role: "Mrs. Gump", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "July 6, 1994",
+    languages: "English",
+    ratings: " 4.8 out of 5",
+    genre: "Drama, Romance, Comedy"
+  },
+  "FightClub": {
+    title: "Fight Club",
+    image: "/dist/images/movie-play/img9.jpg",
+    description: "Fight Club (1999) is a mind-bending psychological thriller directed by David Fincher, based on the novel by Chuck Palahniuk. The film follows an unnamed narrator, a disillusioned office worker who forms an underground fight club with the enigmatic and rebellious Tyler Durden. As their club grows, it evolves into something far more dangerous, leading to shocking revelations. ",
+    cast: [
+      { name: "Edward Norton", role: "The Narrator", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Brad Pitt", role: "Tyler Durden", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Helena Bonham Carter", role: "Marla Singer", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Meat Loaf", role: "Bob", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "October 15, 1999",
+    languages: "English",
+    ratings: " 4.7 out of 5",
+    genre: "Drama, Thriller, Psychological"
+  },
+  "SpiderManIntotheSpiderVerse": {
+    title: "Spider-Man: Into the Spider-Verse",
+    image: "/dist/images/movie-play/img10.jpg",
+    description: "Spider-Man: Into the Spider-Verse follows teenager Miles Morales as he becomes Spider-Man and discovers multiple parallel universes, each with its own Spider-Man. Miles teams up with various Spider-People from different dimensions to stop a villain from destroying all of reality. ",
+    cast: [
+      { name: "Shameik Moore", role: " Miles Morales ", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Jake Johnson", role: "Peter B. Parker", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Hailee Steinfeld", role: "Gwen Stacy", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Mahershala Ali", role: "Uncle Aaron", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "December 14, 2018",
+    languages: "English, Spanish, French,",
+    ratings: " 4.8 out of 5",
+    genre: "Animation, Action, Adventure, Science Fiction, Superhero"
+  },
+  "Inception": {
+    title: "Inception",
+    image: "/dist/images/movie-play/img11.jpg",
+    description: "Inception follows a team of thieves who specialize in stealing secrets by entering people's dreams. The leader, Dom Cobb, is offered a chance to have his criminal record erased if he can successfully plant an idea into someone's subconscious—a process known as inception. ",
+    cast: [
+      { name: "Leonardo DiCaprio", role: " Dom Cobb", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Joseph Gordon-Levitt", role: "Arthur", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Ellen Page", role: "Ariadne", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Tom Hardy", role: "Eames", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "July 16, 2010",
+    languages: "English",
+    ratings: " 4.7 out of 5",
+    genre: "Action, Adventure, Science Fiction, Thriller"
+  },
 };
 
 if (moviesData[movie]) {
