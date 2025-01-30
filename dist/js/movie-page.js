@@ -43,27 +43,41 @@ const moviesData = {
       { name: "Maddie Hasson", role: "Katie", photo: "/dist/images/cast/LucyLiu.jpg" },
       { name: "Danny Boyd Jr.", role: "Hunter", photo: "/dist/images/cast/J.K.Simmons.jpg" }
     ],
-    releaseDate: "November 15, 2024",
+    releaseDate: "November 8, 2024",
     languages: "English",
     ratings: " 2.5 out of 5",
-    genre: "Action, Adventure, Comedy"
+    genre: "Action, Thriller, Science Fiction"
   },
-  "avatar": {
-    title: "Avatar",
-    image: "images/avatar.jpg",
-    description: "An epic sci-fi film set on Pandora.",
+  "CarryOn": {
+    title: "Carry-On",
+    image: "/dist/images/movie-play/img4.jpg",
+    description: "Carry-On is a 2024 American action thriller directed by Jaume Collet-Serra. The film follows Ethan Kopek, a young TSA agent who is blackmailed by a mysterious traveler into allowing a dangerous package onto a Christmas Eve flight, leading to a tense and suspenseful narrative. ",
     cast: [
-      { name: "Sam Worthington", role: "Jake Sully", photo: "images/cast1.jpg" },
-      { name: "Zoe Saldana", role: "Neytiri", photo: "images/cast2.jpg" },
-      { name: "Sigourney Weaver", role: "Dr. Grace Augustine", photo: "images/cast3.jpg" },
-      { name: "Stephen Lang", role: "Colonel Quaritch", photo: "images/cast4.jpg" },
-      { name: "Michelle Rodriguez", role: "Trudy Chacón", photo: "images/cast5.jpg" }
+      { name: "Taron Egerton", role: "Ethan Kopek", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Jason Bateman", role: "Ellis", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Sofia Carson", role: "Mia", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Danielle Deadwyler", role: "Detective Franklin", photo: "/dist/images/cast/J.K.Simmons.jpg" }
     ],
-    releaseDate: "2009",
-    languages: "English, Spanish, French",
-    ratings: "4.6/5",
-    genre: "Action, Adventure, Fantasy"
-  }
+    releaseDate: "December 13, 2024",
+    languages: "English",
+    ratings: " 3.5 out of 5",
+    genre: "Action, Thriller"
+  },
+  "SonictheHedgehog": {
+    title: "Sonic the Hedgehog",
+    image: "/dist/images/movie-play/img5.jpg",
+    description: "Sonic the Hedgehog (2020) is a live-action/CGI hybrid adventure film based on the popular video game franchise by SEGA. The story follows Sonic, a speedy blue hedgehog who arrives on Earth and tries to escape government forces with the help of a small-town sheriff, Tom Wachowski. Meanwhile, the evil scientist Dr. Robotnik hunts Sonic, hoping to harness his powers for world domination. ",
+    cast: [
+      { name: "Ben Schwartz", role: "Sonic the Hedgehog", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "James Marsden", role: "Tom Wachowski", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Jim Carrey", role: " Dr. Robotnik", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Lee Majdoub ", role: "Agent Stone", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "February 14, 2020",
+    languages: "English",
+    ratings: " 4.2 out of 5",
+    genre: "Action, Adventure, Comedy, Family"
+  },
 };
 
 if (moviesData[movie]) {
