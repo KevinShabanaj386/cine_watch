@@ -26,7 +26,31 @@ const showsData = {
     ratings: "4.9 out of 5",
     genre: "Animated, Sci-Fi, Comedy, Adventure, Dark Humor",
     watchLink: "/watch-show.html?show=RickandMorty"
-  }
+  },
+  "TheSopranos": {
+    title: "The Sopranos",
+    image: "/dist/images/show-play/img2.jpg",
+    description: "A groundbreaking drama series that follows the life of Tony Soprano, a New Jersey mob boss, as he tries to balance his criminal empire with his personal life. The show delves into Tony’s struggles with family, mental health, and his position as a mafia leader, exploring themes of power, loyalty, and the American dream.",
+    seasons: {
+      1: 13,
+      2: 13,
+      3: 12,
+      4: 13,
+      5: 9,
+      6: 21
+    },
+    languages: "English",
+    cast: [
+      { name: "James Gandolfini", role: "Tony Soprano", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Edie Falco", role: "Carmela Soprano", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Michael Imperioli", role: "Christopher Moltisanti", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Lorraine Bracco", role: "Dr. Jennifer Melfi", photo: "/dist/images/cast/AaronTaylor.jpg" }
+    ],
+    releaseDate: "Premiered on January 10, 1999",
+    ratings: "5 out of 5",
+    genre: "Crime, Drama, Psychological Thriller",
+    watchLink: "/watch-show.html?show=RickandMorty"
+  },
 };
 
 
