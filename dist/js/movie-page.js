@@ -11,8 +11,7 @@ const moviesData = {
       { name: "Aaron Taylor-Johnson", role: "Kraven", photo: "/dist/images/cast/AaronTaylor.jpg" },
       { name: "Russell Crowe", role: "Nikolai Kravinoff", photo: "/dist/images/cast/RussellCrowe.jpg" },
       { name: "Ariana DeBose", role: "Calypso Ezili", photo: "/dist/images/cast/ArianaDeBose.jpg" },
-      { name: "Fred Hechinger", role: "Dmitri Kravinoff", photo: "/dist/images/cast/FredHechinger.jpg" },
-      { name: "Alessandro Nivola", role: "Rhino", photo: "/dist/images/cast/AlessandroNivola.jpg" }
+      { name: "Fred Hechinger", role: "Dmitri Kravinoff", photo: "/dist/images/cast/FredHechinger.jpg" }
     ],
     releaseDate: " December 13, 2024",
     languages: "English",
@@ -20,36 +19,34 @@ const moviesData = {
     genre: "Action, Thriller"
   },
   "redone": {
-    title: "redone",
-    image: "images/inception.jpg",
-    description: "A mind-bending thriller directed by Christopher Nolan.",
+    title: "Red One",
+    image: "/dist/images/movie-play/img2.jpg",
+    description: "Red One is a 2024 American Christmas action film directed by Jake Kasdan. The story follows Callum Drift, the head of Santa Claus's security detail, who teams up with hacker Jack O'Malley to rescue a kidnapped Santa Claus on Christmas Eve. ",
     cast: [
-      { name: "Leonardo DiCaprio", role: "Cobb", photo: "images/cast1.jpg" },
-      { name: "Joseph Gordon-Levitt", role: "Arthur", photo: "images/cast2.jpg" },
-      { name: "Ellen Page", role: "Ariadne", photo: "images/cast3.jpg" },
-      { name: "Tom Hardy", role: "Eames", photo: "images/cast4.jpg" },
-      { name: "Cillian Murphy", role: "Robert Fischer", photo: "images/cast5.jpg" }
+      { name: "Dwayne Johnson", role: "Callum Drift", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Chris Evans", role: "Jack O'Malley", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Lucy Liu", role: "Zoe Harlow", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "J.K. Simmons", role: "Santa Claus", photo: "/dist/images/cast/J.K.Simmons.jpg" }
     ],
-    releaseDate: "2010",
-    languages: "English, Italian, Japanese",
-    ratings: "4.5/5",
-    genre: "Action, Sci-Fi, Thriller"
+    releaseDate: "November 15, 2024",
+    languages: "English",
+    ratings: " 2.5 out of 5",
+    genre: "Action, Adventure, Comedy"
   },
-  "interstellar": {
-    title: "Interstellar",
-    image: "images/interstellar.jpg",
-    description: "A sci-fi journey through space and time.",
+  "elevation": {
+    title: "Elevation",
+    image: "/dist/images/movie-play/img3.jpg",
+    description: "Elevation is a 2024 American post-apocalyptic action thriller directed by George Nolfi. The film is set in a world where humanity's survivors must reside above 8,000 feet to avoid deadly creatures known as Reapers. The story follows Will, a single father, who, along with scientist Nina and friend Katie, ventures below the safe altitude to secure essential supplies and search for a means to combat the Reapers. ",
     cast: [
-      { name: "Matthew McConaughey", role: "Cooper", photo: "images/cast1.jpg" },
-      { name: "Anne Hathaway", role: "Brand", photo: "images/cast2.jpg" },
-      { name: "Jessica Chastain", role: "Murph", photo: "images/cast3.jpg" },
-      { name: "Michael Caine", role: "Professor Brand", photo: "images/cast4.jpg" },
-      { name: "Mackenzie Foy", role: "Young Murph", photo: "images/cast5.jpg" }
+      { name: "Anthony Mackie", role: "Will", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Morena Baccarin", role: "Nina", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Maddie Hasson", role: "Katie", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Danny Boyd Jr.", role: "Hunter", photo: "/dist/images/cast/J.K.Simmons.jpg" }
     ],
-    releaseDate: "2014",
-    languages: "English, Italian, Japanese",
-    ratings: "4.8/5",
-    genre: "Adventure, Drama, Sci-Fi"
+    releaseDate: "November 15, 2024",
+    languages: "English",
+    ratings: " 2.5 out of 5",
+    genre: "Action, Adventure, Comedy"
   },
   "avatar": {
     title: "Avatar",
