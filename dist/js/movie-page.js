@@ -196,7 +196,7 @@ const moviesData = {
     releaseDate: "December 14, 2018",
     languages: "English, Spanish, French,",
     ratings: " 4.8 out of 5",
-    genre: "Animation, Action, Adventure, Science Fiction, Superhero"
+    genre: "Animation, Action, Adventure, Science Fiction"
   },
   "Inception": {
     title: "Inception",
@@ -287,6 +287,246 @@ const moviesData = {
     languages: "English",
     ratings: "4.7 out of 5",
     genre: "Crime, Drama, Thriller"
+  },
+  "HacksawRidge": {
+    title: "Hacksaw Ridge",
+    image: "/dist/images/movie-play/img17.jpg",
+    description: "Hacksaw Ridge is based on the true story of Desmond Doss, a U.S. Army medic who served in the Battle of Okinawa during World War II. Doss, a devout Seventh-day Adventist, refuses to carry a weapon due to his religious beliefs but is determined to save lives on the battlefield. His bravery and heroism lead to him becoming the first conscientious objector to receive the Medal of Honor.",
+    cast: [
+      { name: "Andrew Garfield", role: "Desmond Doss", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Vince Vaughn", role: "Sgt. Howell", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Sam Worthington", role: " Captain Glover", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Luke Bracey", role: "Smitty Ryker", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "November 4, 2016",
+    languages: "English",
+    ratings: "4.7 out of 5",
+    genre: "Biography, Drama, War"
+  },
+  "TopGunMaverick": {
+    title: "Top Gun: Maverick",
+    image: "/dist/images/movie-play/img18.jpg",
+    description: "Top Gun: Maverick follows Pete Maverick Mitchell, now a seasoned Navy captain, who is tasked with training a new generation of Top Gun pilots for a dangerous mission. As Maverick confronts his past and faces the challenges of being an instructor, he forms a bond with Lt. Bradley Rooster Bradshaw, the son of his late friend Goose.",
+    cast: [
+      { name: "Tom Cruise", role: "Maverick", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Miles Teller", role: "Rooster", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Jennifer Connelly", role: "Penny Benjamin", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Jon Hamm", role: "Cyclone", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "May 27, 2022",
+    languages: "English, with dubbed versions in various languages",
+    ratings: "4.7 out of 5",
+    genre: "Action, Drama, Thriller"
+  },
+  "Scarface": {
+    title: "Scarface",
+    image: "/dist/images/movie-play/img19.jpg",
+    description: "Scarface tells the story of Tony Montana, a Cuban immigrant who rises to power in the Miami drug trade. Through ambition, violence, and betrayal, Montana becomes a ruthless drug lord, ultimately leading to his downfall. The film explores themes of power, greed, and corruption.",
+    cast: [
+      { name: "Al Pacino", role: " Tony Montana", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Michelle Pfeiffer", role: "Elvira Hancock", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Steven Bauer", role: "Manny Ribera", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Robert Loggia", role: "Frank Lopez", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "December 9, 1983",
+    languages: "English",
+    ratings: "4.6 out of 5",
+    genre: "Crime, Drama, Thriller"
+  },
+  "GoodWillHunting": {
+    title: "Good Will Hunting",
+    image: "/dist/images/movie-play/img20.jpg",
+    description: "Good Will Hunting follows Will Hunting, a janitor at MIT who is also a self-taught mathematical genius. After assaulting a police officer, Will avoids jail time by studying mathematics and undergoing therapy. With the help of his therapist, Sean Maguire, Will confronts his troubled past and his fear of reaching his full potential.",
+    cast: [
+      { name: "Matt Damon", role: " Will Hunting", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Robin Williams", role: " Sean Maguire", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Ben Affleck", role: " Chuckie Sullivan", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Minnie Driver", role: "Skylar", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "December 5, 1997",
+    languages: "English",
+    ratings: "4.8 out of 5",
+    genre: "Drama, Romance"
+  },
+  "Joker": {
+    title: "Joker",
+    image: "/dist/images/movie-play/img21.jpg",
+    description: "Joker is an origin story about Arthur Fleck, a failed comedian and mentally ill man living in Gotham City. Struggling with rejection, isolation, and poverty, Arthur’s descent into madness transforms him into the infamous criminal mastermind known as the Joker. The film explores themes of mental illness, societal neglect, and the impact of trauma.",
+    cast: [
+      { name: "Joaquin Phoenix", role: "Joker", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Robert De Niro", role: "Murray Franklin", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Zazie Beetz", role: "Sophie Dumond", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Frances Conroy", role: "Penny Fleck", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "October 4, 2019",
+    languages: "English",
+    ratings: "4.7 out of 5",
+    genre: "Crime, Drama, Thriller"
+  },
+  "TheTrumanShow": {
+    title: "The Truman Show",
+    image: "/dist/images/movie-play/img21.jpg",
+    description: "The Truman Show follows Truman Burbank, an ordinary man who unknowingly lives his entire life as the star of a 24/7 televised reality show. As Truman begins to notice oddities in his surroundings, he starts to question the nature of his reality and seeks to escape the world created for him by the show's producers.",
+    cast: [
+      { name: "Jim Carrey", role: "Truman Burbank", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Laura Linney", role: "Meryl Burbank", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Ed Harris", role: "Christof", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Noah Emmerich", role: "Marlon", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "June 5, 1998",
+    languages: "English",
+    ratings: "4.6 out of 5",
+    genre: "Drama, Science Fiction, Comedy"
+  },
+  "Togo": {
+    title: "Togo",
+    image: "/dist/images/movie-play/img23.jpg",
+    description: "Togo is based on the true story of the 1925 serum run to Nome, Alaska, also known as the Great Race of Mercy. The film focuses on the bond between sled dog Togo and his owner, Leonhard Seppala. Togo, despite being small and considered too old, leads the team on a dangerous and heroic journey to deliver life-saving medicine to a town plagued by a diphtheria outbreak.",
+    cast: [
+      { name: "Willem Dafoe", role: " Leonhard Seppala", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Julianne Nicholson", role: " Constance Seppala", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Christopher Heyerdahl", role: "Walt", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Michael Gaston", role: "Jocko", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "December 20, 2019",
+    languages: "English",
+    ratings: "4.5 out of 5",
+    genre: "Adventure, Drama, Family"
+  },
+  "Prisoners": {
+    title: "Prisoners",
+    image: "/dist/images/movie-play/img24.jpg",
+    description: "Prisoners is a psychological thriller about a father, Keller Dover, whose daughter and her friend go missing. As the police investigation stalls, Dover takes matters into his own hands and kidnaps a man he believes knows where the girls are. The film delves into themes of morality, justice, and the lengths a parent will go to for their child.",
+    cast: [
+      { name: "Hugh Jackman", role: "Keller Dover", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Jake Gyllenhaal", role: " Detective Loki", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Viola Davis", role: "Nancy Birch", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Maria Bello", role: "Grace Dover", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "September 20, 2013",
+    languages: "English",
+    ratings: "4.6 out of 5",
+    genre: "Crime, Drama, Mystery, Thriller"
+  },
+  "WALLE": {
+    title: "WALL·E",
+    image: "/dist/images/movie-play/img25.jpg",
+    description: "WALL·E is an animated science fiction film set in a distant future where Earth has been abandoned due to pollution and waste. WALL·E, a lonely garbage-compacting robot, spends his days cleaning up the planet. His life changes when he discovers a small plant and meets EVE, a sleek robot sent to find signs of life. The two embark on an adventure that could change the fate of humanity.",
+    cast: [
+      { name: "Ben Burtt", role: "WALL·E", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Elissa Knight", role: "EVE ", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Jeff Garlin", role: " M-O", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "John Ratzenberger", role: "John", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "June 27, 2008",
+    languages: "English",
+    ratings: "4.8 out of 5",
+    genre: "Animation, Adventure, Family, Science Fiction"
+  },
+  "Oppenheimer": {
+    title: "Oppenheimer",
+    image: "/dist/images/movie-play/img26.jpg",
+    description: "Oppenheimer is a biographical drama about J. Robert Oppenheimer, the theoretical physicist who is credited with being the father of the atomic bomb for his role in the Manhattan Project. The film delves into his personal and professional life, the moral dilemmas surrounding the development of nuclear weapons, and the complex legacy he left behind.",
+    cast: [
+      { name: "Cillian Murphy", role: "J. Robert Oppenheimer", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Emily Blunt", role: "Katherine Oppenheimer ", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Matt Damon", role: "Leslie Groves", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Robert Downey Jr", role: "Lewis Strauss", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "July 21, 2023",
+    languages: "English, with dubbed versions in various languages",
+    ratings: "4.7 out of 5",
+    genre: "Biography, Drama, History"
+  },
+  "TheWolfofWallStreet": {
+    title: "The Wolf of Wall Street",
+    image: "/dist/images/movie-play/img27.jpg",
+    description: "The Wolf of Wall Street is a biographical black comedy that follows Jordan Belfort, a stockbroker who rises to immense wealth and power through illegal and unethical practices on Wall Street. The film chronicles his excesses, scandals, and eventual downfall, highlighting the moral consequences of greed and corruption.",
+    cast: [
+      { name: "Leonardo DiCaprio", role: "Jordan Belfort", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Jonah Hill", role: "Donnie Azoff", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Margot Robbie", role: "Naomi Lapaglia", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Matthew McConaughey", role: " Mark Hanna", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "December 25, 2013",
+    languages: "English",
+    ratings: "4.5 out of 5",
+    genre: "Biography, Comedy, Crime, Drama"
+  },
+  "Titanic": {
+    title: "Titanic",
+    image: "/dist/images/movie-play/img28.jpg",
+    description: "Titanic is an epic romance and disaster film that centers around the ill-fated maiden voyage of the RMS Titanic. The story follows Jack and Rose, two passengers from different social backgrounds who fall in love during the voyage. As the ship tragically sinks after hitting an iceberg, their love is put to the ultimate test amidst the chaos and loss.",
+    cast: [
+      { name: "Leonardo DiCaprio", role: "Jack Dawson", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Kate Winslet", role: "Rose DeWitt Bukater", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Billy Zane", role: "Cal", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Danny Nucci", role: "Fabio", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "December 19, 1997",
+    languages: "English",
+    ratings: "4.8 out of 5",
+    genre: "Drama, Romance"
+  },
+  "ThePursuitofHappyness": {
+    title: "The Pursuit of Happyness",
+    image: "/dist/images/movie-play/img29.jpg",
+    description: "The Pursuit of Happyness is a biographical drama about Chris Gardner, a struggling salesman who faces homelessness while trying to provide a better life for his young son. Despite countless setbacks, Chris refuses to give up on his dreams of a better future, leading him to pursue a competitive internship at a prestigious brokerage firm.",
+    cast: [
+      { name: "Will Smith", role: "Chris Gardner", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Jaden Smith", role: "Christopher Gardner", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Thandie Newton", role: "Linda", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Brian Howe", role: " Jay Twistle", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "December 15, 2006",
+    languages: "English",
+    ratings: "4.7 out of 5",
+    genre: "Biography, Drama"
+  },
+  "HowtoTrainYourDragon": {
+    title: "How to Train Your Dragon",
+    image: "/dist/images/movie-play/img30.jpg",
+    description: "How to Train Your Dragon is an animated fantasy film about a young Viking named Hiccup who lives on the island of Berk, where dragons are seen as enemies. However, Hiccup befriends a dragon named Toothless, leading to a change in the way his village views these creatures. Together, they embark on an adventure that challenges the long-standing beliefs about dragons.",
+    cast: [
+      { name: "Jay Baruchel", role: "Hiccup ", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Gerard Butler", role: "Stoick the Vast", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "America Ferrera", role: "Astrid Hofferson", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Craig Ferguson", role: "Gobber the Belch", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "March 26, 2010",
+    languages: "English",
+    ratings: "4.6 out of 5",
+    genre: "Animation, Action, Adventure, Family, Fantasy"
+  },
+  "TheDarkKnightRises": {
+    title: "The Dark Knight Rises",
+    image: "/dist/images/movie-play/img31.jpg",
+    description: "The Dark Knight Rises is the conclusion to Christopher Nolan's Batman trilogy. Set eight years after the events of The Dark Knight, Gotham City has been relatively peaceful. However, a new foe, Bane, emerges, aiming to destroy the city and its symbol of hope, Batman. Bruce Wayne must confront his past and physical limitations to rise again and protect Gotham.",
+    cast: [
+      { name: "Christian Bale", role: "Bruce Wayne ", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Tom Hardy", role: "Bane", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Anne Hathaway", role: "Selina Kyle", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Gary Oldman", role: "James Gordon", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "July 20, 2012",
+    languages: "English",
+    ratings: "4.5 out of 5",
+    genre: "Action, Adventure, Thriller"
+  },
+  "RainMan": {
+    title: "Rain Man",
+    image: "/dist/images/movie-play/img32.jpg",
+    description: "Rain Man is a drama about Charlie Babbitt, a man who discovers that his estranged brother, Raymond, is an autistic savant with exceptional memory and mathematical abilities. Charlie, initially motivated by his inheritance, embarks on a road trip with Raymond, leading to a deep bond and an emotional journey of self-discovery.",
+    cast: [
+      { name: "Dustin Hoffman", role: "Raymond Babbitt ", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Tom Cruise", role: "Charlie Babbitt", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Valeria Golino", role: "Susanna", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Jerry Molen", role: " Dr. Bruner", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "December 16, 1988",
+    languages: "English",
+    ratings: "4.6 out of 5",
+    genre: "Drama"
   },
 };
 
