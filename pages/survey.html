@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="/dist/css/survey.css">
+</section>
+<section id="survey" class="survey">
+    
+        <h1>We'd Love Your Feedback!</h1>
+    <div class="survey-form">
+        <form action="submit_feedback.php" method="POST">
+            <h3>Tell Us About Your Experience</h3>
+            
+            <label for="rating">How would you rate your overall experience with CineWatch?</label><br>
+            <input type="radio" id="1" name="rating" value="1"> 1
+            <input type="radio" id="2" name="rating" value="2"> 2
+            <input type="radio" id="3" name="rating" value="3"> 3
+            <input type="radio" id="4" name="rating" value="4"> 4
+            <input type="radio" id="5" name="rating" value="5"> 5
+            <br><br>
+            
+            <label for="improvements">What improvements would you suggest for our website?</label>
+            <textarea name="improvements">Share your thoughts here...</textarea>
+            <br><br>
+
+            <label for="helpful">Did you find the content on our site helpful?</label><br>
+            <input type="radio" id="yes" name="helpful" value="yes"> Yes
+            <input type="radio" id="no" name="helpful" value="no"> No
+            <br><br>
+            
+            <label for="recommend">Would you recommend CineWatch to a friend?</label><br>
+            <input type="radio" id="recommendYes" name="recommend" value="yes"> Yes
+            <input type="radio" id="recommendNo" name="recommend" value="no"> No
+            <br><br>
+            
+            <input type="submit" value="Submit Your Feedback" class="btn">
+        </form>
+    </div>
+  </section>
+
+
+    
+</body>
+</html>
