@@ -168,6 +168,81 @@ const moviesData = {
     ratings: " 4.7 out of 5",
     genre: "Action, Adventure, Science Fiction, Thriller"
   },
+  "Whiplash": {
+    title: "Whiplash",
+    image: "/dist/images/movie-play/img12.jpg",
+    description: "Whiplash tells the story of a young and ambitious jazz drummer, Andrew Neiman, who strives for perfection under the intense and abusive mentorship of a ruthless music instructor, Terence Fletcher. The film explores themes of ambition, obsession, and the cost of greatness. ",
+    cast: [
+      { name: "Miles Teller", role: " Andrew Neiman", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "J.K. Simmons", role: "Terence Fletcher", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Melissa Benoist", role: "Nicole", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Paul Reiser", role: "Jim Neiman", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "October 10, 2014",
+    languages: "English",
+    ratings: "4.8 out of 5",
+    genre: "Drama, Music"
+  },
+  "AvengersEndgame": {
+    title: "Avengers: Endgame",
+    image: "/dist/images/movie-play/img13.jpg",
+    description: "Avengers: Endgame follows the aftermath of Avengers: Infinity War, where the Avengers must band together to undo the destruction caused by Thanos. With half of all life in the universe erased, the Avengers plan to travel through time to retrieve the Infinity Stones and reverse the damage, leading to an epic final showdown.",
+    cast: [
+      { name: "Robert Downey Jr", role: "Tony Stark", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "J.K. Simmons", role: "Terence Fletcher", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Chris Evans", role: "Bruce Banner", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Chris Hemsworth", role: "Thor", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "April 26, 2019",
+    languages: "English, with dubbed versions in multiple languages",
+    ratings: "4.9 out of 5",
+    genre: "Action, Adventure, Science Fiction, Superhero"
+  },
+  "ShutterIsland": {
+    title: "Shutter Island",
+    image: "/dist/images/movie-play/img14.jpg",
+    description: "Shutter Island follows U.S. Marshal Teddy Daniels as he is sent to a mental institution for the criminally insane on Shutter Island to investigate the disappearance of a patient. As he digs deeper into the case, he uncovers disturbing secrets, leading to a shocking revelation about his own identity and the island’s dark past.",
+    cast: [
+      { name: "Leonardo DiCaprio", role: " Teddy Daniels", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Mark Ruffalo", role: "Chuck Aule", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Ben Kingsley", role: "Dr. John Cawley", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Michelle Williams", role: "Dolores Chanal", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "February 19, 2010",
+    languages: "English",
+    ratings: "4.6 out of 5",
+    genre: "Mystery, Thriller, Psychological Horror"
+  },
+  "TheMatrix": {
+    title: "The Matrix",
+    image: "/dist/images/movie-play/img15.jpg",
+    description: "The Matrix follows computer hacker Neo, who discovers that the world he lives in is a simulated reality controlled by intelligent machines. With the help of a group of rebels, Neo begins to uncover the truth about the Matrix and his role in the war between humans and machines.",
+    cast: [
+      { name: "Keanu Reeves", role: "Neo / Thomas Anderson", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Laurence Fishburne", role: "Morpheus", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Carrie-Anne Moss", role: "Trinity", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Hugo Weaving", role: "Agent Smith", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "March 31, 1999",
+    languages: "English",
+    ratings: "4.8 out of 5",
+    genre: "Action, Science Fiction"
+  },
+  "TheDeparted": {
+    title: "The Departed",
+    image: "/dist/images/movie-play/img16.jpg",
+    description: "The Departed is a crime thriller about an undercover cop, Billy Costigan, and a mole in the police force, Colin Sullivan, who are both trying to uncover each other’s identity while working for the Irish mob. The tense cat-and-mouse game leads to a shocking and explosive climax.",
+    cast: [
+      { name: "Leonardo DiCaprio", role: "Billy Costigan", photo: "/dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Matt Damon", role: "Colin Sullivan", photo: "/dist/images/cast/ChrisEvans.jpg" },
+      { name: "Jack Nicholson", role: "Frank Costello", photo: "/dist/images/cast/LucyLiu.jpg" },
+      { name: "Mark Wahlberg", role: "Sergeant Dignam", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+    ],
+    releaseDate: "October 6, 2006",
+    languages: "English",
+    ratings: "4.7 out of 5",
+    genre: "Crime, Drama, Thriller"
+  },
 };
 
 if (moviesData[movie]) {
