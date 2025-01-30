@@ -3,6 +3,51 @@ const params = new URLSearchParams(window.location.search);
 const movie = params.get("movie");
 
 const moviesData = {
+  "MufasaTheLionKing": {
+    title: "Mufasa: The Lion King",
+    image: "/dist/images/movie-play/1.jpg",
+    description: "Mufasa: The Lion King is a prequel to the 2019 film, exploring the origins of Mufasa, the beloved king of the Pride Lands. The story follows Mufasa's journey from an orphaned cub to a wise and just ruler, delving into his relationships with key characters and the challenges he faced to ascend to the throne.",
+    cast: [
+      { name: "Aaron Pierre", role: "Mufasa", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Kelvin Harrison Jr.", role: "Taka", photo: "/dist/images/cast/RussellCrowe.jpg" },
+      { name: "Tiffany Boone", role: "Sarabi", photo: "/dist/images/cast/ArianaDeBose.jpg" },
+      { name: "Mads Mikkelsen", role: "Obasi", photo: "/dist/images/cast/FredHechinger.jpg" }
+    ],
+    releaseDate: "December 20, 2024",
+    languages: "English, with dubbed versions in various languages",
+    ratings: "4.2 out of 5",
+    genre: "Animation, Adventure, Drama"
+  },
+  "BadBoysRideorDie": {
+    title: "Bad Boys: Ride or Die",
+    image: "/dist/images/movie-play/2.jpg",
+    description: "Bad Boys: Ride or Die is the fourth installment in the Bad Boys franchise, featuring detectives Mike Lowrey and Marcus Burnett. The film follows the duo as they attempt to clear the name of their late Captain, Conrad Howard, who has been falsely accused of conspiracy. Their investigation leads them into a dangerous world of drug cartels and corruption.",
+    cast: [
+      { name: "Will Smith", role: "Mike Lowrey", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Martin Lawrence", role: "Marcus Burnett", photo: "/dist/images/cast/RussellCrowe.jpg" },
+      { name: "Vanessa Hudgens", role: "Detective Kelly", photo: "/dist/images/cast/ArianaDeBose.jpg" },
+      { name: "Alexander Ludwig", role: "Agent Ryan", photo: "/dist/images/cast/FredHechinger.jpg" }
+    ],
+    releaseDate: "June 7, 2024",
+    languages: "English, with dubbed versions in various languages",
+    ratings: "4.3 out of 5",
+    genre: "Action, Comedy, Crime"
+  },
+  "Interstellar": {
+    title: "Interstellar",
+    image: "/dist/images/movie-play/3.jpg",
+    description: "Interstellar follows a group of astronauts who travel through a wormhole near Saturn in search of a new habitable planet for humanity, as Earth faces environmental collapse. The film explores themes of love, time, and the survival of the human race, with stunning visuals and complex scientific concepts.",
+    cast: [
+      { name: "Matthew McConaughey", role: "Cooper", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Anne Hathaway", role: "Dr. Amelia Brand", photo: "/dist/images/cast/RussellCrowe.jpg" },
+      { name: "Jessica Chastain", role: "Murph Cooper", photo: "/dist/images/cast/ArianaDeBose.jpg" },
+      { name: "Michael Caine", role: "Professor", photo: "/dist/images/cast/FredHechinger.jpg" }
+    ],
+    releaseDate: "November 7, 2014",
+    languages: "English, with dubbed versions in various languages",
+    ratings: "4.8 out of 5",
+    genre: "Adventure, Drama, Science Fiction"
+  },
   "kraven": {
     title: "Kraven the Hunter",
     image: "/dist/images/movie-play/img1.jpg",
