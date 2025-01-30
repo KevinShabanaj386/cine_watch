@@ -75,19 +75,23 @@ body{
 
 .movie-cast-container {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: space-between;  
+  gap: 20px; 
 }
 
+
 .cast-item {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;  
 }
 
 .cast-photo {
-  width: 120px;
-  height: auto;
-  border-radius: 8px;
+  width: 100px; 
+  height: 150px; 
+  object-fit: cover; 
+  margin-bottom: 10px; 
 }
 
 .emrat {

@@ -30,8 +30,12 @@
     </div>
   </header>
 
+  <div class="heading">
+    <h2 class="heading-title" id="show-title">Movie/Show Title</h2>
+  </div>
+
   <div class="image-container">
-    <img src="/dist/images/movies/slidesho1.jpg" alt="preview">
+    <img src="/dist/images/shows-play/img1.jpg" alt="show-preview" id="show-image">
   </div>
 
   <div class="container">
@@ -39,58 +43,20 @@
       <div class="season-selector">
         <label for="season">Select Season:</label>
         <select id="season" class="dropdown" onchange="showEpisodes(this.value)">
-          <option value="1">Season 1</option>
-          <option value="2">Season 2</option>
-          <option value="3">Season 3</option>
+          
         </select>
         <div id="episode-container" class="episode-container"></div>
       </div>
+
       <div class="movie-description">
         <p>Description</p>
-        <p class="movie-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad a doloremque, aliquam quo perferendis nostrum id iusto, quasi est qui dolor recusandae in similique magni neque, incidunt sed illum ut. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad a doloremque, aliquam quo perferendis nostrum id iusto, quasi est qui dolor recusandae in similique magni neque, incidunt sed illum ut.</p>
+        <p class="movie-text" id="show-description"></p>
       </div>
+
       <div class="movie-cast">
         <p>Cast</p>
-        <div class="movie-cast-container">
-          <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
-            <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
-            </div>
-          </div>
-
-          <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
-            <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
-            </div>
-          </div>
-
-          <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
-            <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
-            </div>
-          </div>
-
-          <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
-            <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
-            </div>
-          </div>
-
-          <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
-            <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
-            </div>
-          </div>
+        <div class="movie-cast-container" id="cast-container">
+          
         </div>
       </div>
     </div>
@@ -98,19 +64,19 @@
     <div class="movie-info">
       <div class="info-item">
         <p class="info-title">Release Date</p>
-        <p class="info-content">2022</p>
+        <p class="info-content" id="release-date"></p>
       </div>
       <div class="info-item">
         <p class="info-title">Available Languages</p>
-        <p class="info-content">English, Albanian, Russian</p>
-      </div>
+        <p class="info-content" id="languages"></p>
+      </div>      
       <div class="info-item">
         <p class="info-title">Ratings</p>
-        <p class="info-content">3/5</p>
+        <p class="info-content" id="ratings"></p>
       </div>
       <div class="info-item">
         <p class="info-title">Genre</p>
-        <p class="info-content">Action, Adventure</p>
+        <p class="info-content" id="genre"></p>
       </div>
     </div>
   </div>
@@ -149,7 +115,7 @@
         <a href="https://www.tiktok.com/explore">TikTok</a>
       </div>
     </div>
-
+    
     <div class="footer-bottom">
       <h3>&#169; 2025 CineWatch. All rights reserved</h3>
     </div>
