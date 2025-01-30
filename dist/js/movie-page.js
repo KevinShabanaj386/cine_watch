@@ -60,7 +60,7 @@ const moviesData = {
     ],
     releaseDate: " December 13, 2024",
     languages: "English",
-    ratings: "5.4/10 on IMDb",
+    ratings: "2.7 out of 5 on IMDb",
     genre: "Action, Thriller"
   },
   "redone": {
@@ -365,7 +365,7 @@ const moviesData = {
   },
   "TheTrumanShow": {
     title: "The Truman Show",
-    image: "/dist/images/movie-play/img21.jpg",
+    image: "/dist/images/movie-play/img22.jpg",
     description: "The Truman Show follows Truman Burbank, an ordinary man who unknowingly lives his entire life as the star of a 24/7 televised reality show. As Truman begins to notice oddities in his surroundings, he starts to question the nature of his reality and seeks to escape the world created for him by the show's producers.",
     cast: [
       { name: "Jim Carrey", role: "Truman Burbank", photo: "/dist/images/cast/DwayneJohnson.jpg" },
