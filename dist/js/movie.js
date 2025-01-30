@@ -65,3 +65,5 @@ document.querySelector('.page2').addEventListener('click', () => changePage(2));
 document.querySelector('.page3').addEventListener('click', () => changePage(3));
 
 updateButtons();  
+
+

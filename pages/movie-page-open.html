@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CineWatch | MoviePage</title>
+  <script defer src="/dist/js/movie-page.js"></script>
   <link rel="stylesheet" href="/dist/css/header.css">
   <link rel="stylesheet" href="/dist/css/footer.css">
   <link rel="stylesheet" href="/dist/css/movie-page.css">
@@ -30,77 +31,82 @@
   </header>
 
   <div class="image-container">
-    <img src="/dist/images/movies/slidesho1.jpg" alt="preview">
+    <img id="movie-image" src="/dist/images/movies/slidesho1.jpg" alt="preview">
   </div>
+  
 
   <div class="container">
     <div class="description-cast">
+     
       <div class="movie-description">
-        <p>Description</p>
-        <p class="movie-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad a doloremque, aliquam quo perferendis nostrum id iusto, quasi est qui dolor recusandae in similique magni neque, incidunt sed illum ut. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad a doloremque, aliquam quo perferendis nostrum id iusto, quasi est qui dolor recusandae in similique magni neque, incidunt sed illum ut.</p>
+        <p id="movie-title">Movie Title</p>
+        <p class="movie-text" id="movie-description">Movie Description</p>
       </div>
+  
+      
       <div class="movie-cast">
         <p>Cast</p>
         <div class="movie-cast-container">
           <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
+            <img class="cast-photo" id="cast-photo-1" src="/dist/images/movies/poster1.jpg" alt="cast">
             <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
+              <p id="cast-name-1">Name Surname</p>
+              <p id="cast-role-1">(Role Name)</p>
             </div>
           </div>
-
+  
           <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
+            <img class="cast-photo" id="cast-photo-2" src="/dist/images/movies/poster1.jpg" alt="cast">
             <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
+              <p id="cast-name-2">Name Surname</p>
+              <p id="cast-role-2">(Role Name)</p>
             </div>
           </div>
-
+  
           <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
+            <img class="cast-photo" id="cast-photo-3" src="/dist/images/movies/poster1.jpg" alt="cast">
             <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
+              <p id="cast-name-3">Name Surname</p>
+              <p id="cast-role-3">(Role Name)</p>
             </div>
           </div>
-
+  
           <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
+            <img class="cast-photo" id="cast-photo-4" src="/dist/images/movies/poster1.jpg" alt="cast">
             <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
+              <p id="cast-name-4">Name Surname</p>
+              <p id="cast-role-4">(Role Name)</p>
             </div>
           </div>
-
+  
           <div class="cast-item">
-            <img class="cast-photo" src="/dist/images/movies/poster1.jpg" alt="cast">
+            <img class="cast-photo" id="cast-photo-5" src="/dist/images/movies/poster1.jpg" alt="cast">
             <div class="emrat">
-              <p>Name Surname</p>
-              <p>(Name Surname)</p>
+              <p id="cast-name-5">Name Surname</p>
+              <p id="cast-role-5">(Role Name)</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+  
+   
     <div class="movie-info">
       <div class="info-item">
         <p class="info-title">Release Date</p>
-        <p class="info-content">2022</p>
+        <p class="info-content" id="release-date">2022</p>
       </div>
       <div class="info-item">
         <p class="info-title">Available Languages</p>
-        <p class="info-content">English, Albanian, Russian</p>
+        <p class="info-content" id="available-languages">English, Albanian, Russian</p>
       </div>
       <div class="info-item">
         <p class="info-title">Ratings</p>
-        <p class="info-content">3/5</p>
+        <p class="info-content" id="ratings">3/5</p>
       </div>
       <div class="info-item">
         <p class="info-title">Genre</p>
-        <p class="info-content">Action, Adventure</p>
+        <p class="info-content" id="genre">Action, Adventure</p>
       </div>
     </div>
   </div>
