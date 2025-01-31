@@ -1,24 +1,35 @@
+<?php
+
+session_start();
+if(isset($_SESSION['username'])){
+  $username = $_SESSION['username'];
+}else{
+  $username = null;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CineWatch | MoviePage</title>
-  <script defer src="/dist/js/movie-page.js"></script>
-  <link rel="stylesheet" href="/dist/css/header.css">
-  <link rel="stylesheet" href="/dist/css/footer.css">
-  <link rel="stylesheet" href="/dist/css/movie-page.css">
+  <script defer src="../dist/js/movie-page.js"></script>
+  <link rel="stylesheet" href="../dist/css/header.css">
+  <link rel="stylesheet" href="../dist/css/footer.css">
+  <link rel="stylesheet" href="../dist/css/movie-page.css">
 </head>
 <body>
   <header class="header">
     <div class="left-section">
-        <img class="logo" src="/dist/images/logo.png" alt="log">
+        <img class="logo" src="../dist/images/logo.png" alt="log">
     </div>
     <div class="middle-section-1">
         <ul class="navbar">
-            <a href="/pages/home.html">Trending</a>
-            <a href="/pages/movie.html">Movies</a>
-            <a href="/pages/shows.html">TV Series</a>
+            <a href="../pages/home.php">Trending</a>
+            <a href="../pages/movie.php">Movies</a>
+            <a href="../pages/shows.php">TV Series</a>
             <a href="">Genre</a>
         </ul>
     </div>
@@ -26,7 +37,7 @@
         <input type="text" class="search-input" placeholder="| Search">
     </div>
     <div class="right-section">
-      <a class="sign-in" href="/register.html">Register</a>
+      <a class="sign-in" href="../register.php">Register</a>
     </div>
   </header>
 
@@ -35,7 +46,7 @@
   </div>
 
   <div class="image-container">
-    <img id="movie-image" src="/dist/images/movies/slidesho1.jpg" alt="preview">
+    <img id="movie-image" src="../dist/images/movies/slidesho1.jpg" alt="preview">
   </div>
   
 
@@ -52,7 +63,7 @@
         <p>Cast</p>
         <div class="movie-cast-container">
           <div class="cast-item">
-            <img class="cast-photo" id="cast-photo-1" src="/dist/images/movies/poster1.jpg" alt="cast">
+            <img class="cast-photo" id="cast-photo-1" src="../dist/images/movies/poster1.jpg" alt="cast">
             <div class="emrat">
               <p id="cast-name-1">Name Surname</p>
               <p id="cast-role-1">(Role Name)</p>
@@ -60,7 +71,7 @@
           </div>
   
           <div class="cast-item">
-            <img class="cast-photo" id="cast-photo-2" src="/dist/images/movies/poster1.jpg" alt="cast">
+            <img class="cast-photo" id="cast-photo-2" src="../dist/images/movies/poster1.jpg" alt="cast">
             <div class="emrat">
               <p id="cast-name-2">Name Surname</p>
               <p id="cast-role-2">(Role Name)</p>
@@ -68,7 +79,7 @@
           </div>
   
           <div class="cast-item">
-            <img class="cast-photo" id="cast-photo-3" src="/dist/images/movies/poster1.jpg" alt="cast">
+            <img class="cast-photo" id="cast-photo-3" src="../dist/images/movies/poster1.jpg" alt="cast">
             <div class="emrat">
               <p id="cast-name-3">Name Surname</p>
               <p id="cast-role-3">(Role Name)</p>
@@ -76,7 +87,7 @@
           </div>
   
           <div class="cast-item">
-            <img class="cast-photo" id="cast-photo-4" src="/dist/images/movies/poster1.jpg" alt="cast">
+            <img class="cast-photo" id="cast-photo-4" src="../dist/images/movies/poster1.jpg" alt="cast">
             <div class="emrat">
               <p id="cast-name-4">Name Surname</p>
               <p id="cast-role-4">(Role Name)</p>
@@ -112,8 +123,8 @@
     <div class="footer-top">
       <div class="menut">
         <p>Menu</p>
-        <a href="/pages/home.html">Trending</a>
-        <a href="/pages/movie.html">Movies</a>
+        <a href="/pages/home.php">Trending</a>
+        <a href="/pages/movie.ph">Movies</a>
         <a href="">TV Series</a>
         <a href="">Genre</a>
       </div>

@@ -71,7 +71,7 @@ const showsData = {
   },
   "RickandMorty": {
     title: "Rick and Morty",
-    image: "/dist/images/show-play/img1.jpg",
+    image: "../dist/images/show-play/img1.jpg",
     description: "A sci-fi animated series that follows the misadventures of an eccentric, alcoholic scientist, Rick Sanchez, and his good-hearted but easily distressed grandson, Morty Smith. The show explores parallel universes, extraterrestrial worlds, and bizarre adventures that often lead to dark and thought-provoking consequences.",
     seasons: {
       1: 11,
@@ -84,10 +84,10 @@ const showsData = {
     },
     languages: "English, Albanian, Russian",
     cast: [
-      { name: "Justin Roiland", role: "Rick Sanchez", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Chris Parnell", role: "Jerry Smith", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Spencer Grammer", role: "Summer Smith", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Sarah Chalke", role: "Beth Smith", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "Justin Roiland", role: "Rick Sanchez", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Chris Parnell", role: "Jerry Smith", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Spencer Grammer", role: "Summer Smith", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Sarah Chalke", role: "Beth Smith", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "December 2, 2013",
     ratings: "4.9 out of 5",
@@ -96,7 +96,7 @@ const showsData = {
   },
   "TheSopranos": {
     title: "The Sopranos",
-    image: "/dist/images/show-play/img2.jpg",
+    image: "../dist/images/show-play/img2.jpg",
     description: "A groundbreaking drama series that follows the life of Tony Soprano, a New Jersey mob boss, as he tries to balance his criminal empire with his personal life. The show delves into Tony’s struggles with family, mental health, and his position as a mafia leader, exploring themes of power, loyalty, and the American dream.",
     seasons: {
       1: 13,

@@ -5,13 +5,13 @@ const movie = params.get("movie");
 const moviesData = {
   "MufasaTheLionKing": {
     title: "Mufasa: The Lion King",
-    image: "/dist/images/movie-play/1.jpg",
+    image: "../dist/images/movie-play/1.jpg",
     description: "Mufasa: The Lion King is a prequel to the 2019 film, exploring the origins of Mufasa, the beloved king of the Pride Lands. The story follows Mufasa's journey from an orphaned cub to a wise and just ruler, delving into his relationships with key characters and the challenges he faced to ascend to the throne.",
     cast: [
-      { name: "Aaron Pierre", role: "Mufasa", photo: "/dist/images/cast/AaronPierre.webp" },
-      { name: "Kelvin Harrison Jr.", role: "Taka", photo: "/dist/images/cast/KelvinHarrisonJr..webp" },
-      { name: "Tiffany Boone", role: "Sarabi", photo: "/dist/images/cast/TiffanyBoone.webp" },
-      { name: "Mads Mikkelsen", role: "Obasi", photo: "/dist/images/cast/MadsMikkelsen.webp" }
+      { name: "Aaron Pierre", role: "Mufasa", photo: "../dist/images/cast/AaronPierre.webp" },
+      { name: "Kelvin Harrison Jr.", role: "Taka", photo: "../dist/images/cast/KelvinHarrisonJr..webp" },
+      { name: "Tiffany Boone", role: "Sarabi", photo: "../dist/images/cast/TiffanyBoone.webp" },
+      { name: "Mads Mikkelsen", role: "Obasi", photo: "../dist/images/cast/MadsMikkelsen.webp" }
     ],
     releaseDate: "December 20, 2024",
     languages: "English, with dubbed versions in various languages",
@@ -20,13 +20,13 @@ const moviesData = {
   },
   "BadBoysRideorDie": {
     title: "Bad Boys: Ride or Die",
-    image: "/dist/images/movie-play/2.jpg",
+    image: "../dist/images/movie-play/2.jpg",
     description: "Bad Boys: Ride or Die is the fourth installment in the Bad Boys franchise, featuring detectives Mike Lowrey and Marcus Burnett. The film follows the duo as they attempt to clear the name of their late Captain, Conrad Howard, who has been falsely accused of conspiracy. Their investigation leads them into a dangerous world of drug cartels and corruption.",
     cast: [
-      { name: "Will Smith", role: "Mike Lowrey", photo: "/dist/images/cast/WillSmith.webp" },
-      { name: "Martin Lawrence", role: "Marcus Burnett", photo: "/dist/images/cast/MartinLawrence.webp" },
-      { name: "Vanessa Hudgens", role: "Detective Kelly", photo: "/dist/images/cast/VanessaHudgens.webp" },
-      { name: "Alexander Ludwig", role: "Agent Ryan", photo: "/dist/images/cast/AlexanderLudwig.webp" }
+      { name: "Will Smith", role: "Mike Lowrey", photo: "../dist/images/cast/WillSmith.webp" },
+      { name: "Martin Lawrence", role: "Marcus Burnett", photo: "../dist/images/cast/MartinLawrence.webp" },
+      { name: "Vanessa Hudgens", role: "Detective Kelly", photo: "../dist/images/cast/VanessaHudgens.webp" },
+      { name: "Alexander Ludwig", role: "Agent Ryan", photo: "../dist/images/cast/AlexanderLudwig.webp" }
     ],
     releaseDate: "June 7, 2024",
     languages: "English, with dubbed versions in various languages",
@@ -35,13 +35,13 @@ const moviesData = {
   },
   "Interstellar": {
     title: "Interstellar",
-    image: "/dist/images/movie-play/3.jpg",
+    image: "../dist/images/movie-play/3.jpg",
     description: "Interstellar follows a group of astronauts who travel through a wormhole near Saturn in search of a new habitable planet for humanity, as Earth faces environmental collapse. The film explores themes of love, time, and the survival of the human race, with stunning visuals and complex scientific concepts.",
     cast: [
-      { name: "Matthew McConaughey", role: "Cooper", photo: "/dist/images/cast/MatthewMcConaughey.webp" },
-      { name: "Anne Hathaway", role: "Dr. Amelia Brand", photo: "/dist/images/cast/AnneHathaway.webp" },
-      { name: "Jessica Chastain", role: "Murph Cooper", photo: "/dist/images/cast/JessicaChastain.webp" },
-      { name: "Michael Caine", role: "Professor", photo: "/dist/images/cast/MichaelCaine.webp" }
+      { name: "Matthew McConaughey", role: "Cooper", photo: "../dist/images/cast/MatthewMcConaughey.webp" },
+      { name: "Anne Hathaway", role: "Dr. Amelia Brand", photo: "../dist/images/cast/AnneHathaway.webp" },
+      { name: "Jessica Chastain", role: "Murph Cooper", photo: "../dist/images/cast/JessicaChastain.webp" },
+      { name: "Michael Caine", role: "Professor", photo: "../dist/images/cast/MichaelCaine.webp" }
     ],
     releaseDate: "November 7, 2014",
     languages: "English, with dubbed versions in various languages",
@@ -50,13 +50,13 @@ const moviesData = {
   },
   "kraven": {
     title: "Kraven the Hunter",
-    image: "/dist/images/movie-play/img1.jpg",
+    image: "../dist/images/movie-play/img1.jpg",
     description: "Kraven the Hunter is a 2024 action-packed origin story that delves into the transformation of Sergei Kravinoff into one of Marvel's most iconic villains.",
     cast: [
-      { name: "Aaron Taylor-Johnson", role: "Kraven", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Russell Crowe", role: "Nikolai Kravinoff", photo: "/dist/images/cast/RussellCrowe.jpg" },
-      { name: "Ariana DeBose", role: "Calypso Ezili", photo: "/dist/images/cast/ArianaDeBose.jpg" },
-      { name: "Fred Hechinger", role: "Dmitri Kravinoff", photo: "/dist/images/cast/FredHechinger.jpg" }
+      { name: "Aaron Taylor-Johnson", role: "Kraven", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Russell Crowe", role: "Nikolai Kravinoff", photo: "../dist/images/cast/RussellCrowe.jpg" },
+      { name: "Ariana DeBose", role: "Calypso Ezili", photo: "../dist/images/cast/ArianaDeBose.jpg" },
+      { name: "Fred Hechinger", role: "Dmitri Kravinoff", photo: "../dist/images/cast/FredHechinger.jpg" }
     ],
     releaseDate: " December 13, 2024",
     languages: "English",
@@ -65,13 +65,13 @@ const moviesData = {
   },
   "redone": {
     title: "Red One",
-    image: "/dist/images/movie-play/img2.jpg",
+    image: "../dist/images/movie-play/img2.jpg",
     description: "Red One is a 2024 American Christmas action film directed by Jake Kasdan. The story follows Callum Drift, the head of Santa Claus's security detail, who teams up with hacker Jack O'Malley to rescue a kidnapped Santa Claus on Christmas Eve. ",
     cast: [
-      { name: "Dwayne Johnson", role: "Callum Drift", photo: "/dist/images/cast/DwayneJohnson.jpg" },
-      { name: "Chris Evans", role: "Jack O'Malley", photo: "/dist/images/cast/ChrisEvans.jpg" },
-      { name: "Lucy Liu", role: "Zoe Harlow", photo: "/dist/images/cast/LucyLiu.jpg" },
-      { name: "J.K. Simmons", role: "Santa Claus", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+      { name: "Dwayne Johnson", role: "Callum Drift", photo: "../dist/images/cast/DwayneJohnson.jpg" },
+      { name: "Chris Evans", role: "Jack O'Malley", photo: "../dist/images/cast/ChrisEvans.jpg" },
+      { name: "Lucy Liu", role: "Zoe Harlow", photo: "../dist/images/cast/LucyLiu.jpg" },
+      { name: "J.K. Simmons", role: "Santa Claus", photo: "../dist/images/cast/J.K.Simmons.jpg" }
     ],
     releaseDate: "November 15, 2024",
     languages: "English",
@@ -80,13 +80,13 @@ const moviesData = {
   },
   "elevation": {
     title: "Elevation",
-    image: "/dist/images/movie-play/img3.jpg",
+    image: "../dist/images/movie-play/img3.jpg",
     description: "Elevation is a 2024 American post-apocalyptic action thriller directed by George Nolfi. The film is set in a world where humanity's survivors must reside above 8,000 feet to avoid deadly creatures known as Reapers. The story follows Will, a single father, who, along with scientist Nina and friend Katie, ventures below the safe altitude to secure essential supplies and search for a means to combat the Reapers. ",
     cast: [
-      { name: "Anthony Mackie", role: "Will", photo: "/dist/images/cast/AnthonyMackie.webp" },
-      { name: "Morena Baccarin", role: "Nina", photo: "/dist/images/cast/MorenaBaccarin.webp" },
-      { name: "Maddie Hasson", role: "Katie", photo: "/dist/images/cast/MaddieHasson.webp" },
-      { name: "Danny Boyd Jr.", role: "Hunter", photo: "/dist/images/cast/DannyBoyd Jr..webp" }
+      { name: "Anthony Mackie", role: "Will", photo: "../dist/images/cast/AnthonyMackie.webp" },
+      { name: "Morena Baccarin", role: "Nina", photo: "../dist/images/cast/MorenaBaccarin.webp" },
+      { name: "Maddie Hasson", role: "Katie", photo: "../dist/images/cast/MaddieHasson.webp" },
+      { name: "Danny Boyd Jr.", role: "Hunter", photo: "../dist/images/cast/DannyBoyd Jr..webp" }
     ],
     releaseDate: "November 8, 2024",
     languages: "English",
@@ -95,13 +95,13 @@ const moviesData = {
   },
   "CarryOn": {
     title: "Carry-On",
-    image: "/dist/images/movie-play/img4.jpg",
+    image: "../dist/images/movie-play/img4.jpg",
     description: "Carry-On is a 2024 American action thriller directed by Jaume Collet-Serra. The film follows Ethan Kopek, a young TSA agent who is blackmailed by a mysterious traveler into allowing a dangerous package onto a Christmas Eve flight, leading to a tense and suspenseful narrative. ",
     cast: [
-      { name: "Taron Egerton", role: "Ethan Kopek", photo: "/dist/images/cast/TaronEgerton.webp" },
-      { name: "Jason Bateman", role: "Ellis", photo: "/dist/images/cast/JasonBateman.webp" },
-      { name: "Sofia Carson", role: "Mia", photo: "/dist/images/cast/SofiaCarson.webp" },
-      { name: "Danielle Deadwyler", role: "Detective Franklin", photo: "/dist/images/cast/DanielleDeadwyler.webp" }
+      { name: "Taron Egerton", role: "Ethan Kopek", photo: "../dist/images/cast/TaronEgerton.webp" },
+      { name: "Jason Bateman", role: "Ellis", photo: "../dist/images/cast/JasonBateman.webp" },
+      { name: "Sofia Carson", role: "Mia", photo: "../dist/images/cast/SofiaCarson.webp" },
+      { name: "Danielle Deadwyler", role: "Detective Franklin", photo: "../dist/images/cast/DanielleDeadwyler.webp" }
     ],
     releaseDate: "December 13, 2024",
     languages: "English",
@@ -110,13 +110,13 @@ const moviesData = {
   },
   "SonictheHedgehog": {
     title: "Sonic the Hedgehog",
-    image: "/dist/images/movie-play/img5.jpg",
+    image: "../dist/images/movie-play/img5.jpg",
     description: "Sonic the Hedgehog (2020) is a live-action/CGI hybrid adventure film based on the popular video game franchise by SEGA. The story follows Sonic, a speedy blue hedgehog who arrives on Earth and tries to escape government forces with the help of a small-town sheriff, Tom Wachowski. Meanwhile, the evil scientist Dr. Robotnik hunts Sonic, hoping to harness his powers for world domination. ",
     cast: [
-      { name: "Ben Schwartz", role: "Sonic the Hedgehog", photo: "/dist/images/cast/SofiaCarson.webp" },
-      { name: "James Marsden", role: "Tom Wachowski", photo: "/dist/images/cast/DannyBoyd Jr..webp" },
-      { name: "Jim Carrey", role: " Dr. Robotnik", photo: "/dist/images/cast/MaddieHasson.webp" },
-      { name: "Lee Majdoub ", role: "Agent Stone", photo: "/dist/images/cast/J.K.Simmons.jpg" }
+      { name: "Ben Schwartz", role: "Sonic the Hedgehog", photo: "../dist/images/cast/SofiaCarson.webp" },
+      { name: "James Marsden", role: "Tom Wachowski", photo: "../dist/images/cast/DannyBoyd Jr..webp" },
+      { name: "Jim Carrey", role: " Dr. Robotnik", photo: "../dist/images/cast/MaddieHasson.webp" },
+      { name: "Lee Majdoub ", role: "Agent Stone", photo: "../dist/images/cast/J.K.Simmons.jpg" }
     ],
     releaseDate: "February 14, 2020",
     languages: "English",
@@ -125,13 +125,13 @@ const moviesData = {
   },
   "GoodFellas": {
     title: "GoodFellas",
-    image: "/dist/images/movie-play/img6.jpg",
+    image: "../dist/images/movie-play/img6.jpg",
     description: "GoodFellas (1990) is a legendary crime drama directed by Martin Scorsese, based on the true story of Henry Hill, a young man who rises through the ranks of the mob, only to see his life spiral out of control due to crime, betrayal, and drugs. The film is widely considered one of the greatest gangster movies of all time. ",
     cast: [
-      { name: "Ray Liotta", role: "Henry Hill", photo: "/dist/images/cast/DannyBoyd Jr..webp" },
-      { name: "Robert De Niro", role: "James Conway", photo: "/dist/images/cast/ChrisEvans.jpg" },
-      { name: "Joe Pesci", role: " Tommy DeVito", photo: "/dist/images/cast/LucyLiu.jpg" },
-      { name: "Lorraine Bracco ", role: " Karen Hill", photo: "/dist/images/cast/SofiaCarson.webp" }
+      { name: "Ray Liotta", role: "Henry Hill", photo: "../dist/images/cast/DannyBoyd Jr..webp" },
+      { name: "Robert De Niro", role: "James Conway", photo: "../dist/images/cast/ChrisEvans.jpg" },
+      { name: "Joe Pesci", role: " Tommy DeVito", photo: "../dist/images/cast/LucyLiu.jpg" },
+      { name: "Lorraine Bracco ", role: " Karen Hill", photo: "../dist/images/cast/SofiaCarson.webp" }
     ],
     releaseDate: "September 19, 1990 ",
     languages: "English",

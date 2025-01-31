@@ -1,24 +1,35 @@
+<?php
+
+session_start();
+if(isset($_SESSION['username'])){
+  $username = $_SESSION['username'];
+}else{
+  $username = null;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CineWatch | ShowPage</title>
-  <script defer src="/dist/js/show-page.js"></script>
-  <link rel="stylesheet" href="/dist/css/header.css">
-  <link rel="stylesheet" href="/dist/css/footer.css">
-  <link rel="stylesheet" href="/dist/css/show-page.css">
+  <script defer src="../dist/js/show-page.js"></script>
+  <link rel="stylesheet" href="../dist/css/header.css">
+  <link rel="stylesheet" href="../dist/css/footer.css">
+  <link rel="stylesheet" href="../dist/css/show-page.css">
 </head>
 <body>
   <header class="header">
     <div class="left-section">
-        <img class="logo" src="/dist/images/logo.png" alt="log">
+        <img class="logo" src="../dist/images/logo.png" alt="log">
     </div>
     <div class="middle-section-1">
         <ul class="navbar">
-            <a href="/pages/home.html">Trending</a>
-            <a href="/pages/movie.html">Movies</a>
-            <a href="/pages/shows.html">TV Series</a>
+            <a href="../pages/home.php">Trending</a>
+            <a href="../pages/movie.php">Movies</a>
+            <a href="../pages/shows.php">TV Series</a>
             <a href="">Genre</a>
         </ul>
     </div>
@@ -26,7 +37,7 @@
         <input type="text" class="search-input" placeholder="| Search">
     </div>
     <div class="right-section">
-      <a class="sign-in" href="/register.html">Register</a>
+      <a class="sign-in" href="../register.php">Register</a>
     </div>
   </header>
 
@@ -35,7 +46,7 @@
   </div>
 
   <div class="image-container">
-    <img src="/dist/images/shows-play/img1.jpg" alt="show-preview" id="show-image">
+    <img src="../dist/images/shows-play/img1.jpg" alt="show-preview" id="show-image">
   </div>
 
   <div class="container">
@@ -85,8 +96,8 @@
     <div class="footer-top">
       <div class="menut">
         <p>Menu</p>
-        <a href="/pages/home.html">Trending</a>
-        <a href="/pages/movie.html">Movies</a>
+        <a href="/pages/home.php">Trending</a>
+        <a href="/pages/movie.php">Movies</a>
         <a href="">TV Series</a>
         <a href="">Genre</a>
       </div>

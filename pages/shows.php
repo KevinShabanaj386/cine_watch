@@ -1,25 +1,36 @@
+<?php
+
+session_start();
+if(isset($_SESSION['username'])){
+  $username = $_SESSION['username'];
+}else{
+  $username = null;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CineWhatch | Movies</title>
-  <script defer src="/dist/js/show.js"></script>
-  <link rel="stylesheet" href="/dist/css/header.css">
-  <link rel="stylesheet" href="/dist/css/movie.css">
-  <link rel="stylesheet" href="/dist/css/footer.css">
+  <script defer src="../dist/js/show.js"></script>
+  <link rel="stylesheet" href="../dist/css/header.css">
+  <link rel="stylesheet" href="../dist/css/movie.css">
+  <link rel="stylesheet" href="../dist/css/footer.css">
 </head>
 <body>
 
   <header class="header">
     <div class="left-section">
-        <img class="logo" src="/dist/images/logo.png" alt="log">
+        <img class="logo" src="../dist/images/logo.png" alt="log">
     </div>
     <div class="middle-secion-1">
         <ul class="navbar">
-            <a href="/pages/home.html">Trending</a>
-            <a href="/pages/movie.html">Movies</a>
-            <a href="/pages/shows.html" class="home-active">TV Series</a>
+            <a href="../pages/home.php">Trending</a>
+            <a href="../pages/movie.php">Movies</a>
+            <a href="../pages/shows.php" class="home-active">TV Series</a>
             <a href="">Gendre</a>
         </ul>
     </div>
@@ -27,36 +38,36 @@
         <input type="text" class="search-input" placeholder="| Search">
     </div>
     <div class="right-section">
-      <a class="sign-in" href="/register.html">Regjister</a>
+      <a class="sign-in" href="../register.php">Regjister</a>
     </div>
 </header>
 
 <div class="slideshow-container">
   <div class="slide">
-    <img src="/dist/images/shows/slidesho1.jpg" alt="Slide 1">
+    <img src="../dist/images/shows/slidesho1.jpg" alt="Slide 1">
     <div class="text-container">
       <h1>Squid Game</h1>
       <p>19 &#8226 2021 &#8226 Action/Adventure/Mystery/Drama</p>
       <p>2 seasons</p>
-      <a class="watch-link" href="/pages/show-page.html?show=SquidGame" id="watchLink">Watch Now</a> 
+      <a class="watch-link" href="../pages/show-page.php?show=SquidGame" id="watchLink">Watch Now</a> 
     </div>
   </div>
   <div class="slide">
-    <img src="/dist/images/shows/slidesho2.jpg" alt="Slide 2">
+    <img src="../dist/images/shows/slidesho2.jpg" alt="Slide 2">
     <div class="text-container">
       <h1>Breaking Bad</h1>
       <p>TV-MA &#8226 06/07/2024 &#8226 Drana/Crime</p>
       <p>5 seasons</p>
-      <a class="watch-link" href="/pages/show-page.html?show=BreakingBad" id="watchLink">Watch Now</a>
+      <a class="watch-link" href="../pages/show-page.php?show=BreakingBad" id="watchLink">Watch Now</a>
     </div>
   </div>
   <div class="slide">
-    <img src="/dist/images/shows/slidesho3.jpg" alt="Slide 3">
+    <img src="../dist/images/shows/slidesho3.jpg" alt="Slide 3">
     <div class="text-container">
       <h1>Peaky Blinders</h1>
       <p>18 &#8226 2013 &#8226 Drama/Crime</p>
       <p>6 seasons</p>
-      <a class="watch-link" href="/pages/show-page.html?show=PeakyBlinders" id="watchLink">Watch Now</a>
+      <a class="watch-link" href="../pages/show-page.php?show=PeakyBlinders" id="watchLink">Watch Now</a>
     </div>
   </div>
 
@@ -72,194 +83,194 @@
     <div class="movie-container">
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster1.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster1.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">Rick and Morty</h3> 
           <p class="movie-description">Animation</p>
           <p>7 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=RickandMorty" id="watchLink">Watch Now</a> 
+          <a class="watch-link" href="../pages/show-page.php?show=RickandMorty" id="watchLink">Watch Now</a> 
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster2.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster2.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">The Sopranos</h3> 
           <p class="movie-description">Drama</p>
           <p>6 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=TheSopranos" id="watchLink">Watch Now</a> 
+          <a class="watch-link" href="../pages/show-page.php?show=TheSopranos" id="watchLink">Watch Now</a> 
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster3.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster3.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">The Last of Us </h3> 
           <p class="movie-description">Drama</p>
           <p>1 season</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=TheLastofUs" id="watchLink">Watch Now</a> 
+          <a class="watch-link" href="../pages/show-page.php?show=TheLastofUs" id="watchLink">Watch Now</a> 
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster4.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster4.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">The Office</h3> 
           <p class="movie-description">Comedy</p>
           <p>9 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=TheOffice" id="watchLink">Watch Now</a>  
+          <a class="watch-link" href="../pages/show-page.php?show=TheOffice" id="watchLink">Watch Now</a>  
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster5.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster5.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">Sherlock</h3> 
           <p class="movie-description">Mystery</p>
           <p>4 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=Sherlock" id="watchLink">Watch Now</a>   
+          <a class="watch-link" href="../pages/show-page.php?show=Sherlock" id="watchLink">Watch Now</a>   
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster6.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster6.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">House</h3> 
           <p class="movie-description">Drama</p>
           <p>8 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=House" id="watchLink">Watch Now</a>  
+          <a class="watch-link" href="../pages/show-page.php?show=House" id="watchLink">Watch Now</a>  
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster7.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster7.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">INVINCIBLE</h3> 
           <p class="movie-description">Animation</p>
           <p>2 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=INVINCIBLE" id="watchLink">Watch Now</a>  
+          <a class="watch-link" href="../pages/show-page.php?show=INVINCIBLE" id="watchLink">Watch Now</a>  
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster8.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster8.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">Toradora!</h3> 
           <p class="movie-description">Animation</p>
           <p>1 season</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=Toradora" id="watchLink">Watch Now</a> 
+          <a class="watch-link" href="../pages/show-page.php?show=Toradora" id="watchLink">Watch Now</a> 
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster9.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster9.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">The Rookie</h3> 
           <p class="movie-description">Crime</p>
           <p>6 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=TheRookie" id="watchLink">Watch Now</a> 
+          <a class="watch-link" href="../pages/show-page.php?show=TheRookie" id="watchLink">Watch Now</a> 
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster10.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster10.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">The Boys</h3> 
           <p class="movie-description">Sci-Fi & Fantasy</p>
           <p>3 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=TheBoys" id="watchLink">Watch Now</a> 
+          <a class="watch-link" href="../pages/show-page.php?show=TheBoys" id="watchLink">Watch Now</a> 
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster11.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster11.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">Game of Thrones </h3> 
           <p class="movie-description">Sci-Fi & Fantasy</p>
           <p>8 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=GameofThrones" id="watchLink">Watch Now</a>
+          <a class="watch-link" href="../pages/show-page.php?show=GameofThrones" id="watchLink">Watch Now</a>
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster12.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster12.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">Prison Break</h3> 
           <p class="movie-description">Action & Adventure</p>
           <p>5 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=PrisonBreak" id="watchLink">Watch Now</a>
+          <a class="watch-link" href="../pages/show-page.php?show=PrisonBreak" id="watchLink">Watch Now</a>
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster13.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster13.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">Snowfall</h3> 
           <p class="movie-description">Crime</p>
           <p>6 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=Snowfall" id="watchLink">Watch Now</a> 
+          <a class="watch-link" href="../pages/show-page.php?show=Snowfall" id="watchLink">Watch Now</a> 
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster14.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster14.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">The Witcher</h3> 
           <p class="movie-description">Sci-Fi & Fantasy</p>
           <p>3 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=TheWitcher" id="watchLink">Watch Now</a> 
+          <a class="watch-link" href="../pages/show-page.php?show=TheWitcher" id="watchLink">Watch Now</a> 
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster15.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster15.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">Friends</h3> 
           <p class="movie-description">Comedy</p>
           <p>10 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=Friends" id="watchLink">Watch Now</a>  
+          <a class="watch-link" href="../pages/show-page.php?show=Friends" id="watchLink">Watch Now</a>  
         </div>
       </div>
 
       <div class="movie-card">
-        <img class="poster" src="/dist/images/shows/poster16.jpg" alt="poster">
+        <img class="poster" src="../dist/images/shows/poster16.jpg" alt="poster">
         <div class="movie-info">
           <h3 class="movie-title">Modern Family</h3> 
           <p class="movie-description">Comedy</p>
           <p>11 seasons</p>
         </div>
         <div class="movie-play">
-          <a class="watch-link" href="/pages/show-page.html?show=ModernFamily" id="watchLink">Watch Now</a> 
+          <a class="watch-link" href="../pages/show-page.php?show=ModernFamily" id="watchLink">Watch Now</a> 
         </div>
       </div>
 
@@ -278,8 +289,8 @@
       <div class="footer-top">
         <div class="menut">
           <p>Menu</p>
-          <a href="/pages/home.html">Trending</a>
-          <a href="/pages/movie.html">Movies</a>
+          <a href="../pages/home.php">Trending</a>
+          <a href="../pages/movie.php">Movies</a>
           <a href="">TV Series</a>
           <a href="">Gandre</a>
         </div>

@@ -7,11 +7,11 @@ function changePage(page) {
     console.log("Switched to page " + page);
     
     if (page === 1) {
-        window.location.href = 'shows.html'; 
+        window.location.href = 'shows.php'; 
     } else if (page === 2) {
-        window.location.href = 'shows1.html'; 
+        window.location.href = 'shows1.php'; 
     } else if (page === 3) {
-        window.location.href = 'shows2.html'; 
+        window.location.href = 'shows2.php'; 
     }
 }
 

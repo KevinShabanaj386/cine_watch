@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       html: `
         <div class="card">
           <div class="title">
-            <img class="titulli" src="/dist/images/home/avangers.png" alt="avengers">
+            <img class="titulli" src="../dist/images/home/avangers.png" alt="avengers">
           </div>
           <div class="movie-info">
             <p class="kategorit">2023 | PG-13 | 2h 29min | Action/Sci-fi</p>
@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
         </div>`,
-      background: "url('/dist/images/home/bck1.jpg')",
+      background: "url('../dist/images/home/bck1.jpg')",
     },
     page1: {
       html: `
        <div class="card">
           <div class="title">
-            <img class="titulli" src="/dist/images/home/deadpool.png" alt="avengers">
+            <img class="titulli" src="../dist/images/home/deadpool.png" alt="avengers">
           </div>
           <div class="movie-info">
            <p class="kategorit">2024 | R | 2h 7min | Action/Comedy </p>
@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
         </div>`,
-      background: "url('/dist/images/home/bck2.jpg')",
+      background: "url('../dist/images/home/bck2.jpg')",
     },
     page2: {
       html: `
         <div class="card">
           <div class="title">
-            <img class="titulli" src="/dist/images/home/gladiator.png" alt="title">
+            <img class="titulli" src="../dist/images/home/gladiator.png" alt="title">
           </div>
           <div class="movie-info">
            <p class="kategorit">2024 | R | 2h 28min | Action/Adventure </p>
@@ -47,13 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
         </div>`,
-      background: "url('/dist/images/home/bck3.jpg')",
+      background: "url('../dist/images/home/bck3.jpg')",
     },
     page3: {
       html: `
         <div class="card">
           <div class="title">
-             <img class="titulli" src="/dist/images/home/sonic.png" alt="title">
+             <img class="titulli" src="../dist/images/home/sonic.png" alt="title">
           </div>
           <div class="movie-info">
           <p class="kategorit">2024 | PG-13 | 1h 50min | Action/Comedy </p>
@@ -62,13 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
         </div>`,
-      background: "url('/dist/images/home/bck4.jpg')",
+      background: "url('../dist/images/home/bck4.jpg')",
     },
     page4: {
       html: `
         <div class="card">
           <div class="title">
-            <img class="titulli" src="/dist/images/home/spider.png" alt="title">
+            <img class="titulli" src="../dist/images/home/spider.png" alt="title">
           </div>
           <div class="movie-info">
           <p class="kategorit">2021 | PG-13 | 2h 28min | Action/Sci-fi </p>
@@ -77,13 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
         </div>`,
-      background: "url('/dist/images/home/bck5.jpg')",
+      background: "url('../dist/images/home/bck5.jpg')",
     },
     page5: {
       html: `
        <div class="card">
           <div class="title">
-            <img class="titulli" src="/dist/images/home/godfather.png" alt="title">
+            <img class="titulli" src="../dist/images/home/godfather.png" alt="title">
           </div>
           <div class="movie-info">
           <p class="kategorit">1972 | R | 2h 55min | Crime </p>
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
         </div>`,
-      background: "url('/dist/images/home/bck6.jpg')",
+      background: "url('../dist/images/home/bck6.jpg')",
     },
   };
 
