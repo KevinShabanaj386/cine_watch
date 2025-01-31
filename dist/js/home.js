@@ -16,10 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
-          <div class="buttonat">
-            <button class="trailer">TRAILER</button>
-            <button class="watch">WATCH</button>
-          </div>
         </div>`,
       background: "url('/dist/images/home/bck1.jpg')",
     },
@@ -34,10 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
-          </div>
-          <div class="buttonat">
-            <button class="trailer">TRAILER</button>
-            <button class="watch">WATCH</button>
           </div>
         </div>`,
       background: "url('/dist/images/home/bck2.jpg')",
@@ -54,10 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
-          <div class="buttonat">
-            <button class="trailer">TRAILER</button>
-            <button class="watch">WATCH</button>
-          </div>
         </div>`,
       background: "url('/dist/images/home/bck3.jpg')",
     },
@@ -72,10 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
-          </div>
-          <div class="buttonat">
-            <button class="trailer">TRAILER</button>
-            <button class="watch">WATCH</button>
           </div>
         </div>`,
       background: "url('/dist/images/home/bck4.jpg')",
@@ -92,10 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
-          <div class="buttonat">
-            <button class="trailer">TRAILER</button>
-            <button class="watch">WATCH</button>
-          </div>
         </div>`,
       background: "url('/dist/images/home/bck5.jpg')",
     },
@@ -110,10 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
-          </div>
-          <div class="buttonat">
-            <button class="trailer">TRAILER</button>
-            <button class="watch">WATCH</button>
           </div>
         </div>`,
       background: "url('/dist/images/home/bck6.jpg')",

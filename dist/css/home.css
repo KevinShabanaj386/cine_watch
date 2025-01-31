@@ -90,6 +90,7 @@ body{
   padding: 7px 15px 7px 15px;
   border-radius: 2px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .icon{

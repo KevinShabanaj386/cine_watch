@@ -678,7 +678,26 @@ const moviesData = {
     ratings: "4.5 out of 5",
     genre: "Crime, Drama, Thriller"
   },
+  "AvengersInfinityWar": {
+    title: "Avengers: Infinity War",
+    image: "/dist/images/movie-play/img42.jpg",
+    description: "Avengers: Infinity War is a superhero film based on the Marvel Comics superhero team the Avengers. The film follows the Avengers and their allies as they work to prevent the villain Thanos from collecting all six Infinity Stones, which would give him the power to destroy half of the universe. As the heroes face overwhelming odds, they must unite to stop Thanos and save the universe.",
+    cast: [
+      { name: "Robert Downey Jr.", role: "Tony Stark / Iron Man", photo: "/dist/images/cast/RobertDowneyJr.jpg" },
+      { name: "Chris Hemsworth", role: "Thor", photo: "/dist/images/cast/ChrisHemsworth.jpg" },
+      { name: "Mark Ruffalo", role: "Bruce Banner / Hulk", photo: "/dist/images/cast/MarkRuffalo.jpg" },
+      { name: "Chris Evans", role: "Steve Rogers / Captain America", photo: "/dist/images/cast/ChrisEvans.jpg" }
+    ],
+    releaseDate: "April 27, 2018",
+    languages: "English",
+    ratings: "4.7 out of 5",
+    genre: "Action, Adventure, Sci-Fi"
+  }
+
+
+
 };
+
 
 if (moviesData[movie]) {
   document.getElementById("movie-title").textContent = moviesData[movie].title;
