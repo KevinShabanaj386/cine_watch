@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: url('/dist/images/about-us/aboutus.img');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.faq-section {
+    width: 80%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    background: #060731;
+    padding: 20px;
+    border-radius: 10px;
+}
+.faq-item {
+    border-bottom: 1px solid #3e7eb9;
+    padding: 15px 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    background: #09264d;
+    border-radius: 5px;
+}
+
+.faq-question h3 {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.faq-number {
+    background: #0a0863;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.toggle-btn {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bbb;
+}
+
+.faq-answer {
+    margin-top: 10px;
+    padding: 10px;
+    background: #063674;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
