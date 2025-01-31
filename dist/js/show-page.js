@@ -447,6 +447,489 @@ const showsData = {
     genre: "Comedy, Sitcom, Mockumentary",
     watchLink: "/watch-show.html?show=RickandMorty"
   },
+  "BetterCallSaul": {
+    title: "Better Call Saul",
+    image: "/dist/images/show-play/img17.jpg",
+    description: "A prequel to Breaking Bad, Better Call Saul chronicles the transformation of Jimmy McGill, a struggling public defender, into the morally ambiguous lawyer Saul Goodman. Set before the events of Breaking Bad, the series explores Jimmy's complicated relationships with his brother Chuck, his future associate Kim Wexler, and the criminal underworld.",
+    seasons: {
+      1: 10,
+      2: 10,
+      3: 10,
+      4: 10,
+      5: 10,
+      6: 13
+    },
+    languages: "English",
+    cast: [
+      { name: "Bob Odenkirk", role: "Jimmy McGill", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Rhea Seehorn", role: "Kim Wexler", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Jonathan Banks", role: "Mike Ehrmantraut", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Michael McKean", role: "Chuck McGill", photo: "/dist/images/cast/AaronTaylor.jpg" }
+    ],
+    releaseDate: "Premiered on February 8, 2015",
+    ratings: "4.9 out of 5",
+    genre: "Crime, Drama, Legal Drama",
+    watchLink: "/watch-show.html?show=RickandMorty"
+  },
+  "TheSpectacularSpiderMan": {
+    title: "The Spectacular Spider-Man",
+    image: "/dist/images/show-play/img18.jpg",
+    description: "An animated series that follows the life of Peter Parker as he balances his responsibilities as a high school student and his alter ego, Spider-Man. The show focuses on his journey of learning to be a hero, facing iconic villains like the Green Goblin and Doctor Octopus, while dealing with personal struggles and relationships. Known for its faithful adaptation of Spider-Man’s character and comic book roots, the series is highly regarded by fans.",
+    seasons: {
+      1: 13,
+      2: 13
+    },
+    languages: "English",
+    cast: [
+      { name: "Josh Keaton", role: "Peter Parker", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Lacey Chabert", role: "Gwen Stacy", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "James Arnold", role: "Harry Osborn", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Gregg Berger", role: " Ben Parker", photo: "/dist/images/cast/AaronTaylor.jpg" }
+    ],
+    releaseDate: "Premiered on March 8, 2008",
+    ratings: "4.7 out of 5",
+    genre: "Action, Animation, Superhero, Adventure",
+    watchLink: "/watch-show.html?show=RickandMorty"
+  },
+  "BandofBrothers": {
+    title: "Band of Brothers",
+    image: "/dist/images/show-play/img19.jpg",
+    description: "A World War II miniseries based on the non-fiction book by Stephen E. Ambrose, Band of Brothers follows the journey of Easy Company, part of the 506th Parachute Infantry Regiment of the 101st Airborne Division, from D-Day through to the war’s end. It focuses on the soldiers' bonds, hardships, and experiences, highlighting the brutal realities of war and their courage in the face of adversity.",
+    seasons: {
+      1: 10
+    },
+    languages: "English",
+    cast: [
+      { name: "Damian Lewis ", role: "Major Richard", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Ron Livingston", role: " Captain Lewis Nixon", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Donnie Wahlberg", role: "Lieutenant Carwood Lipton", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "David Schwimmer", role: " Captain Herbert Sobel", photo: "/dist/images/cast/AaronTaylor.jpg" }
+    ],
+    releaseDate: "Premiered on September 9, 2001",
+    ratings: "5 out of 5",
+    genre: "Drama, War, History, Military",
+    watchLink: "/watch-show.html?show=RickandMorty"
+  },
+  "TeenWolf": {
+    title: "Teen Wolf",
+    image: "/dist/images/show-play/img20.jpg",
+    description: "A supernatural teen drama that follows Scott McCall, a high school student who is bitten by a werewolf and discovers a world of supernatural creatures. As Scott tries to balance his normal life with his new identity as a werewolf, he faces numerous challenges, including dangerous enemies, complicated relationships, and the constant threat of his powers spiraling out of control.",
+    seasons: {
+      1: 12,
+      2: 12,
+      3: 24,
+      4: 12,
+      5: 20,
+      6: 20
+    },
+    languages: "English",
+    cast: [
+      { name: "Tyler Posey ", role: "Scott McCall", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Dylan O'Brien", role: "Stiles Stilinski", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Crystal Reed", role: "Allison Argent", photo: "/dist/images/cast/AaronTaylor.jpg" },
+      { name: "Tyler Hoechlin", role: "Derek Hale", photo: "/dist/images/cast/AaronTaylor.jpg" }
+    ],
+    releaseDate: "Premiered on June 5, 2011",
+    ratings: "4.3 out of 5",
+    genre: "Drama, War, History, Military",
+    watchLink: "/watch-show.html?show=RickandMorty"
+  },
+  TheGoodDoctor: {
+    title: "The Good Doctor",
+    image: "/dist/images/show-play/img21.jpg",
+    description: "A medical drama series that follows Dr. Shaun Murphy, a young surgical resident with autism and savant syndrome. Despite his exceptional medical abilities, Shaun faces challenges in communicating with others and earning the trust of his colleagues. The series explores his personal and professional journey as he navigates the medical world.",
+    seasons: {
+      1: 18,
+      2: 18,
+      3: 20,
+      4: 20,
+      5: 18,
+      6: 22,
+      7: 10
+    },
+    languages: "English",
+    cast: [
+      { name: "Freddie Highmore", role: "Dr. Shaun Murphy", photo: "/dist/images/cast/FreddieHighmore.jpg" },
+      { name: "Antonia Thomas", role: "Dr. Claire Browne", photo: "/dist/images/cast/AntoniaThomas.jpg" },
+      { name: "Hill Harper", role: "Dr. Marcus Andrews", photo: "/dist/images/cast/HillHarper.jpg" },
+      { name: "Richard Schiff", role: "Dr. Aaron Glassman", photo: "/dist/images/cast/RichardSchiff.jpg" }
+    ],
+    releaseDate: "Premiered on September 25, 2017",
+    ratings: "4.6 out of 5",
+    genre: "Drama, Medical",
+    watchLink: "/watch-show.html?show=TheGoodDoctor"
+  },
+  TheQueensGambit: {
+    title: "The Queen's Gambit",
+    image: "/dist/images/show-play/img22.jpg",
+    description: "A captivating drama that follows the life of Beth Harmon, a young orphaned girl who discovers her extraordinary talent for chess. As she rises through the ranks of the male-dominated chess world, she struggles with personal demons, addiction, and the pressures of fame, all while trying to find her place in the world.",
+    seasons: {
+      1: 7
+    },
+    languages: "English",
+    cast: [
+      { name: "Anya Taylor-Joy", role: "Beth Harmon", photo: "/dist/images/cast/AnyaTaylorJoy.jpg" },
+      { name: "Bill Camp", role: "Mr. Shaibel", photo: "/dist/images/cast/BillCamp.jpg" },
+      { name: "Marielle Heller", role: "Alma Wheatley", photo: "/dist/images/cast/MarielleHeller.jpg" },
+      { name: "Thomas Brodie-Sangster", role: "Benny Watts", photo: "/dist/images/cast/ThomasBrodieSangster.jpg" }
+    ],
+    releaseDate: "Premiered on October 23, 2020",
+    ratings: "4.8 out of 5",
+    genre: "Drama, Sport",
+    watchLink: "/watch-show.html?show=TheQueensGambit"
+  },
+  ThePenguin: {
+    title: "The Penguin",
+    image: "/dist/images/show-play/img23.jpg",
+    description: "A crime drama series centered on Oswald Cobblepot, aka The Penguin, from the *Batman* universe. Set in the aftermath of *The Batman* (2022), the show delves into Cobblepot’s rise within Gotham's criminal underworld and his journey to becoming a powerful figure in the city’s dark, dangerous world.",
+    seasons: {
+      1: 8
+    },
+    languages: "English",
+    cast: [
+      { name: "Colin Farrell", role: "Oswald Cobblepot / The Penguin", photo: "/dist/images/cast/ColinFarrell.jpg" },
+      { name: "Cristo Fernández", role: "José", photo: "/dist/images/cast/CristoFernandez.jpg" },
+      { name: "Clancy Brown", role: "Sal Maroni", photo: "/dist/images/cast/ClancyBrown.jpg" },
+      { name: "Rhenzy Feliz", role: "Carlos", photo: "/dist/images/cast/RhenzyFeliz.jpg" }
+    ],
+    releaseDate: "TBD (2024)",
+    ratings: "N/A (Upcoming)",
+    genre: "Crime, Drama, Action",
+    watchLink: "/watch-show.html?show=ThePenguin"
+  },
+  Lucifer: {
+    title: "Lucifer",
+    image: "/dist/images/show-play/img24.jpg",
+    description: "Lucifer Morningstar, the Devil, abandons his throne in Hell to live in Los Angeles, where he opens a nightclub and begins working as a civilian consultant for the LAPD. As he helps solve crimes, Lucifer struggles with his identity, his relationship with his family, and the complicated feelings he has for LAPD detective Chloe Decker.",
+    seasons: {
+      1: 13,
+      2: 18,
+      3: 26,
+      4: 10,
+      5: 16,
+      6: 10
+    },
+    languages: "English",
+    cast: [
+      { name: "Tom Ellis", role: "Lucifer Morningstar", photo: "/dist/images/cast/TomEllis.jpg" },
+      { name: "Lauren German", role: "Chloe Decker", photo: "/dist/images/cast/LaurenGerman.jpg" },
+      { name: "DB Woodside", role: "Amenadiel", photo: "/dist/images/cast/DBWoodside.jpg" },
+      { name: "Lesley-Ann Brandt", role: "Mazikeen", photo: "/dist/images/cast/LesleyAnnBrandt.jpg" }
+    ],
+    releaseDate: "Premiered on January 25, 2016",
+    ratings: "4.7 out of 5",
+    genre: "Fantasy, Crime, Drama",
+    watchLink: "/watch-show.html?show=Lucifer"
+  },
+  TulsaKing: {
+    title: "Tulsa King",
+    image: "/dist/images/show-play/img25.jpg",
+    description: "After serving a 25-year prison sentence, New York mafia capo Dwight 'The General' Manfredi is sent to Tulsa, Oklahoma, to set up a new criminal empire. As he navigates the unfamiliar world of the American Midwest, he faces challenges in establishing his dominance while adjusting to the new realities of crime and power in a different landscape.",
+    seasons: {
+      1: 10
+    },
+    languages: "English",
+    cast: [
+      { name: "Sylvester Stallone", role: "Dwight 'The General' Manfredi", photo: "/dist/images/cast/SylvesterStallone.jpg" },
+      { name: "Andrea Savage", role: "Stacy Beale", photo: "/dist/images/cast/AndreaSavage.jpg" },
+      { name: "Max Casella", role: "Armand", photo: "/dist/images/cast/MaxCasella.jpg" },
+      { name: "Jay Will", role: "Tyson Mitchell", photo: "/dist/images/cast/JayWill.jpg" }
+    ],
+    releaseDate: "Premiered on November 13, 2022",
+    ratings: "4.5 out of 5",
+    genre: "Crime, Drama",
+    watchLink: "/watch-show.html?show=TulsaKing"
+  },
+  Peacemaker: {
+    title: "Peacemaker",
+    image: "/dist/images/show-play/img26.jpg",
+    description: "Following the events of *The Suicide Squad* (2021), Peacemaker is a vigilante with a unique code of peace: achieving peace at any cost, no matter how violent. The show follows his adventures as he is recruited by a secret government team to take on dangerous missions, while dealing with his troubled past and quirky team dynamics.",
+    seasons: {
+      1: 8
+    },
+    languages: "English",
+    cast: [
+      { name: "John Cena", role: "Peacemaker", photo: "/dist/images/cast/JohnCena.jpg" },
+      { name: "Danielle Brooks", role: "Leota Adebayo", photo: "/dist/images/cast/DanielleBrooks.jpg" },
+      { name: "Freddie Stroma", role: "Vigilante", photo: "/dist/images/cast/FreddieStroma.jpg" },
+      { name: "Steve Agee", role: "John Economos", photo: "/dist/images/cast/SteveAgee.jpg" }
+    ],
+    releaseDate: "Premiered on January 13, 2022",
+    ratings: "4.6 out of 5",
+    genre: "Action, Comedy, Superhero",
+    watchLink: "/watch-show.html?show=Peacemaker"
+  },
+  HenryDanger: {
+    title: "Henry Danger",
+    image: "/dist/images/show-play/img27.jpg",
+    description: "The series follows 13-year-old Henry Hart, who becomes the sidekick to a superhero named Captain Man. As 'Kid Danger,' Henry helps Captain Man fight villains while trying to maintain his normal life as a teenager. With his friends and family unaware of his secret identity, Henry faces the challenges of balancing crime-fighting and growing up.",
+    seasons: {
+      1: 25,
+      2: 22,
+      3: 25,
+      4: 19,
+      5: 22
+    },
+    languages: "English",
+    cast: [
+      { name: "Jace Norman", role: "Henry Hart / Kid Danger", photo: "/dist/images/cast/JaceNorman.jpg" },
+      { name: "Cooper Barnes", role: "Ray Manchester / Captain Man", photo: "/dist/images/cast/CooperBarnes.jpg" },
+      { name: "Riele Downs", role: "Charlotte Page", photo: "/dist/images/cast/RieleDowns.jpg" },
+      { name: "Sean Ryan Fox", role: "Jasper Dunlop", photo: "/dist/images/cast/SeanRyanFox.jpg" }
+    ],
+    releaseDate: "Premiered on July 26, 2014",
+    ratings: "4.5 out of 5",
+    genre: "Comedy, Action, Superhero",
+    watchLink: "/watch-show.html?show=HenryDanger"
+  },
+  Hannibal: {
+    title: "Hannibal",
+    image: "/dist/images/show-play/img28.jpg",
+    description: "A psychological horror-thriller series that explores the complex relationship between FBI special investigator Will Graham and Dr. Hannibal Lecter, a brilliant psychiatrist and secret cannibalistic serial killer. As Will is drawn into Hannibal's dangerous web, he must navigate the blurred lines between good and evil, all while trying to solve horrifying cases.",
+    seasons: {
+      1: 13,
+      2: 13,
+      3: 13
+    },
+    languages: "English",
+    cast: [
+      { name: "Mads Mikkelsen", role: "Dr. Hannibal Lecter", photo: "/dist/images/cast/MadsMikkelsen.jpg" },
+      { name: "Hugh Dancy", role: "Will Graham", photo: "/dist/images/cast/HughDancy.jpg" },
+      { name: "Caroline Dhavernas", role: "Dr. Alana Bloom", photo: "/dist/images/cast/CarolineDhavernas.jpg" },
+      { name: "Laurence Fishburne", role: "Jack Crawford", photo: "/dist/images/cast/LaurenceFishburne.jpg" }
+    ],
+    releaseDate: "Premiered on April 4, 2013",
+    ratings: "4.7 out of 5",
+    genre: "Crime, Drama, Horror",
+    watchLink: "/watch-show.html?show=Hannibal"
+  },
+  MrRobot: {
+    title: "Mr. Robot",
+    image: "/dist/images/show-play/img29.jpg",
+    description: "A psychological thriller that follows Elliot Alderson, a cybersecurity engineer and hacker with dissociative identity disorder. Elliot is recruited by a mysterious anarchist known as Mr. Robot to join a group of hacktivists aiming to bring down corrupt corporations. The series explores themes of mental illness, hacking, and societal issues while keeping the audience on edge with its twists and turns.",
+    seasons: {
+      1: 10,
+      2: 12,
+      3: 10,
+      4: 13
+    },
+    languages: "English",
+    cast: [
+      { name: "Rami Malek", role: "Elliot Alderson", photo: "/dist/images/cast/RamiMalek.jpg" },
+      { name: "Christian Slater", role: "Mr. Robot", photo: "/dist/images/cast/ChristianSlater.jpg" },
+      { name: "Carly Chaikin", role: "Darlene Alderson", photo: "/dist/images/cast/CarlyChaikin.jpg" },
+      { name: "Portia Doubleday", role: "Angela Moss", photo: "/dist/images/cast/PortiaDoubleday.jpg" }
+    ],
+    releaseDate: "Premiered on June 24, 2015",
+    ratings: "4.8 out of 5",
+    genre: "Thriller, Drama, Crime",
+    watchLink: "/watch-show.html?show=MrRobot"
+  },
+  MoneyHeist: {
+    title: "Money Heist",
+    image: "/dist/images/show-play/img30.jpg",
+    description: "A Spanish heist crime drama that follows a mysterious mastermind known as 'The Professor' who assembles a group of eight criminals to carry out an ambitious plan: to rob the Royal Mint of Spain and print billions of euros. The show explores themes of loyalty, betrayal, and power as the criminals try to outsmart the police while keeping their identities hidden.",
+    seasons: {
+      1: 15,
+      2: 9,
+      3: 8,
+      4: 8,
+      5: 10
+    },
+    languages: "Spanish",
+    cast: [
+      { name: "Álvaro Morte", role: "The Professor", photo: "/dist/images/cast/ÁlvaroMorte.jpg" },
+      { name: "Úrsula Corberó", role: "Tokyo", photo: "/dist/images/cast/ÚrsulaCorberó.jpg" },
+      { name: "Pedro Alonso", role: "Berlin", photo: "/dist/images/cast/PedroAlonso.jpg" },
+      { name: "Itziar Ituño", role: "Raquel Murillo", photo: "/dist/images/cast/ItziarItuño.jpg" }
+    ],
+    releaseDate: "Premiered on May 2, 2017",
+    ratings: "4.7 out of 5",
+    genre: "Crime, Drama, Thriller",
+    watchLink: "/watch-show.html?show=MoneyHeist"
+  },
+  WandaVision: {
+    title: "WandaVision",
+    image: "/dist/images/show-play/img31.jpg",
+    description: "A unique blend of classic television and the Marvel Cinematic Universe, *WandaVision* follows Wanda Maximoff and Vision as they live in an idyllic suburban setting, but strange occurrences hint that things are not as perfect as they seem. As they navigate their surreal reality, they uncover deeper mysteries, blending the world of superheroes with 1950s-style sitcoms.",
+    seasons: {
+      1: 9
+    },
+    languages: "English",
+    cast: [
+      { name: "Elizabeth Olsen", role: "Wanda Maximoff", photo: "/dist/images/cast/ElizabethOlsen.jpg" },
+      { name: "Paul Bettany", role: "Vision", photo: "/dist/images/cast/PaulBettany.jpg" },
+      { name: "Kathryn Hahn", role: "Agnes", photo: "/dist/images/cast/KathrynHahn.jpg" },
+      { name: "Teyonah Parris", role: "Monica Rambeau", photo: "/dist/images/cast/TeyonahParris.jpg" }
+    ],
+    releaseDate: "Premiered on January 15, 2021",
+    ratings: "4.6 out of 5",
+    genre: "Superhero, Mystery, Comedy, Drama",
+    watchLink: "/watch-show.html?show=WandaVision"
+  },
+  BrooklynNineNine: {
+    title: "Brooklyn Nine-Nine",
+    image: "/dist/images/show-play/img32.jpg",
+    description: "A comedic police procedural that follows the detectives of the 99th precinct of the NYPD, led by the lovable and immature Jake Peralta. The show combines hilarious antics with light-hearted crime-solving, showcasing the unique relationships between the precinct’s quirky staff, including Captain Holt, the no-nonsense leader, and Amy Santiago, Peralta’s hardworking partner.",
+    seasons: {
+      1: 22,
+      2: 23,
+      3: 23,
+      4: 22,
+      5: 22,
+      6: 23,
+      7: 13
+    },
+    languages: "English",
+    cast: [
+      { name: "Andy Samberg", role: "Jake Peralta", photo: "/dist/images/cast/AndySamberg.jpg" },
+      { name: "Terry Crews", role: "Terry Jeffords", photo: "/dist/images/cast/TerryCrews.jpg" },
+      { name: "Stephanie Beatriz", role: "Rosa Diaz", photo: "/dist/images/cast/StephanieBeatriz.jpg" },
+      { name: "Andre Braugher", role: "Captain Holt", photo: "/dist/images/cast/AndreBraugher.jpg" }
+    ],
+    releaseDate: "Premiered on September 17, 2013",
+    ratings: "4.7 out of 5",
+    genre: "Comedy, Crime, Drama",
+    watchLink: "/watch-show.html?show=BrooklynNineNine"
+  },
+  Dexter: {
+    title: "Dexter",
+    image: "/dist/images/show-play/img33.jpg",
+    description: "Dexter Morgan is a blood-spatter analyst for the Miami Metro Police, but he leads a secret life as a vigilante serial killer, targeting criminals who have escaped justice. The show delves into Dexter's complex psyche as he struggles with his urge to kill while maintaining his facade as a normal, law-abiding citizen.",
+    seasons: {
+      1: 12,
+      2: 12,
+      3: 12,
+      4: 12,
+      5: 12,
+      6: 12,
+      7: 12,
+      8: 12
+    },
+    languages: "English",
+    cast: [
+      { name: "Michael C. Hall", role: "Dexter Morgan", photo: "/dist/images/cast/MichaelCHall.jpg" },
+      { name: "Jennifer Carpenter", role: "Debra Morgan", photo: "/dist/images/cast/JenniferCarpenter.jpg" },
+      { name: "David Zayas", role: "Angel Batista", photo: "/dist/images/cast/DavidZayas.jpg" },
+      { name: "James Remar", role: "Harry Morgan", photo: "/dist/images/cast/JamesRemar.jpg" }
+    ],
+    releaseDate: "Premiered on October 1, 2006",
+    ratings: "4.7 out of 5",
+    genre: "Crime, Drama, Mystery",
+    watchLink: "/watch-show.html?show=Dexter"
+  },
+  Loki: {
+    title: "Loki",
+    image: "/dist/images/show-play/img34.jpg",
+    description: "The series follows Loki, the God of Mischief, after the events of *Avengers: Endgame* (2019), where he escapes with the Tesseract and creates an alternate timeline. Loki finds himself recruited by the Time Variance Authority (TVA) to help track down other dangerous variants of himself, all while confronting his own identity and purpose in the multiverse.",
+    seasons: {
+      1: 6
+    },
+    languages: "English",
+    cast: [
+      { name: "Tom Hiddleston", role: "Loki", photo: "/dist/images/cast/TomHiddleston.jpg" },
+      { name: "Owen Wilson", role: "Mobius M. Mobius", photo: "/dist/images/cast/OwenWilson.jpg" },
+      { name: "Gugu Mbatha-Raw", role: "Ravonna Renslayer", photo: "/dist/images/cast/GuguMbathaRaw.jpg" },
+      { name: "Sophia Di Martino", role: "Sylvie", photo: "/dist/images/cast/SophiaDiMartino.jpg" }
+    ],
+    releaseDate: "Premiered on June 9, 2021",
+    ratings: "4.6 out of 5",
+    genre: "Action, Adventure, Fantasy",
+    watchLink: "/watch-show.html?show=Loki"
+  },
+  AliceInBorderland: {
+    title: "Alice in Borderland",
+    image: "/dist/images/show-play/img35.jpg",
+    description: "A thrilling survival drama that follows Arisu, a young man who finds himself transported to a parallel version of Tokyo, where he and his friends must participate in deadly games to survive. As they navigate this dystopian world, they uncover secrets about the game’s origins and struggle to find a way back to their original reality.",
+    seasons: {
+      1: 8,
+      2: 8
+    },
+    languages: "Japanese",
+    cast: [
+      { name: "Kento Yamazaki", role: "Ryohei Arisu", photo: "/dist/images/cast/KentoYamazaki.jpg" },
+      { name: "Tao Tsuchiya", role: "Usagi", photo: "/dist/images/cast/TaoTsuchiya.jpg" },
+      { name: "Nijiro Murakami", role: "Chota", photo: "/dist/images/cast/NijiroMurakami.jpg" },
+      { name: "Ayaka Miyoshi", role: "Karube", photo: "/dist/images/cast/AyakaMiyoshi.jpg" }
+    ],
+    releaseDate: "Premiered on December 10, 2020",
+    ratings: "4.4 out of 5",
+    genre: "Action, Thriller, Sci-Fi",
+    watchLink: "/watch-show.html?show=AliceInBorderland"
+  },
+  Shameless: {
+    title: "Shameless",
+    image: "/dist/images/show-play/img36.jpg",
+    description: "A dark comedy-drama that follows the dysfunctional Gallagher family, led by Frank Gallagher, a brilliant yet alcoholic father who neglects his children. The show explores the struggles of his six children as they try to survive, navigate their troubled lives, and deal with the challenges of poverty, relationships, and growing up in a rough Chicago neighborhood.",
+    seasons: {
+      1: 12,
+      2: 12,
+      3: 12,
+      4: 12,
+      5: 12,
+      6: 12,
+      7: 12,
+      8: 12,
+      9: 14,
+      10: 12,
+      11: 12
+    },
+    languages: "English",
+    cast: [
+      { name: "William H. Macy", role: "Frank Gallagher", photo: "/dist/images/cast/WilliamHMacy.jpg" },
+      { name: "Emmy Rossum", role: "Fiona Gallagher", photo: "/dist/images/cast/EmmyRossum.jpg" },
+      { name: "Jeremy Allen White", role: "Lip Gallagher", photo: "/dist/images/cast/JeremyAllenWhite.jpg" },
+      { name: "Shameless", role: "Carl Gallagher", photo: "/dist/images/cast/Shameless.jpg" }
+    ],
+    releaseDate: "Premiered on January 9, 2011",
+    ratings: "4.5 out of 5",
+    genre: "Comedy, Drama",
+    watchLink: "/watch-show.html?show=Shameless"
+  },
+  BlackBird: {
+    title: "Black Bird",
+    image: "/dist/images/show-play/img37.jpg",
+    description: "A psychological crime drama that follows Jimmy Keene, a convicted drug dealer who is offered a deal to reduce his sentence by helping the FBI get a confession from a suspected serial killer, Larry Hall. As Jimmy befriends Larry, he finds himself in a dangerous game of deception, manipulation, and trust, where his own life and freedom are at stake.",
+    seasons: {
+      1: 6
+    },
+    languages: "English",
+    cast: [
+      { name: "Taron Egerton", role: "Jimmy Keene", photo: "/dist/images/cast/TaronEgerton.jpg" },
+      { name: "Paul Walter Hauser", role: "Larry Hall", photo: "/dist/images/cast/PaulWalterHauser.jpg" },
+      { name: "Ray Liotta", role: "Big Jim Keene", photo: "/dist/images/cast/RayLiotta.jpg" },
+      { name: "Greg Kinnear", role: "Brian Miller", photo: "/dist/images/cast/GregKinnear.jpg" }
+    ],
+    releaseDate: "Premiered on July 8, 2022",
+    ratings: "4.6 out of 5",
+    genre: "Crime, Drama, Thriller",
+    watchLink: "/watch-show.html?show=BlackBird"
+  },
+  You: {
+    title: "You",
+    image: "/dist/images/show-play/img38.jpg",
+    description: "A psychological thriller that follows Joe Goldberg, a charming but dangerously obsessive man who becomes infatuated with the women he dates. As Joe's obsession grows, he takes extreme measures to insert himself into their lives, leading to dangerous consequences. The show delves into themes of love, obsession, and the dark side of human nature.",
+    seasons: {
+      1: 10,
+      2: 10,
+      3: 10,
+      4: 10
+    },
+    languages: "English",
+    cast: [
+      { name: "Penn Badgley", role: "Joe Goldberg", photo: "/dist/images/cast/PennBadgley.jpg" },
+      { name: "Victoria Pedretti", role: "Love Quinn", photo: "/dist/images/cast/VictoriaPedretti.jpg" },
+      { name: "Elizabeth Lail", role: "Guinevere Beck", photo: "/dist/images/cast/ElizabethLail.jpg" },
+      { name: "Ambyr Childers", role: "Candace Stone", photo: "/dist/images/cast/AmbyrChilders.jpg" }
+    ],
+    releaseDate: "Premiered on September 9, 2018",
+    ratings: "4.5 out of 5",
+    genre: "Thriller, Drama, Crime",
+    watchLink: "/watch-show.html?show=You"
+  }
+
+
+
 };
 
 
