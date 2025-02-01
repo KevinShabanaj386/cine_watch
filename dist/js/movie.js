@@ -34,11 +34,11 @@ function changePage(page) {
     console.log("Switched to page " + page);
     
     if (page === 1) {
-        window.location.href = 'movie.html'; 
+        window.location.href = 'movie.php'; 
     } else if (page === 2) {
-        window.location.href = 'movie1.html'; 
+        window.location.href = 'movie1.php'; 
     } else if (page === 3) {
-        window.location.href = 'movie2.html'; 
+        window.location.href = 'movie2.php'; 
     }
 }
 
@@ -65,3 +65,21 @@ document.querySelector('.page2').addEventListener('click', () => changePage(2));
 document.querySelector('.page3').addEventListener('click', () => changePage(3));
 
 updateButtons();  
+
+document.addEventListener("DOMContentLoaded", function () {
+    const genreButton = document.querySelector(".dropbtn");
+    const dropdownContent = document.querySelector(".dropdown-content");
+
+    dropdownContent.style.display = "none";
+
+    genreButton.addEventListener("click", function (event) {
+        event.preventDefault(); 
+        dropdownContent.style.display = dropdownContent.style.display === "none" ? "block" : "none";
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!genreButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.style.display = "none";
+        }
+    });
+});

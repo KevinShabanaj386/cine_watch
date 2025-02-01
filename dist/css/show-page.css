@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1A1A1A;
+  font-size: 16px;
+}
+
+.heading {
+  margin-left: 80px;
+  margin-right: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2d2e37;
+  padding: 8px 14px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.heading-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 100px;
+  margin-top: 50px;
+}
+
+.image-container {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.image-container img {
+  max-height: 750px;
+  width: 90%;
+  object-fit: cover;
+}
+
+.description-cast-info {
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.description-cast {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-description {
+  background-color: #262626;
+  color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+
+.movie-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.movie-description .movie-text {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.movie-cast {
+  background-color: #262626;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.movie-cast-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.cast-photo {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.cast-details {
+  text-align: center;
+}
+
+.movie-info {
+  background-color: #262626;
+  width: 420px;
+  border-radius: 10px;
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-info .info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+}
+
+.movie-info .info-item:last-child {
+  border-bottom: none;
+}
+
+.movie-info .info-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.movie-info .info-content {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.season-selector {
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1A1A1A;
+  color: white;
+  border: 1px solid #444;
+}
+
+.episode-container {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.episode-button {
+  background-color: #444;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.episode-button:hover {
+  background-color: #666;
+}
+
+.dropdownn {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtnn {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdownn-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownn-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownn-content a:hover {
+  background-color: #444;
+}
+
+.dropdownn:hover .dropdownn-content {
+  display: block;
+}
+
+.dropdownn:active .dropdownn-content {
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .image-container img {
+    max-height: 500px;
+  }
+
+  .description-cast-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .description-cast {
+    width: 100%;
+  }
+
+  .movie-info {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .movie-cast-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
