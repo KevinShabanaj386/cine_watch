@@ -1,9 +1,8 @@
 <?php
- 
 
 echo "db_connection.php included!<br>";
 
-// *** This is just an example. Adjust to your actual setup. *** //
+
 $dsn = "mysql:host=localhost;dbname=cineWhatch;charset=utf8mb4";
 $db_user = "root";
 $db_pass = "";
@@ -102,7 +101,6 @@ if (isset($_POST['submit'])) {
         <div class="shape"></div>
     </div>
 
-    <!-- Display Errors or Success Messages -->
     <?php if (!empty($errors)): ?>
         <div style="color: red; text-align:center;">
             <?php foreach ($errors as $error) : ?>
