@@ -15,6 +15,7 @@ if (!isset($_GET['movie'])) {
 }
 
 $movieTitle = urldecode($_GET['movie']);
+$movieTitle = preg_replace('/[^a-zA-Z0-9\s]/', '', $movieTitle); 
 $movieTitle = str_replace(' ', '', $movieTitle); 
 
 $sql = "SELECT * FROM movies WHERE REPLACE(REPLACE(REPLACE(REPLACE(title, ' ', ''), ':', ''), '-', ''), '·', '') LIKE ?";
@@ -140,7 +141,6 @@ while ($cast = $castResult->fetch_assoc()) {
         </div>
     </div>
 </div>
-
 
 <footer class="footer">
     <div class="footer-top">
