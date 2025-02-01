@@ -68,6 +68,14 @@ if(isset($_SESSION['username'])){
       <div class="description">
         <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
       </div>
+      <div class="buttonat">
+        <div class="watch-now">
+          <a href="../register.php" class="watch-now-btn watch-now-red">Watch Now</a>
+        </div>
+        <div class="watch-now">
+          <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-white">Trailer</a>
+        </div>
+      </div>
     </div>
   </main>
 
