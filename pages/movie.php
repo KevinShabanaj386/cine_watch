@@ -18,7 +18,7 @@ try {
     die("Connection failed: " . $e->getMessage());
 }
 
-$sql = "SELECT * FROM movies ORDER BY id ASC";
+$sql = "SELECT * FROM movies ORDER BY id ASC LIMIT 16";  
 $stmt = $conn->query($sql);
 $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -67,7 +67,9 @@ $randomMovies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
     
     <div class="middle-secion-2">
-        <input type="text" class="search-input" placeholder="| Search">
+      <form id="searchForm" action="search.php" method="GET">
+        <input type="text" id="searchInput" name="query" class="search-input" placeholder="| Search">
+      </form>
     </div>
     
     <div class="right-section">
@@ -190,6 +192,6 @@ $randomMovies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <h3>&#169; 2025 CineWatch. All rights reserved</h3>
   </div>
 </footer>
-
+<script src="search.js"></script>
 </body>
 </html>

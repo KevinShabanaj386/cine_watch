@@ -88,7 +88,9 @@ $conn->close();
         </ul>
     </div>
     <div class="middle-secion-2">
-        <input type="text" class="search-input" placeholder="| Search">
+      <form id="searchForm" action="search.php" method="GET">
+        <input type="text" id="searchInput" name="query" class="search-input" placeholder="| Search">
+      </form>
     </div>
     <div class="right-section">
         <a class="sign-in" href="../register.php">Register</a>
