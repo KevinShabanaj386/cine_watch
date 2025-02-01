@@ -36,16 +36,15 @@ if (isset($_POST['submit'])) {
                 $errors[] = "Username not found.";
             } else {
                 if (password_verify($password, $user['password'])) {
-                    // Check if the user is an admin
+
                     if ($user['is_admin'] == 0) {
                         $errors[] = "You do not have admin privileges.";
                     } else {
-                        // User is an admin, proceed with login
+
                         $_SESSION['user_id']   = $user['id'];
                         $_SESSION['username']  = $user['username'];
-                        $_SESSION['is_admin']  = $user['is_admin']; // Store admin status in session
+                        $_SESSION['is_admin']  = $user['is_admin'];
 
-                        // Redirect to admin page or home page
                         header("Location: ./pages/admin.php");
                         exit();
                     }
@@ -84,7 +83,6 @@ if (isset($_POST['submit'])) {
         <div class="shape"></div>
     </div>
 
-    <!-- Login Form -->
     <form method="POST" action="">
         <h3>Admin Login</h3>
 
@@ -128,7 +126,5 @@ if (isset($_POST['submit'])) {
         <h1>Login as an Admin Role</h1>
 
     </div>
-
-    <!-- Load Javascript -->
 </body>
 </html>

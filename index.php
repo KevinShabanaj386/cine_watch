@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
                     $_SESSION['username']  = $user['username'];
 
                      
-                         header("Location: /pages/home.html");
+                         header("Location: /pages/home.php");
                  } else {
                      $errors[] = "Invalid password.";
                 }
@@ -141,6 +141,5 @@ if (isset($_POST['submit'])) {
         <p>TV episodes, music, and podcasts!</p>
     </div>
 
-    <!-- Load Javascript -->
 </body>
 </html>
