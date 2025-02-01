@@ -521,31 +521,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <td><?= htmlspecialchars($movie['release_date'], ENT_QUOTES) ?></td>
           <td><?= htmlspecialchars($movie['languages'], ENT_QUOTES) ?></td>
           <td><?= htmlspecialchars($movie['ratings'], ENT_QUOTES) ?></td>
-          <td><?= htmlspecialchars($movie['genre'], ENT_QUOTES) ?></td>
-          <td class="image-cell">
-            <?php
-               if (!empty($movie['image']) && file_exists(__DIR__ . '/' . $movie['image'])) {
-                   $thumbnailPath = str_replace('movie-play/', 'movie-play/thumbs/', $movie['image']);
-                  $thumbFullPath = __DIR__ . '/' . $thumbnailPath;
-
-                  if (file_exists($thumbFullPath)) {
-                       echo '<img 
-                              src="' . htmlspecialchars($thumbnailPath, ENT_QUOTES) . '" 
-                              alt="Movie Thumbnail"
-                              onclick="zoomImage(\'' . htmlspecialchars($movie['image'], ENT_QUOTES) . '\')"
-                            />';
-                  } else {
-                       echo '<img 
-                              src="' . htmlspecialchars($movie['image'], ENT_QUOTES) . '" 
-                              alt="Movie Image"
-                              onclick="zoomImage(\'' . htmlspecialchars($movie['image'], ENT_QUOTES) . '\')"
-                            />';
-                  }
-              } else {
-                  echo '<em>No image</em>';
-              }
-            ?>
-          </td>
+          <td><?= htmlspecialchars($movie['genre'], ENT_QUOTES) ?></td>     
           <td class="action-buttons">
             <button onclick="editMovie(
               <?= $movie['id'] ?>,
