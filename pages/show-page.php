@@ -17,12 +17,13 @@ if (!isset($_GET['show'])) {
 $showTitle = urldecode($_GET['show']);
 $showTitle = str_replace(' ', '', $showTitle);
 
-$sql = "SELECT * FROM tv_shows WHERE REPLACE(REPLACE(REPLACE(REPLACE(title, ' ', ''), ':', ''), '-', ''), '·', '') LIKE ?";
+$sql = "SELECT * FROM tv_shows WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(title, ' ', ''), ':', ''), '-', ''), '·', ''), '.', '') LIKE ?";
 $stmt = $conn->prepare($sql);
 $searchTitle = "%" . $showTitle . "%";
 $stmt->bind_param("s", $searchTitle);
 $stmt->execute();
 $result = $stmt->get_result();
+
 
 if ($result->num_rows > 0) {
     $show = $result->fetch_assoc();
