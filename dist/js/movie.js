@@ -66,4 +66,25 @@ document.querySelector('.page3').addEventListener('click', () => changePage(3));
 
 updateButtons();  
 
+document.addEventListener("DOMContentLoaded", function () {
+    const genreButton = document.querySelector(".dropbtn");
+    const dropdownContent = document.querySelector(".dropdown-content");
+
+    // Initially hide the dropdown content
+    dropdownContent.style.display = "none";
+
+    // Toggle dropdown visibility on click
+    genreButton.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        dropdownContent.style.display = dropdownContent.style.display === "none" ? "block" : "none";
+    });
+
+    // Close dropdown if clicking outside
+    document.addEventListener("click", function (event) {
+        if (!genreButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.style.display = "none";
+        }
+    });
+});
+
 

@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
-body{
-  background-color: #1A1A1A;
-  margin: 0 0 0 0;
+
+body {
+  background-color: #1a1a1a;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .heading{
-  margin-left: 100px;
-  margin-right: 147px;
+  margin-left: 80px;
+  margin-right: 78px;
   color: white;
   display: flex;
   align-items: center;
@@ -17,7 +21,7 @@ body{
   background-color: #2d2e37;
   padding: 8px 14px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .heading-title{
@@ -26,41 +30,52 @@ body{
 }
 
 .container {
-  margin-top: 50px;
   display: flex;
+  flex-wrap: wrap;
   padding: 0 100px;
-  flex-direction: row;
+  margin-top: 50px;
+}
+
+.image-container {
+  flex: 1 1 50%;
+  text-align: center;
 }
 
 .image-container img {
   max-height: 750px;
-  margin-left: 100px;
+  width: 90%;
+  object-fit: cover;
+}
+
+.description-cast-info {
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .description-cast {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  gap: 20px;
 }
 
 .movie-description {
   background-color: #262626;
-  height: auto; 
-  border-radius: 10px;
   color: white;
   padding: 30px 40px;
-  margin-bottom: 20px;
-  position: relative;
+  border-radius: 10px;
 }
 
 .movie-description p {
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.6;
   opacity: 0.9;
 }
 
 .movie-description .movie-text {
-  font-size: 16px;
+  font-size: 0.95rem;
   line-height: 1.8;
   opacity: 0.8;
   margin-bottom: 15px;
@@ -75,27 +90,28 @@ body{
 
 .movie-cast-container {
   display: flex;
-  justify-content: space-between;  
-  gap: 20px; 
+  justify-content: space-evenly; /* Distributes the items evenly with equal space between them */
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping if the items exceed the container width */
 }
-
 
 .cast-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 120px;  
+  width: 120px;
 }
 
 .cast-photo {
-  width: 100px; 
-  height: 150px; 
-  object-fit: cover; 
-  margin-bottom: 10px; 
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
 
-.emrat {
-  margin-top: 10px;
+.cast-details {
+  text-align: center;
 }
 
 .movie-info {
@@ -104,7 +120,6 @@ body{
   border-radius: 10px;
   color: white;
   padding: 20px 30px;
-  margin-left: 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -124,11 +139,92 @@ body{
 
 .movie-info .info-title {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .movie-info .info-content {
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 0.9rem;
   opacity: 0.8;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #222;
+  border: none;
+  border-radius: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:active .dropdown-content {
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .image-container img {
+    max-height: 500px;
+  }
+
+  .description-cast-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .description-cast {
+    width: 100%;
+  }
+
+  .movie-info {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .movie-cast-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

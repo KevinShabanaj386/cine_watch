@@ -22,25 +22,40 @@ if(isset($_SESSION['username'])){
 
 <body style="background-image: url(../dist/images/home/bck1.jpg);">
 
-  <header class="header">
+<header class="header">
     <div class="left-section">
-      <img class="logo" src="../dist/images/logo.png" alt="logo">
+        <img class="logo" src="../dist/images/logo.png" alt="logo">
     </div>
     <div class="middle-secion-1">
-      <ul class="navbar">
-          <a href="../pages/home.php" class="home-active">Trending</a>
-          <a href="../pages/movie.php">Movies</a>
-          <a href="../pages/shows.php">TV Series</a>
-          <a href="">Gendre</a>
-      </ul>
-  </div>
+        <ul class="navbar">
+            <a href="../pages/home.php" class="home-active">Trending</a>
+            <a href="../pages/movie.php">Movies</a>
+            <a href="../pages/shows.php">TV Series</a>
+            
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Genre</a>
+                <div class="dropdown-content">
+                <a href="genre.php?name=Action">Action</a>
+                <a href="genre.php?name=Adventure">Adventure</a>
+                <a href="genre.php?name=Crime">Crime</a>
+                <a href="genre.php?name=Thriller">Thriller</a>
+                <a href="genre.php?name=Comedy">Comedy</a>
+                <a href="genre.php?name=Romance">Romance</a>
+                <a href="genre.php?name=Drama">Drama</a>
+                <a href="genre.php?name=Science Fiction">Science Fiction</a>
+                </div>
+            </div>
+        </ul>
+    </div>
+    
     <div class="middle-secion-2">
-      <input type="text" class="search-input" placeholder="| Search">
+        <input type="text" class="search-input" placeholder="| Search">
     </div>
+    
     <div class="right-section">
-      <a class="sign-in" href="../register.php">Register</a>
+        <a class="sign-in" href="../register.php">Register</a>
     </div>
-  </header>
+</header>
 
   <main id="content">
     <div class="card">

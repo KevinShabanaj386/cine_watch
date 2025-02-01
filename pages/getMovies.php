@@ -1,54 +1,36 @@
 <?php
 header("Content-Type: application/json");
 
-$servername = "localhost";
-$username = "root"; 
+$host = "localhost";
+$user = "root";
 $password = "";
-$dbname = "cinewhatch";
+$dbname = "cinewhatch";  
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
+$conn = new mysqli($host, $user, $password, $dbname);
 if ($conn->connect_error) {
-    die(json_encode(["error" => "Connection failed: " . $conn->connect_error]));
+    die(json_encode(["error" => "Database connection failed"]));
+}
+if (!isset($_GET['movie'])) {
+    die("<p style='color:red;'>❌ Movie title not provided in URL.</p>");
 }
 
-mysqli_set_charset($conn, "utf8mb4"); // Fix encoding issues
+$movieTitle = urldecode($_GET['movie']); 
 
-if (isset($_GET["movie"])) {
-    $movieTitle = urldecode($_GET["movie"]); // Decode URL-encoded movie title
+echo "<p>🔎 Searching for: " . htmlspecialchars($movieTitle) . "</p>";
 
-    // Fetch Movie Details
-    $stmt = $conn->prepare("SELECT * FROM movies WHERE TRIM(title) = ?");
-    $stmt->bind_param("s", $movieTitle);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    if ($result->num_rows > 0) {
-        $movie = $result->fetch_assoc();
+$movieTitle = trim($movieTitle);
+$sql = "SELECT * FROM movies WHERE title LIKE ?";
+$stmt = $conn->prepare($sql);
+$searchTerm = "%$movieTitle%";
+$stmt->bind_param("s", $searchTerm);
+$stmt->execute();
+$result = $stmt->get_result();
 
-        // Fetch Cast Details
-        $stmt = $conn->prepare("SELECT name, role, photo FROM cast WHERE movie_id = ?");
-        $stmt->bind_param("i", $movie["id"]);
-        $stmt->execute();
-        $castResult = $stmt->get_result();
-
-        $movie["cast"] = [];
-        while ($row = $castResult->fetch_assoc()) {
-            $row["photo"] = "../cine_watch" . $row["photo"]; // Fix relative path issue
-            $movie["cast"][] = $row;
-        }
-
-        echo json_encode($movie, JSON_UNESCAPED_UNICODE);
-    } else {
-        echo json_encode(["error" => "Movie not found"]);
-    }
-
-    $stmt->close();
+if ($result->num_rows === 0) {
+    die("<p style='color:red;'>❌ No results found for: " . htmlspecialchars($movieTitle) . "</p>");
 } else {
-    echo json_encode(["error" => "No movie parameter provided"]);
+    $movie = $result->fetch_assoc();
+    echo "<p style='color:green;'>✅ Movie found: " . htmlspecialchars($movie['title']) . "</p>";
 }
-
-$conn->close();
 ?>
+

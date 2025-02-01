@@ -4,7 +4,7 @@ const show = params.get("show");
 const showsData = {
   "PeakyBlinders": {
     title: "Peaky Blinders",
-    image: "/dist/images/show-play/3.jpg",
+    image: "../dist/images/show-play/3.jpg",
     description: "Set in post-World War I Birmingham, England, Peaky Blinders follows the Shelby crime family, led by the ambitious and cunning Thomas Shelby. The show delves into the family's rise to power as they navigate politics, law enforcement, and rival gangs in the early 20th century. Known for its stylish presentation, complex characters, and gripping storylines.",
     seasons: {
       1: 6,
@@ -16,10 +16,10 @@ const showsData = {
     },
     languages: "English",
     cast: [
-      { name: "Cillian Murphy", role: "Thomas Shelby", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Paul Anderson", role: "Arthur Shelby", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Helen McCrory ", role: "Polly Gray", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Tommy Flanagan", role: "Finn Shelby", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "Cillian Murphy", role: "Thomas Shelby", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Paul Anderson", role: "Arthur Shelby", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Helen McCrory ", role: "Polly Gray", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Tommy Flanagan", role: "Finn Shelby", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "Premiered on September 12, 2013",
     ratings: "4.7 out of 5",
@@ -28,7 +28,7 @@ const showsData = {
   },
   "BreakingBad": {
     title: "Breaking Bad",
-    image: "/dist/images/show-play/2.jpg",
+    image: "../dist/images/show-play/2.jpg",
     description: "A critically acclaimed crime drama about Walter White, a high school chemistry teacher turned methamphetamine manufacturer after being diagnosed with terminal cancer. As he partners with a former student, Jesse Pinkman, to enter the drug trade, Walter's descent into criminality and moral corruption becomes both compelling and tragic.",
     seasons: {
       1: 13,
@@ -39,10 +39,10 @@ const showsData = {
     },
     languages: "English",
     cast: [
-      { name: "Bryan Cranston", role: "Walter White", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Aaron Paul", role: "Jesse Pinkman", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Anna Gunn", role: "Skyler White", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Dean Norris", role: "Hank Schrader", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "Bryan Cranston", role: "Walter White", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Aaron Paul", role: "Jesse Pinkman", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Anna Gunn", role: "Skyler White", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Dean Norris", role: "Hank Schrader", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "Premiered on January 20, 2008",
     ratings: "5 out of 5",
@@ -51,7 +51,7 @@ const showsData = {
   },
   "SquidGame": {
     title: "Squid Game",
-    image: "/dist/images/show-play/1.jpg",
+    image: "../dist/images/show-play/1.jpg",
     description: "A South Korean survival thriller where 456 financially struggling contestants participate in deadly children's games for a chance to win a massive cash prize. As the games progress, alliances, betrayals, and moral dilemmas unfold in this intense and thought-provoking series.",
     seasons: {
       1: 11,
@@ -59,10 +59,10 @@ const showsData = {
     },
     languages: "Korean",
     cast: [
-      { name: "Lee Jung-jae", role: "Seong Gi-hun", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Park Hae-soo", role: "Cho Sang-woo", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Wi Ha-joon", role: "Hwang Jun-ho", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Jung Ho-yeon", role: "Kang Sae-byeok", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "Lee Jung-jae", role: "Seong Gi-hun", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Park Hae-soo", role: "Cho Sang-woo", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Wi Ha-joon", role: "Hwang Jun-ho", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Jung Ho-yeon", role: "Kang Sae-byeok", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "Premiered on September 17, 2021",
     ratings: "4.8 out of 5",
@@ -108,10 +108,10 @@ const showsData = {
     },
     languages: "English",
     cast: [
-      { name: "James Gandolfini", role: "Tony Soprano", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Edie Falco", role: "Carmela Soprano", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Michael Imperioli", role: "Christopher Moltisanti", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Lorraine Bracco", role: "Dr. Jennifer Melfi", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "James Gandolfini", role: "Tony Soprano", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Edie Falco", role: "Carmela Soprano", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Michael Imperioli", role: "Christopher Moltisanti", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Lorraine Bracco", role: "Dr. Jennifer Melfi", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "Premiered on January 10, 1999",
     ratings: "5 out of 5",
@@ -120,17 +120,17 @@ const showsData = {
   },
   "TheLastofUs": {
     title: "The Last of Us",
-    image: "/dist/images/show-play/img3.jpg",
+    image: "../dist/images/show-play/img3.jpg",
     description: "Based on the critically acclaimed video game, The Last of Us follows Joel, a hardened survivor, as he escorts Ellie, a teenage girl immune to a deadly fungal outbreak, across a post-apocalyptic United States. The series explores themes of survival, morality, and the emotional bonds that form in a broken world.",
     seasons: {
       1: 9
     },
     languages: "English, Spanish, French",
     cast: [
-      { name: "Pedro Pascal", role: "Joel Miller", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Bella Ramsey", role: "Ellie Williams", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Anna Torv", role: "Tess Servopoulos", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Gabriel Luna", role: "Tommy Miller", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "Pedro Pascal", role: "Joel Miller", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Bella Ramsey", role: "Ellie Williams", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Anna Torv", role: "Tess Servopoulos", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Gabriel Luna", role: "Tommy Miller", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "Premiered on January 15, 2023",
     ratings: "4.7 out of 5",
@@ -139,7 +139,7 @@ const showsData = {
   },
   "TheOffice": {
     title: "The Office",
-    image: "/dist/images/show-play/img4.jpg",
+    image: "../dist/images/show-play/img4.jpg",
     description: "A mockumentary-style sitcom set in the Scranton, Pennsylvania branch of the Dunder Mifflin paper company. The series follows the daily lives of its quirky employees, led by the clueless but lovable boss, Michael Scott. The show is known for its hilarious workplace antics, awkward humor, and heartwarming moments.",
     seasons: {
       1: 6,
@@ -154,10 +154,10 @@ const showsData = {
     },
     languages: "English",
     cast: [
-      { name: "Steve Carell", role: "Michael Scott", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "John Krasinski", role: "Jim Halpert", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Rainn Wilson", role: "Dwight Schrute", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Jenna Fischer", role: "Pam Beesly", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "Steve Carell", role: "Michael Scott", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "John Krasinski", role: "Jim Halpert", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Rainn Wilson", role: "Dwight Schrute", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Jenna Fischer", role: "Pam Beesly", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "Premiered on March 24, 2005",
     ratings: "4.8 out of 5",
@@ -166,7 +166,7 @@ const showsData = {
   },
   "Sherlock": {
     title: "Sherlock",
-    image: "/dist/images/show-play/img5.jpg",
+    image: "../dist/images/show-play/img5.jpg",
     description: "A modern adaptation of Sir Arthur Conan Doyle’s famous detective stories, Sherlock follows Sherlock Holmes, a brilliant but socially awkward detective, and his loyal friend Dr. John Watson as they solve complex crimes in present-day London. The series is known for its fast-paced storytelling, sharp dialogue, and intricate mysteries.",
     seasons: {
       1: 3,
@@ -176,10 +176,10 @@ const showsData = {
     },
     languages: "English",
     cast: [
-      { name: "Benedict Cumberbatch", role: "Sherlock Holmes", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Martin Freeman", role: "Dr. John Watson", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Andrew Scott", role: "Jim Moriarty", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Mark Gatiss", role: "Mycroft Holmes", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "Benedict Cumberbatch", role: "Sherlock Holmes", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Martin Freeman", role: "Dr. John Watson", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Andrew Scott", role: "Jim Moriarty", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Mark Gatiss", role: "Mycroft Holmes", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "Premiered on July 25, 2010",
     ratings: "4.7 out of 5",
@@ -188,7 +188,7 @@ const showsData = {
   },
   "House": {
     title: "House",
-    image: "/dist/images/show-play/img6.jpg",
+    image: "../dist/images/show-play/img6.jpg",
     description: "A medical drama centered around Dr. Gregory House, a brilliant but misanthropic diagnostician who leads a team of doctors at Princeton-Plainsboro Teaching Hospital. House is known for his unconventional methods, sarcasm, and addiction to painkillers, but his genius in solving medical mysteries makes him indispensable.",
     seasons: {
       1: 22,
@@ -202,10 +202,10 @@ const showsData = {
     },
     languages: "English, German, Italian",
     cast: [
-      { name: "Hugh Laurie", role: "Dr. Gregory House", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Lisa Edelstein", role: "Dr. Lisa Cuddy", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Robert Sean Leonard", role: "Dr. James Wilson", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Omar Epps", role: "Dr. Eric Foreman", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "Hugh Laurie", role: "Dr. Gregory House", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Lisa Edelstein", role: "Dr. Lisa Cuddy", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Robert Sean Leonard", role: "Dr. James Wilson", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Omar Epps", role: "Dr. Eric Foreman", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "Premiered on November 16, 2004",
     ratings: "4.7 out of 5",
@@ -214,7 +214,7 @@ const showsData = {
   },
   "INVINCIBLE": {
     title: "INVINCIBLE",
-    image: "/dist/images/show-play/img7.jpg",
+    image: "../dist/images/show-play/img7.jpg",
     description: "An animated superhero series based on the comic book by Robert Kirkman. The story follows Mark Grayson, a teenager who discovers he has superpowers and trains under his father, Omni-Man, the world’s most powerful hero. As Mark grows into his role as a superhero, he uncovers dark secrets that shake his perception of heroism and his family.",
     seasons: {
       1: 8,
@@ -222,10 +222,10 @@ const showsData = {
     },
     languages: "English",
     cast: [
-      { name: "Steven Yeun", role: "Mark Grayson", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "J.K. Simmons", role: "Nolan Grayson", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Sandra Oh", role: "Debbie Grayson", photo: "/dist/images/cast/AaronTaylor.jpg" },
-      { name: "Gillian Jacobs", role: "Eve ", photo: "/dist/images/cast/AaronTaylor.jpg" }
+      { name: "Steven Yeun", role: "Mark Grayson", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "J.K. Simmons", role: "Nolan Grayson", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Sandra Oh", role: "Debbie Grayson", photo: "../dist/images/cast/AaronTaylor.jpg" },
+      { name: "Gillian Jacobs", role: "Eve ", photo: "../dist/images/cast/AaronTaylor.jpg" }
     ],
     releaseDate: "Premiered on March 26, 2021",
     ratings: "4.8 out of 5",

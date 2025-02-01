@@ -163,3 +163,39 @@ body {
 .episode-button:hover {
   background-color: #666;
 }
+
+.dropdownn {
+  position: relative;
+  display: inline-block;
+}
+.dropbtnn {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.dropdownn-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdownn-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+.dropdownn-content a:hover {
+  background-color: #444;
+}
+
+.dropdownn:hover .dropdownn-content {
+  display: block;
+}
+
+.dropdownn:active .dropdownn-content {
+  display: block;
+}
