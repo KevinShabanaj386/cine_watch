@@ -15,9 +15,6 @@ try {
     die("Connection failed: " . $e->getMessage());
 }
 
-/**
- * Create a thumbnail from a given image file.
- */
 function createThumbnail($sourcePath, $thumbPath, $maxWidth = 150) {
     list($origWidth, $origHeight, $imageType) = getimagesize($sourcePath);
     if (!$origWidth || !$origHeight) {
@@ -44,7 +41,6 @@ function createThumbnail($sourcePath, $thumbPath, $maxWidth = 150) {
 
     $thumbImage = imagecreatetruecolor($newWidth, $newHeight);
 
-    // Preserve transparency for PNG/GIF
     if ($imageType == IMAGETYPE_PNG || $imageType == IMAGETYPE_GIF) {
         imagecolortransparent($thumbImage, imagecolorallocate($thumbImage, 0, 0, 0));
         imagealphablending($thumbImage, false);
@@ -77,64 +73,43 @@ function createThumbnail($sourcePath, $thumbPath, $maxWidth = 150) {
     imagedestroy($thumbImage);
 }
 
-/**
- * Handle the file upload for an image, creating a thumbnail as well.
- */
 function handleImageUpload($fileInputName = 'image') {
     if (!isset($_FILES[$fileInputName]) || $_FILES[$fileInputName]['error'] === UPLOAD_ERR_NO_FILE) {
-        // No file was uploaded
+        // No file uploaded
         return null;
     }
-
     if ($_FILES[$fileInputName]['error'] !== UPLOAD_ERR_OK) {
         throw new RuntimeException('Image upload error code: ' . $_FILES[$fileInputName]['error']);
     }
 
-    // Paths
-    $uploadsDir = __DIR__ . '/dist/images/movie-play';
-    $thumbsDir  = __DIR__ . '/dist/images/movie-play/thumbs';
+    $uploadsDir = __DIR__ . '/../../dist/images/movie-play';
+    $thumbsDir  = __DIR__ . '/../../dist/images/movie-play/thumbs';
 
-    // Ensure directories exist
-    if (!is_dir($uploadsDir)) {
-        if (!mkdir($uploadsDir, 0777, true)) {
-            throw new RuntimeException("Failed to create directory: $uploadsDir");
-        }
+    if (!is_dir($uploadsDir) && !mkdir($uploadsDir, 0777, true)) {
+        throw new RuntimeException("Failed to create directory: $uploadsDir");
     }
-    if (!is_dir($thumbsDir)) {
-        if (!mkdir($thumbsDir, 0777, true)) {
-            throw new RuntimeException("Failed to create directory: $thumbsDir");
-        }
+    if (!is_dir($thumbsDir) && !mkdir($thumbsDir, 0777, true)) {
+        throw new RuntimeException("Failed to create directory: $thumbsDir");
     }
 
-    // Generate a unique filename
     $ext  = pathinfo($_FILES[$fileInputName]['name'], PATHINFO_EXTENSION);
     $uniq = 'movie_' . time() . '_' . mt_rand(1000, 9999);
     $filename = $uniq . '.' . strtolower($ext);
 
-    $targetFile = $uploadsDir . '/' . $filename;       // full image
-    $thumbFile  = $thumbsDir  . '/' . $filename;       // thumbnail
+    $targetFile = $uploadsDir . '/' . $filename; 
+    $thumbFile  = $thumbsDir  . '/' . $filename;
 
-    // Move the uploaded file to the target location
     if (!move_uploaded_file($_FILES[$fileInputName]['tmp_name'], $targetFile)) {
         throw new RuntimeException('Failed to move uploaded file.');
     }
 
-    // Create thumbnail
     createThumbnail($targetFile, $thumbFile);
 
-    // We only store the main image path in the DB, not the thumbnail
-    // Let's store a *relative* path for the main image
-    $relativePath = 'dist/images/movie-play/' . $filename;
-
-    return $relativePath;
+    return '../../dist/images/movie-play/' . $filename;
 }
 
-/**
- * Handle incoming POST requests (Add, Edit, Delete, Bulk-Delete).
- */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // 1. ADD MOVIE
     if (isset($_POST['add_movie'])) {
         $title       = $_POST['title']        ?? '';
         $description = $_POST['description']  ?? '';
@@ -143,10 +118,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $genre       = $_POST['genre']        ?? '';
         $releaseDate = $_POST['release_date'] ?? '';
 
-        // Handle image upload
         $imagePath = handleImageUpload('image');
 
-        // Insert into DB
         $sql = "INSERT INTO movies (
                     title,
                     image,
@@ -178,7 +151,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // 2. EDIT MOVIE
     if (isset($_POST['edit_movie'])) {
         $id          = $_POST['id'];
         $title       = $_POST['title']        ?? '';
@@ -188,11 +160,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $genre       = $_POST['genre']        ?? '';
         $releaseDate = $_POST['release_date'] ?? '';
 
-        // See if a new image was uploaded
         $newImage = handleImageUpload('image');
 
         if ($newImage !== null) {
-            // Update including the new image
+            $oldStmt = $conn->prepare("SELECT image FROM movies WHERE id = :id");
+            $oldStmt->bindParam(':id', $id);
+            $oldStmt->execute();
+            $oldImage = $oldStmt->fetchColumn();
+
+            if ($oldImage && file_exists(__DIR__ . '/' . $oldImage)) {
+                unlink(__DIR__ . '/' . $oldImage);
+
+                $oldThumb = str_replace('movie-play/', 'movie-play/thumbs/', $oldImage);
+                if (file_exists(__DIR__ . '/' . $oldThumb)) {
+                    unlink(__DIR__ . '/' . $oldThumb);
+                }
+            }
+
             $sql = "
                 UPDATE movies
                    SET title = :title,
@@ -206,25 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':image', $newImage);
-
-            // Before updating, remove old file from disk if you want:
-            // 1) fetch old path from DB
-            $oldStmt = $conn->prepare("SELECT image FROM movies WHERE id = :id");
-            $oldStmt->bindParam(':id', $id);
-            $oldStmt->execute();
-            $oldImage = $oldStmt->fetchColumn();
-
-            // 2) if exists on disk, remove it. (Optional step)
-            if ($oldImage && file_exists(__DIR__ . '/' . $oldImage)) {
-                unlink(__DIR__ . '/' . $oldImage);
-                // Also remove the old thumbnail, if you want:
-                $oldThumb = str_replace('movie-play/', 'movie-play/thumbs/', $oldImage);
-                if (file_exists(__DIR__ . '/' . $oldThumb)) {
-                    unlink(__DIR__ . '/' . $oldThumb);
-                }
-            }
         } else {
-            // Update without changing the image
             $sql = "
                 UPDATE movies
                    SET title = :title,
@@ -251,26 +217,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // 3. DELETE MOVIE
-    if (isset($_POST['delete_movie'])) {
+     if (isset($_POST['delete_movie'])) {
         $id = $_POST['id'];
 
-        // Get old image path to delete from disk
-        $stmt = $conn->prepare("SELECT image FROM movies WHERE id = :id");
+         $stmt = $conn->prepare("SELECT image FROM movies WHERE id = :id");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         $oldImage = $stmt->fetchColumn();
 
-        // Delete row from DB
-        $stmt = $conn->prepare("DELETE FROM movies WHERE id = :id");
+         $stmt = $conn->prepare("DELETE FROM movies WHERE id = :id");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
 
-        // Remove file(s) from disk
-        if ($oldImage && file_exists(__DIR__ . '/' . $oldImage)) {
+         if ($oldImage && file_exists(__DIR__ . '/' . $oldImage)) {
             unlink(__DIR__ . '/' . $oldImage);
-
-            // Also remove the thumbnail if it exists
             $oldThumb = str_replace('movie-play/', 'movie-play/thumbs/', $oldImage);
             if (file_exists(__DIR__ . '/' . $oldThumb)) {
                 unlink(__DIR__ . '/' . $oldThumb);
@@ -281,36 +241,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // 4. DELETE SELECTED MOVIES
-    if (isset($_POST['delete_selected'])) {
+     if (isset($_POST['delete_selected'])) {
         if (!empty($_POST['selected_movies']) && is_array($_POST['selected_movies'])) {
-            // If the form sent a single hidden input with comma-separated IDs,
-            // you might need to explode them. Adjust as needed.
-            // For now, we assume it's an array of IDs.
             $selected_movies = $_POST['selected_movies'];
-
             $placeholders = implode(',', array_fill(0, count($selected_movies), '?'));
 
-            // 4a) Get their images
-            $sqlSelect = "SELECT image FROM movies WHERE id IN ($placeholders)";
+             $sqlSelect = "SELECT image FROM movies WHERE id IN ($placeholders)";
             $stmtSel = $conn->prepare($sqlSelect);
             $stmtSel->execute($selected_movies);
             $imagesToDelete = $stmtSel->fetchAll(PDO::FETCH_COLUMN);
 
-            // 4b) Delete rows from DB
-            $sqlDel = "DELETE FROM movies WHERE id IN ($placeholders)";
+             $sqlDel = "DELETE FROM movies WHERE id IN ($placeholders)";
             $stmtDel = $conn->prepare($sqlDel);
             $stmtDel->execute($selected_movies);
 
-            // 4c) Delete files from disk
-            foreach ($imagesToDelete as $img) {
+             foreach ($imagesToDelete as $img) {
                 if ($img && file_exists(__DIR__ . '/' . $img)) {
                     unlink(__DIR__ . '/' . $img);
-                }
-                // Also remove the thumbnail
-                $thumbPath = str_replace('movie-play/', 'movie-play/thumbs/', $img);
-                if (file_exists(__DIR__ . '/' . $thumbPath)) {
-                    unlink(__DIR__ . '/' . $thumbPath);
+                    $thumbPath = str_replace('movie-play/', 'movie-play/thumbs/', $img);
+                    if (file_exists(__DIR__ . '/' . $thumbPath)) {
+                        unlink(__DIR__ . '/' . $thumbPath);
+                    }
                 }
             }
         }
@@ -319,8 +270,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Fetch all movies for display
-$stmt = $conn->query("SELECT * FROM movies ORDER BY id ASC");
+ $stmt = $conn->query("SELECT * FROM movies ORDER BY id DESC");
 $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -360,12 +310,13 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     .action-buttons button:hover {
       background-color: #0056b3;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
       background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     table, th, td {
       border: 1px solid #ddd;
@@ -392,18 +343,22 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     .checkbox-cell input {
       cursor: pointer;
     }
-    .thumb {
+
+    .desc-cell {
+      max-width: 250px;
+      white-space: nowrap; 
+      width: 50px; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+    }
+
+    .image-cell img {
       max-width: 80px;
       max-height: 80px;
       border-radius: 5px;
       cursor: zoom-in;
     }
-    .desc-cell {
-      max-width: 250px;
-      white-space: pre-wrap; /* so \n or large text wraps properly */
-    }
 
-    /* Modal styling */
     .modal {
       display: none;
       position: fixed;
@@ -434,7 +389,8 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     .modal-content form input[type="text"],
     .modal-content form input[type="date"],
-    .modal-content form textarea {
+    .modal-content form textarea,
+    .modal-content form input[type="file"] {
       width: 100%;
       padding: 8px;
       margin-bottom: 10px;
@@ -464,7 +420,6 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
       background-color: #5a6268;
     }
 
-    /* Zoom modal */
     #zoomModal {
       display: none;
       position: fixed;
@@ -500,6 +455,28 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
       color: #ccc;
       text-decoration: none;
     }
+    .action-buttons{
+      display: flex;
+    }
+
+    
+
+     @media (max-width: 768px) {
+      table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      tr {
+        display: table-row;
+        white-space: nowrap;
+      }
+      th, td {
+        display: table-cell;
+        white-space: normal;
+      }
+    }
   </style>
 </head>
 <body>
@@ -511,10 +488,8 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <button onclick="deleteSelectedMovies()">Delete Selected</button>
 </div>
 
-<!-- Hidden form for bulk-delete -->
-<form id="deleteSelectedForm" method="POST" action="admin.php" style="display: none;">
+ <form id="deleteSelectedForm" method="POST" action="admin.php" style="display: none;">
   <input type="hidden" name="delete_selected" value="1">
-  <!-- This hidden input will store the IDs of selected movies -->
   <input type="hidden" id="selectedMoviesInput" name="selected_movies[]">
 </form>
 
@@ -529,7 +504,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <th>Languages</th>
       <th>Ratings</th>
       <th>Genre</th>
-      <th>Image</th>
+      <th>Thumbnail</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -547,30 +522,31 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <td><?= htmlspecialchars($movie['languages'], ENT_QUOTES) ?></td>
           <td><?= htmlspecialchars($movie['ratings'], ENT_QUOTES) ?></td>
           <td><?= htmlspecialchars($movie['genre'], ENT_QUOTES) ?></td>
-          <td>
+          <td class="image-cell">
             <?php
-              // Derive the thumbnail path (if it exists)
-              if (!empty($movie['image']) && file_exists(__DIR__ . '/' . $movie['image'])) {
-                  $thumbnailPath = str_replace('movie-play/', 'movie-play/thumbs/', $movie['image']);
-                  if (file_exists(__DIR__ . '/' . $thumbnailPath)) {
-                      // Show the thumbnail
-                      echo '<img src="' . $thumbnailPath . '" 
-                                 alt="Movie Thumbnail"
-                                 class="thumb"
-                                 onclick="zoomImage(\'' . $movie['image'] . '\')" />';
+               if (!empty($movie['image']) && file_exists(__DIR__ . '/' . $movie['image'])) {
+                   $thumbnailPath = str_replace('movie-play/', 'movie-play/thumbs/', $movie['image']);
+                  $thumbFullPath = __DIR__ . '/' . $thumbnailPath;
+
+                  if (file_exists($thumbFullPath)) {
+                       echo '<img 
+                              src="' . htmlspecialchars($thumbnailPath, ENT_QUOTES) . '" 
+                              alt="Movie Thumbnail"
+                              onclick="zoomImage(\'' . htmlspecialchars($movie['image'], ENT_QUOTES) . '\')"
+                            />';
                   } else {
-                      // If no separate thumbnail found, just display the main image or "No thumbnail"
-                      echo '<img src="' . $movie['image'] . '" 
-                                 alt="Movie Image"
-                                 class="thumb"
-                                 onclick="zoomImage(\'' . $movie['image'] . '\')" />';
+                       echo '<img 
+                              src="' . htmlspecialchars($movie['image'], ENT_QUOTES) . '" 
+                              alt="Movie Image"
+                              onclick="zoomImage(\'' . htmlspecialchars($movie['image'], ENT_QUOTES) . '\')"
+                            />';
                   }
               } else {
                   echo '<em>No image</em>';
               }
             ?>
           </td>
-          <td>
+          <td class="action-buttons">
             <button onclick="editMovie(
               <?= $movie['id'] ?>,
               '<?= htmlspecialchars($movie['title'], ENT_QUOTES) ?>',
@@ -592,8 +568,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </tbody>
 </table>
 
-<!-- ADD MOVIE MODAL -->
-<div id="addMovieModal" class="modal">
+ <div id="addMovieModal" class="modal">
   <div class="modal-content">
     <h2>Add Movie</h2>
     <form id="addMovieForm" method="POST" action="admin.php" enctype="multipart/form-data">
@@ -626,13 +601,11 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </div>
 </div>
 
-<!-- EDIT MOVIE MODAL -->
-<div id="editMovieModal" class="modal">
+ <div id="editMovieModal" class="modal">
   <div class="modal-content">
     <h2>Edit Movie</h2>
     <form id="editMovieForm" method="POST" action="admin.php" enctype="multipart/form-data">
-      <!-- Hidden field for ID -->
-      <input type="hidden" name="id" id="editMovieId">
+       <input type="hidden" name="id" id="editMovieId">
 
       <label for="editTitle">Title:</label>
       <input type="text" id="editTitle" name="title" required>
@@ -663,8 +636,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </div>
 </div>
 
-<!-- ZOOM IMAGE MODAL -->
-<div id="zoomModal" onclick="closeZoomModal()">
+ <div id="zoomModal" onclick="closeZoomModal()">
   <div id="zoomModalContent">
     <span class="closeZoom" onclick="closeZoomModal()">&times;</span>
     <img id="zoomedImage" src="" alt="Full Image">
@@ -672,26 +644,21 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </div>
 
 <script>
-  // Show Add Modal
-  function openAddMovieModal() {
+   function openAddMovieModal() {
     document.getElementById('addMovieModal').style.display = 'flex';
   }
-  // Hide Add Modal
-  function closeAddMovieModal() {
+   function closeAddMovieModal() {
     document.getElementById('addMovieModal').style.display = 'none';
   }
 
-  // Show Edit Modal
-  function openEditMovieModal() {
+   function openEditMovieModal() {
     document.getElementById('editMovieModal').style.display = 'flex';
   }
-  // Hide Edit Modal
-  function closeEditMovieModal() {
+   function closeEditMovieModal() {
     document.getElementById('editMovieModal').style.display = 'none';
   }
 
-  // Pre-fill and open the Edit Movie modal
-  function editMovie(
+   function editMovie(
     id,
     title,
     description,
@@ -711,8 +678,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     openEditMovieModal();
   }
 
-  // Single Delete
-  function deleteMovie(id) {
+   function deleteMovie(id) {
     if (confirm(`Are you sure you want to delete movie with ID ${id}?`)) {
       const form = document.createElement('form');
       form.method = 'POST';
@@ -735,16 +701,14 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
   }
 
-  // Select/Deselect All
-  document.getElementById('selectAll').addEventListener('change', function() {
+   document.getElementById('selectAll').addEventListener('change', function() {
     const checkboxes = document.querySelectorAll('.movie-checkbox');
     checkboxes.forEach(cb => {
       cb.checked = this.checked;
     });
   });
 
-  // Bulk Delete
-  function deleteSelectedMovies() {
+   function deleteSelectedMovies() {
     const checkboxes = document.querySelectorAll('.movie-checkbox:checked');
     if (checkboxes.length === 0) {
       alert('No movies selected.');
@@ -753,16 +717,12 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if (!confirm('Are you sure you want to delete the selected movies?')) {
       return;
     }
-
     const selectedIds = [];
     checkboxes.forEach(cb => selectedIds.push(cb.value));
-
-    // Put these IDs into the hidden input (comma-separated)
     document.getElementById('selectedMoviesInput').value = selectedIds.join(',');
     document.getElementById('deleteSelectedForm').submit();
   }
 
-  // Zoom Image
   function zoomImage(fullImagePath) {
     if (!fullImagePath) return;
     document.getElementById('zoomedImage').src = fullImagePath;
