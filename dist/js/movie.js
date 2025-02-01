@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     dropdownContent.style.display = "none";
 
-]    genreButton.addEventListener("click", function (event) {
+    genreButton.addEventListener("click", function (event) {
         event.preventDefault(); 
         dropdownContent.style.display = dropdownContent.style.display === "none" ? "block" : "none";
     });
@@ -83,5 +83,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-

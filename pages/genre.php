@@ -24,23 +24,29 @@ if ($conn->connect_error) {
 }
 
 
-$moviesQuery = "SELECT * FROM movies WHERE genre LIKE '%$genre%'";
+$genre = $conn->real_escape_string($genre);
+
+$moviesQuery = "SELECT DISTINCT * FROM movies WHERE FIND_IN_SET('$genre', genre)";
 $moviesResult = $conn->query($moviesQuery);
 $movies = [];
 if ($moviesResult) {
     while ($row = $moviesResult->fetch_assoc()) {
-        $movies[] = $row;
+        $movies[$row['title']] = $row; 
     }
 }
 
-$tvShowsQuery = "SELECT * FROM tv_shows WHERE genre LIKE '%$genre%'";
+$tvShowsQuery = "SELECT DISTINCT * FROM tv_shows WHERE FIND_IN_SET('$genre', genre)";
 $tvShowsResult = $conn->query($tvShowsQuery);
 $tvShows = [];
 if ($tvShowsResult) {
     while ($row = $tvShowsResult->fetch_assoc()) {
-        $tvShows[] = $row;
+        $tvShows[$row['title']] = $row; 
     }
 }
+
+
+
+
 
 $conn->close();
 ?>
@@ -105,7 +111,7 @@ $conn->close();
                   <p class="movie-description"><?php echo htmlspecialchars($movie['genre']); ?></p>
               </div>
               <div class="movie-play">
-                  <a href="movie-page-open.php?movie=<?php echo urlencode($movie['title']); ?>" class="watch-btn">Watch</a>
+              <a href="movie-page-open.php?movie=<?php echo urlencode(str_replace([' ', "'", ':', '-', '·', '.'], '', $movie['title'])); ?>" class="watch-btn">Watch</a>
               </div>
           </div>
       <?php endforeach; ?>
@@ -118,7 +124,7 @@ $conn->close();
                   <p class="movie-description"><?php echo htmlspecialchars($show['genre']); ?></p>
               </div>
               <div class="movie-play">
-                  <a href="../pages/show-page.php?show=<?php echo urlencode($show['title']); ?>" id="watchLink" class="watch-link">Watch Now</a>
+              <a href="../pages/show-page.php?show=<?php echo urlencode(str_replace([' ', "'", ':', '-', '·', '.'], '', $show['title'])); ?>" id="watchLink" class="watch-link">Watch Now</a>
               </div>
           </div>
       <?php endforeach; ?>
