@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #1A1A1A;
-  margin: 0;
+  font-size: 16px;
 }
 
-.heading{
-  margin-left: 100px;
-  margin-right: 147px;
+.heading {
+  margin-left: 80px;
+  margin-right: 80px;
   color: white;
   display: flex;
   align-items: center;
@@ -21,37 +23,48 @@ body {
   margin-bottom: 30px;
 }
 
-.heading-title{
+.heading-title {
   font-size: 1.2rem;
   font-weight: 500;
 }
 
 .container {
-  margin-top: 50px;
   display: flex;
+  flex-wrap: wrap;
   padding: 0 100px;
-  flex-direction: row;
+  margin-top: 50px;
+}
+
+.image-container {
+  flex: 1 1 50%;
+  text-align: center;
 }
 
 .image-container img {
   max-height: 750px;
-  margin-left: 100px;
+  width: 90%;
+  object-fit: cover;
+}
+
+.description-cast-info {
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .description-cast {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  gap: 20px;
 }
 
 .movie-description {
   background-color: #262626;
-  height: auto; 
-  border-radius: 10px;
   color: white;
   padding: 30px 40px;
-  margin-bottom: 20px;
-  position: relative;
+  border-radius: 10px;
 }
 
 .movie-description p {
@@ -76,23 +89,28 @@ body {
 
 .movie-cast-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 20px;
   flex-wrap: wrap;
 }
 
 .cast-item {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
 }
 
 .cast-photo {
-  width: 120px;
-  height: auto;
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
   border-radius: 8px;
 }
 
-.emrat {
-  margin-top: 10px;
+.cast-details {
+  text-align: center;
 }
 
 .movie-info {
@@ -101,7 +119,6 @@ body {
   border-radius: 10px;
   color: white;
   padding: 20px 30px;
-  margin-left: 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -126,7 +143,6 @@ body {
 
 .movie-info .info-content {
   font-size: 14px;
-  font-weight: normal;
   opacity: 0.8;
 }
 
@@ -137,6 +153,7 @@ body {
   color: white;
   margin-bottom: 20px;
 }
+
 .dropdown {
   width: 100%;
   padding: 10px;
@@ -145,12 +162,14 @@ body {
   color: white;
   border: 1px solid #444;
 }
+
 .episode-container {
   margin-top: 10px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
+
 .episode-button {
   background-color: #444;
   border: none;
@@ -160,6 +179,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .episode-button:hover {
   background-color: #666;
 }
@@ -168,12 +188,14 @@ body {
   position: relative;
   display: inline-block;
 }
+
 .dropbtnn {
   color: white;
   padding: 10px 15px;
   text-decoration: none;
   cursor: pointer;
 }
+
 .dropdownn-content {
   display: none;
   position: absolute;
@@ -182,12 +204,14 @@ body {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .dropdownn-content a {
   color: white;
   padding: 10px;
   text-decoration: none;
   display: block;
 }
+
 .dropdownn-content a:hover {
   background-color: #444;
 }
@@ -198,4 +222,42 @@ body {
 
 .dropdownn:active .dropdownn-content {
   display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .image-container img {
+    max-height: 500px;
+  }
+
+  .description-cast-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .description-cast {
+    width: 100%;
+  }
+
+  .movie-info {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .movie-cast-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

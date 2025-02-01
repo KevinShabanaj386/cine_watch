@@ -17,7 +17,7 @@ if (!isset($_GET['movie'])) {
 $movieTitle = urldecode($_GET['movie']);
 $movieTitle = str_replace(' ', '', $movieTitle); 
 
-$sql = "SELECT * FROM movies WHERE REPLACE(REPLACE(title, ' ', ''), ':', '') LIKE ?";
+$sql = "SELECT * FROM movies WHERE REPLACE(REPLACE(REPLACE(REPLACE(title, ' ', ''), ':', ''), '-', ''), '·', '') LIKE ?";
 $stmt = $conn->prepare($sql);
 $searchTitle = "%" . $movieTitle . "%";
 $stmt->bind_param("s", $searchTitle);
