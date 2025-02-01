@@ -24,18 +24,18 @@
         </div>
     
     <div class="message-form ">
-        <form action="">
+        <form action="contact.php" method="POST">
             <h3>Get in touch</h3>
             <div class="inputBox">
-            <input type="text" placeholder="enter your name" class="box">
-            <input type="text" placeholder="enter your email" class="box">
+            <input type="text" name="name" placeholder="Enter your name" class="box" required>
+            <input type="email" name="email" placeholder="Enter your email" class="box"required>
         </div>
         <div class="inputBox">
-            <input type="number" placeholder="enter your number" class="box">
-            <input type="text" placeholder="enter your subject" class="box">
+            <input type="number" name="phone" placeholder="Enter your number" class="box" required>
+            <input type="text" name="subject" placeholder="Enter your subject" class="box" required>
         </div>
-        <textarea placeholder="your message" cols="30" rows="10"></textarea>
-        <input type="submit" value="send message" class="btn">
+        <textarea name="message" placeholder="Your message" cols="30" rows="10"required></textarea>
+        <input type="submit" value="Send message" class="btn">
     
         </form>
     </div>
