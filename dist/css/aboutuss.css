@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('/dist/images/about-us/aboutus.img') no-repeat center center fixed;
+    background-size: cover;
+    color: #f0f0f0; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 20vw; 
+}
+
+.heading h1{
+font-size: 3rem;
+text-align: center;
+color: #f0f0f0;
+margin-bottom: 20px;
+}
+
+.about{
+position: relative;
+padding: 50px;
+color: #fff;
+text-align: center;
+}
+.about-image{
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+
+}

@@ -75,7 +75,7 @@ body{
 .trailer{
   margin-right: 5px;
   border: none;
-  background-color: #white;
+  background-color: white;
   color: red;
   padding: 7px 15px 7px 15px;
   border-radius: 2px;
@@ -133,3 +133,48 @@ body{
 .dropdown:active .dropdown-content {
   display: block;
 }
+
+.buttonat {
+  display: flex;
+  gap: 10px; 
+  position: relative; 
+  z-index: 10; 
+}
+
+.watch-now {
+  margin: 0;
+  position: relative; 
+  z-index: 20;
+}
+
+.watch-now-btn{
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease; 
+}
+
+.watch-now-red {
+  background-color: red;
+  color: white;
+}
+
+.watch-now-red:hover {
+  background-color: darkred;
+}
+
+.watch-now-white {
+  background-color: white;
+  color: red;
+  border: 1px solid red; 
+}
+
+.watch-now-white:hover {
+  background-color: lightgray;
+  color: red;
+  border-color: darkred;
+}
+
+
