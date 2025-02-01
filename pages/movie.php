@@ -1,13 +1,11 @@
 <?php
 session_start();
-// Check if the user is logged in, store username or null
 if(isset($_SESSION['username'])){
   $username = $_SESSION['username'];
 } else {
   $username = null;
 }
 
-// Connect to the database
 $host = 'localhost';
 $dbname = 'cineWhatch';
 $usernameDB = 'root';
@@ -20,10 +18,13 @@ try {
     die("Connection failed: " . $e->getMessage());
 }
 
-// Fetch all movies from the database
 $sql = "SELECT * FROM movies ORDER BY id ASC";
 $stmt = $conn->query($sql);
 $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$sql = "SELECT * FROM movies ORDER BY RAND() LIMIT 3";
+$stmt = $conn->query($sql);
+$randomMovies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -74,37 +75,42 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </header>
 
-<!-- Static slideshow (unchanged) -->
 <div class="slideshow-container">
-  <div class="slide">
-    <img src="../dist/images/movies/slidesho1.jpg" alt="Slide 1">
-    <div class="text-container">
-      <h1>Mufasa: The Lion King</h1>
-      <p>PG &#8226 12/20/24 &#8226 Adventure/Family/Animation &#8226 1h 58m </p>
-      <a href="movie-page-open.php?movie=MufasaTheLionKing" class="watch-btn">Watch</a>
+  <?php foreach ($randomMovies as $movie): ?>
+    <div class="slide">
+      <img 
+        src="<?php echo htmlspecialchars($movie['image'], ENT_QUOTES); ?>" 
+        alt="Slide Image"
+      >
+
+      <div class="text-container">
+        <h1><?php echo htmlspecialchars($movie['title'], ENT_QUOTES); ?></h1>
+
+        <p>
+          <?php 
+            echo htmlspecialchars($movie['ratings'] ?? '', ENT_QUOTES);
+            echo " &#8226; ";
+            echo htmlspecialchars($movie['release_date'] ?? '', ENT_QUOTES);
+            echo " &#8226; ";
+            echo htmlspecialchars($movie['genre'] ?? '', ENT_QUOTES);
+          ?>
+        </p>
+
+        <a 
+          href="movie-page-open.php?movie=<?php echo urlencode($movie['title']); ?>" 
+          class="watch-btn"
+        >
+          Watch
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="slide">
-    <img src="../dist/images/movies/slidesho2.jpg" alt="Slide 2">
-    <div class="text-container">
-      <h1>Bad Boys: Ride or Die</h1>
-      <p>R &#8226 06/07/2024 &#8226 Action/Comedy/Crime/Thriller/Adventure &#8226 1h 55m</p>
-      <a href="movie-page-open.php?movie=BadBoysRideorDie" class="watch-btn">Watch</a>
-    </div>
-  </div>
-  <div class="slide">
-    <img src="../dist/images/movies/slidesho3.jpg" alt="Slide 3">
-    <div class="text-container">
-      <h1>Interstellar</h1>
-      <p>PG-13 &#8226 11/05/2014 &#8226 Adventure/Drama/Science Fiction &#8226 2h 49m</p>
-      <a href="movie-page-open.php?movie=Interstellar" class="watch-btn">Watch</a>
-    </div>
-  </div>
+  <?php endforeach; ?>
+
   <button class="prev">&#10094;</button>
   <button class="next">&#10095;</button>
 </div>
 
-<!-- Dynamic movie container -->
+
 <div class="heading">
   <h2 class="heading-title">Movies</h2>
 </div>
@@ -113,7 +119,6 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <?php if (!empty($movies)): ?>
     <?php foreach ($movies as $movie): ?>
       <div class="movie-card">
-        <!-- Here $movie['image'] should be a path like "../dist/images/movies/posterX.jpg" -->
         <img class="poster" 
              src="<?php echo htmlspecialchars($movie['image'], ENT_QUOTES); ?>" 
              alt="<?php echo htmlspecialchars($movie['title'], ENT_QUOTES); ?> poster">
@@ -123,12 +128,10 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php echo htmlspecialchars($movie['title'], ENT_QUOTES); ?>
           </h3>
           <p class="movie-description">
-            <!-- Using genre here as a short "description" for the card -->
             <?php echo htmlspecialchars($movie['genre'], ENT_QUOTES); ?>
           </p>
         </div>
         <div class="movie-play">
-          <!-- Send the title (or id) as a GET param to open a details page -->
           <a href="movie-page-open.php?movie=<?php echo urlencode($movie['title']); ?>" class="watch-btn">
             Watch
           </a>
@@ -140,7 +143,6 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <?php endif; ?>
 </div>
 
-<!-- Static pagination buttons (optional) -->
 <div class="buttonat">
   <button id="prev" class="page">Prev</button>
   <button class="page page1">1</button>
@@ -149,7 +151,6 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <button id="next" class="page">Next</button>
 </div>
 
-<!-- Footer (unchanged) -->
 <footer class="footer">
   <div class="footer-top">
     <div class="menut">
