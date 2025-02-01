@@ -138,7 +138,6 @@ $conn->close();
             <a href="../pages/home.php">Trending</a>
             <a href="../pages/movie.php">Movies</a>
             <a href="">TV Series</a>
-            <a href="">Genre</a>
         </div>
         <div class="informacion">
             <p>Get Help</p>
@@ -149,13 +148,14 @@ $conn->close();
         </div>
         <div class="zhandrat">
             <p>Genre</p>
-            <a href="">Action</a>
-            <a href="">Adventure</a>
-            <a href="">Crime</a>
-            <a href="">Thriller</a>
-            <a href="">Comedy</a>
-            <a href="">Romance</a>
-            <a href="">Science Fiction</a>
+            <a href="genre.php?name=Action">Action</a>
+            <a href="genre.php?name=Adventure">Adventure</a>
+            <a href="genre.php?name=Crime">Crime</a>
+            <a href="genre.php?name=Thriller">Thriller</a>
+            <a href="genre.php?name=Comedy">Comedy</a>
+            <a href="genre.php?name=Romance">Romance</a>
+            <a href="genre.php?name=Drama">Drama</a>
+            <a href="genre.php?name=Science Fiction">Science Fiction</a>
         </div>
         <div class="follow-us">
             <p>Follow Us</p>

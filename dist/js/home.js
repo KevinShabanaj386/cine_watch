@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
+          <div class="buttonat">
+            <div class="watch-now">
+              <a href="movie-page-open.php?title=AvengersInfinityWar" class="watch-now-btn watch-now-red">Watch Now</a>
+            </div>
+            <div class="watch-now">
+              <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-white">Trailer</a>
+            </div>
+          </div>
         </div>`,
       background: "url('../dist/images/home/bck1.jpg')",
     },
@@ -23,13 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
       html: `
        <div class="card">
           <div class="title">
-            <img class="titulli" src="../dist/images/home/deadpool.png" alt="avengers">
+            <img class="titulli" src="../dist/images/home/deadpool.png" alt="deadpool">
           </div>
           <div class="movie-info">
            <p class="kategorit">2024 | R | 2h 7min | Action/Comedy </p>
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
+          </div>
+          <div class="buttonat">
+            <div class="watch-now">
+              <a href="movie-page-open.php?title=Deadpool&Wolverine" class="watch-now-btn watch-now-red">Watch Now</a>
+            </div>
+            <div class="watch-now">
+              <a href="https://www.youtube.com/watch?v=73_1biulkYk" class="watch-now-btn watch-now-white">Trailer</a>
+            </div>
           </div>
         </div>`,
       background: "url('../dist/images/home/bck2.jpg')",
@@ -46,6 +62,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
+          <div class="buttonat">
+            <div class="watch-now">
+              <a href="movie-page-open.php?title=gladiator2" class="watch-now-btn watch-now-red">Watch Now</a>
+            </div>
+            <div class="watch-now">
+              <a href="https://www.youtube.com/watch?v=4rgYUipGJNo" class="watch-now-btn watch-now-white">Trailer</a>
+            </div>
+          </div>
         </div>`,
       background: "url('../dist/images/home/bck3.jpg')",
     },
@@ -60,6 +84,14 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
+          </div>
+          <div class="buttonat">
+            <div class="watch-now">
+              <a href="movie-page-open.php?title=SonictheHedgehog3" class="watch-now-btn watch-now-red">Watch Now</a>
+            </div>
+            <div class="watch-now">
+              <a href="https://www.youtube.com/watch?v=qSu6i2iFMO0" class="watch-now-btn watch-now-white">Trailer</a>
+            </div>
           </div>
         </div>`,
       background: "url('../dist/images/home/bck4.jpg')",
@@ -76,6 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
+          <div class="buttonat">
+            <div class="watch-now">
+              <a href="movie-page-open.php?title=SpiderManNoWayHome" class="watch-now-btn watch-now-red">Watch Now</a>
+            </div>
+            <div class="watch-now">
+              <a href="https://www.youtube.com/watch?v=JfVOs4VSpmA" class="watch-now-btn watch-now-white">Trailer</a>
+            </div>
+          </div>
         </div>`,
       background: "url('../dist/images/home/bck5.jpg')",
     },
@@ -91,6 +131,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
+          <div class="buttonat">
+            <div class="watch-now">
+              <a href="movie-page-open.php?title=GodFather" class="watch-now-btn watch-now-red">Watch Now</a>
+            </div>
+            <div class="watch-now">
+              <a href="https://www.youtube.com/watch?v=UaVTIH8mujA" class="watch-now-btn watch-now-white">Trailer</a>
+            </div>
+          </div>
         </div>`,
       background: "url('../dist/images/home/bck6.jpg')",
     },
@@ -102,14 +150,37 @@ document.addEventListener("DOMContentLoaded", () => {
       const page = link.dataset.page;
 
       if (pages[page]) {
-       
+        // Insert the HTML for the page
         content.innerHTML = pages[page].html;
 
-        
+        // Set the background image
         body.style.backgroundImage = pages[page].background;
         body.style.backgroundSize = "cover"; 
-       
       }
     });
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
