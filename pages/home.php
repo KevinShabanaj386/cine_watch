@@ -72,7 +72,7 @@ if(isset($_SESSION['username'])){
       </div>
       <div class="buttonat">
         <div class="watch-now">
-          <a href="../register.php" class="watch-now-btn watch-now-red">Watch Now</a>
+        <a href="movie-page-open.php?movie=<?= urlencode('Avengers: Infinity War'); ?>" class="watch-now-btn watch-now-red">Watch Now</a>
         </div>
         <div class="watch-now">
           <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-white">Trailer</a>

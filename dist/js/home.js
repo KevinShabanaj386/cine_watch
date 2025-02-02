@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const content = document.getElementById("content"); 
-  const links = document.querySelectorAll("[data-page]"); 
-  const body = document.body; 
+  const content = document.getElementById("content");
+  const links = document.querySelectorAll("[data-page]");
+  const body = document.body;
 
+  
   const pages = {
     home: {
       html: `
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="buttonat">
             <div class="watch-now">
-              <a href="movie-page-open.php?title=AvengersInfinityWar" class="watch-now-btn watch-now-red">Watch Now</a>
+              <a href="movie-page-open.php?movie=<?= urlencode('Avengers: Infinity War'); ?>" class="watch-now-btn watch-now-red">Watch Now</a>
             </div>
             <div class="watch-now">
               <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-white">Trailer</a>
@@ -144,23 +145,37 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest(".watch-now-btn");
+
+    if (link) {
+      e.preventDefault();
+      const href = link.getAttribute("href");
+      window.location.href = href; // Manually redirect to the movie page
+    }
+  });
+
   links.forEach(link => {
     link.addEventListener("click", e => {
-      e.preventDefault(); 
+      e.preventDefault();
+
       const page = link.dataset.page;
 
       if (pages[page]) {
-        // Insert the HTML for the page
         content.innerHTML = pages[page].html;
-
-        // Set the background image
         body.style.backgroundImage = pages[page].background;
-        body.style.backgroundSize = "cover"; 
+        body.style.backgroundSize = "cover";
+
+        // After dynamically loading content, update "Watch Now" links if necessary
+        const watchNowLinks = content.querySelectorAll('.watch-now-btn');
+        watchNowLinks.forEach(btn => {
+          const movieTitle = btn.textContent; // or some dynamic logic based on your page content
+          btn.href = `movie-page-open.php?movie=${encodeURIComponent(movieTitle)}`;
+        });
       }
     });
   });
 });
-
 
 
 

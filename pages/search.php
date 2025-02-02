@@ -118,7 +118,7 @@ $conn->close();
                     <p class="movie-description"><?php echo htmlspecialchars($show['genre']); ?></p>
                 </div>
                 <div class="movie-play">
-                    <a href="show-page.php?title=<?php echo urlencode($show['title']); ?>" class="watch-btn">Watch</a>
+                    <a href="../pages/show-page.php?show=<?php echo urlencode($show['title']); ?>" class="watch-btn">Watch</a>
                 </div>
             </div>
         <?php endforeach; ?>

@@ -113,7 +113,7 @@ $conn->close();
                   <p class="movie-description"><?php echo htmlspecialchars($movie['genre']); ?></p>
               </div>
               <div class="movie-play">
-              <a href="movie-page-open.php?movie=<?php echo urlencode(str_replace([' ', "'", ':', '-', '·', '.'], '', $movie['title'])); ?>" class="watch-btn">Watch</a>
+              <a href="movie-page-open.php?movie=<?php echo urlencode($movie['title']); ?>" class="watch-btn">Watch</a>
               </div>
           </div>
       <?php endforeach; ?>
