@@ -89,7 +89,9 @@ $conn->close();
       </form>
     </div>
     <div class="right-section">
-      <a class="sign-in" href="../register.php">Register</a>
+      <a href="../register.php" class="sign-in">
+      <img src="../dist/images/icons/user-solid.svg" alt="Register" class="register-icon" />
+      </a>
     </div>
 </header>
 
@@ -97,9 +99,20 @@ $conn->close();
     <h2 class="heading-title"><?= htmlspecialchars($movie['title']); ?></h2>
 </div>
 
-<div class="image-container">
+<div id="image-container" class="image-container">
     <img id="movie-image" src="<?= htmlspecialchars($movie['image']); ?>" alt="<?= htmlspecialchars($movie['title']); ?>">
+    <button class="play-button" onclick="playMovie()">▶</button>
 </div>
+
+<div id="video-container" class="video-container">
+    <video id="movie-player" controls>
+        <source src="<?= htmlspecialchars($movie['file_path']); ?>" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button class="close-video" onclick="closeMovie()">✖</button>
+</div>
+
+
 
 <div class="container">
 
@@ -187,7 +200,6 @@ $conn->close();
     </div>
 </footer>
 <script src="search.js"></script>
+<script src="../dist/js/movie-page.js" defer></script>
 </body>
 </html>
-
-

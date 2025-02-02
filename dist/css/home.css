@@ -177,4 +177,83 @@ body{
   border-color: darkred;
 }
 
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
 
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar a {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .middle-secion-1, .middle-secion-2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-input {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .card {
+    margin-left: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .description {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .image-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .poster {
+    width: 100px;
+    height: 150px;
+  }
+
+  .dropdown-content {
+    position: static;
+  }
+
+  .dropdown-content a {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .poster {
+    width: 80px;
+    height: 120px;
+  }
+
+  .kategorit {
+    font-size: 18px;
+  }
+
+  .pershkrimi {
+    font-size: 14px;
+  }
+
+  .watch-now-btn {
+    padding: 8px 16px;
+  }
+}
