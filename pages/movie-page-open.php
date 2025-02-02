@@ -17,7 +17,10 @@ if (!isset($_GET['movie']) || empty(trim($_GET['movie']))) {
 
 $movieTitle = trim(urldecode($_GET['movie']));
 
-$sql = "SELECT * FROM movies WHERE BINARY title = ?";
+$sql = "SELECT movies.*, users.username AS author 
+        FROM movies 
+        JOIN users ON movies.user_id = users.id 
+        WHERE BINARY movies.title = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $movieTitle);
 $stmt->execute();
@@ -140,6 +143,10 @@ $conn->close();
         </div>
 
         <div class="movie-info">
+        <div class="info-item">
+    <p class="info-title">Author</p>
+    <p class="info-content"><?= htmlspecialchars($movie['author']); ?></p>
+</div>
             <div class="info-item">
                 <p class="info-title">Release Date</p>
                 <p class="info-content"><?= htmlspecialchars($movie['release_date']); ?></p>
