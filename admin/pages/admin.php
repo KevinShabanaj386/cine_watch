@@ -504,7 +504,6 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <th>Languages</th>
       <th>Ratings</th>
       <th>Genre</th>
-      <th>Thumbnail</th>
       <th>Actions</th>
     </tr>
   </thead>
