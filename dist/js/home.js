@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
       html: `
         <div class="card">
           <div class="title">
-            <img class="titulli" src="../dist/images/home/avangers.png" alt="avengers">
+            <img class="titulli" src="../dist/images/home/snow.png" alt="avengers">
           </div>
           <div class="movie-info">
-            <p class="kategorit">2023 | PG-13 | 2h 29min | Action/Sci-fi</p>
+            <p class="kategorit">March 21 2025 | PG-13 | Fantasy, Live Action, Musical</p>
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
             <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-red">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=iV46TJKL8cU" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
@@ -27,16 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
       html: `
        <div class="card">
           <div class="title">
-            <img class="titulli" src="../dist/images/home/deadpool.png" alt="deadpool">
+            <img class="titulli" src="../dist/images/home/captainAmerica.png" alt="deadpool">
           </div>
           <div class="movie-info">
-           <p class="kategorit">2024 | R | 2h 7min | Action/Comedy </p>
+           <p class="kategorit">February 14 2025 | PG-13 | Action-Adventure, Live Action, Science Fiction, Superhero </p>
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
             <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=73_1biulkYk" class="watch-now-btn watch-now-red">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=1pHDWnXmK7Y" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
@@ -46,77 +46,77 @@ document.addEventListener("DOMContentLoaded", () => {
       html: `
         <div class="card">
           <div class="title">
-            <img class="titulli" src="../dist/images/home/gladiator.png" alt="title">
+            <img class="titulli" src="../dist/images/home/tom.png" alt="title">
           </div>
           <div class="movie-info">
-           <p class="kategorit">2024 | R | 2h 28min | Action/Adventure </p>
+           <p class="kategorit">May 23 2025 | R | Action, Adventure, Thriller </p>
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
             <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=4rgYUipGJNo" class="watch-now-btn watch-now-red">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=NOhDyUmT9z0" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
-      background: "url('../dist/images/home/bck3.jpg')",
+      background: "url('../dist/images/home/bck10.jpg')",
     },
     page3: {
       html: `
         <div class="card">
           <div class="title">
-             <img class="titulli" src="../dist/images/home/sonic.png" alt="title">
+             <img class="titulli" src="../dist/images/home/lilo.png" alt="title">
           </div>
           <div class="movie-info">
-          <p class="kategorit">2024 | PG-13 | 1h 50min | Action/Comedy </p>
+          <p class="kategorit">May 23 2025 | PG-13 | Adventure, Comedy, Family, Live Action, Science Fiction </p>
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
             <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=qSu6i2iFMO0" class="watch-now-btn watch-now-red">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=KurP5wvFq70" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
-      background: "url('../dist/images/home/bck4.jpg')",
+      background: "url('../dist/images/home/bck44.jpg')",
     },
     page4: {
       html: `
         <div class="card">
           <div class="title">
-            <img class="titulli" src="../dist/images/home/spider.png" alt="title">
+            <img class="titulli" src="../dist/images/home/karate.png" alt="title">
           </div>
           <div class="movie-info">
-          <p class="kategorit">2021 | PG-13 | 2h 28min | Action/Sci-fi </p>
+          <p class="kategorit">May 30 2025 | PG-13 | Action, Adventure, Drama </p>
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
             <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=JfVOs4VSpmA" class="watch-now-btn watch-now-red">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=uPzOyzsnmio" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
-      background: "url('../dist/images/home/bck5.jpg')",
+      background: "url('../dist/images/home/bck55.jpg')",
     },
     page5: {
       html: `
        <div class="card">
           <div class="title">
-            <img class="titulli" src="../dist/images/home/godfather.png" alt="title">
+            <img class="titulli" src="../dist/images/home/dragon.png" alt="title">
           </div>
           <div class="movie-info">
-          <p class="kategorit">1972 | R | 2h 55min | Crime </p>
+          <p class="kategorit">June 13, 2025 | PG-13 | Adventure, Fantasy </p>
           </div>
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
             <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=UaVTIH8mujA" class="watch-now-btn watch-now-red">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=5lzoxHSn0C0&t=3s" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
-      background: "url('../dist/images/home/bck6.jpg')",
+      background: "url('../dist/images/home/bck66.jpg')",
     },
   };
 
