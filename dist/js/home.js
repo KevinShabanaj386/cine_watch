@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
   const links = document.querySelectorAll("[data-page]");
   const body = document.body;
-
   
   const pages = {
     home: {
@@ -17,12 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
-          <div class="buttonat">
             <div class="watch-now">
-              <a href="movie-page-open.php?movie=<?= urlencode('Avengers: Infinity War'); ?>" class="watch-now-btn watch-now-red">Watch Now</a>
-            </div>
-            <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-white">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
@@ -40,12 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
-          <div class="buttonat">
             <div class="watch-now">
-              <a href="movie-page-open.php?title=Deadpool&Wolverine" class="watch-now-btn watch-now-red">Watch Now</a>
-            </div>
-            <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=73_1biulkYk" class="watch-now-btn watch-now-white">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=73_1biulkYk" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
@@ -63,12 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
-          <div class="buttonat">
             <div class="watch-now">
-              <a href="movie-page-open.php?title=gladiator2" class="watch-now-btn watch-now-red">Watch Now</a>
-            </div>
-            <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=4rgYUipGJNo" class="watch-now-btn watch-now-white">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=4rgYUipGJNo" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
@@ -86,12 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
-          <div class="buttonat">
             <div class="watch-now">
-              <a href="movie-page-open.php?title=SonictheHedgehog3" class="watch-now-btn watch-now-red">Watch Now</a>
-            </div>
-            <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=qSu6i2iFMO0" class="watch-now-btn watch-now-white">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=qSu6i2iFMO0" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
@@ -109,12 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
-          <div class="buttonat">
             <div class="watch-now">
-              <a href="movie-page-open.php?title=SpiderManNoWayHome" class="watch-now-btn watch-now-red">Watch Now</a>
-            </div>
-            <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=JfVOs4VSpmA" class="watch-now-btn watch-now-white">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=JfVOs4VSpmA" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
@@ -132,12 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="description">
             <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
           </div>
-          <div class="buttonat">
             <div class="watch-now">
-              <a href="movie-page-open.php?title=GodFather" class="watch-now-btn watch-now-red">Watch Now</a>
-            </div>
-            <div class="watch-now">
-              <a href="https://www.youtube.com/watch?v=UaVTIH8mujA" class="watch-now-btn watch-now-white">Trailer</a>
+              <a href="https://www.youtube.com/watch?v=UaVTIH8mujA" class="watch-now-btn watch-now-red">Trailer</a>
             </div>
           </div>
         </div>`,
@@ -145,37 +120,38 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  document.addEventListener("click", (e) => {
-    const link = e.target.closest(".watch-now-btn");
-
-    if (link) {
-      e.preventDefault();
-      const href = link.getAttribute("href");
-      window.location.href = href; // Manually redirect to the movie page
-    }
-  });
-
   links.forEach(link => {
     link.addEventListener("click", e => {
-      e.preventDefault();
-
+      e.preventDefault(); 
       const page = link.dataset.page;
 
       if (pages[page]) {
         content.innerHTML = pages[page].html;
-        body.style.backgroundImage = pages[page].background;
-        body.style.backgroundSize = "cover";
 
-        // After dynamically loading content, update "Watch Now" links if necessary
-        const watchNowLinks = content.querySelectorAll('.watch-now-btn');
-        watchNowLinks.forEach(btn => {
-          const movieTitle = btn.textContent; // or some dynamic logic based on your page content
-          btn.href = `movie-page-open.php?movie=${encodeURIComponent(movieTitle)}`;
-        });
+        
+        body.style.backgroundImage = pages[page].background;
+        body.style.backgroundSize = "cover"; 
       }
     });
   });
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("watch-now-btn")) {
+      event.preventDefault(); // Prevent default link behavior
+      let url = event.target.getAttribute("href");
+  
+      // Fix: Encode the title properly if not already encoded
+      if (url.includes("title=")) {
+        let parts = url.split("title=");
+        let encodedTitle = encodeURIComponent(parts[1]); // Encode the movie title
+        url = parts[0] + "title=" + encodedTitle; // Reconstruct URL
+      }
+  
+      window.location.href = url; // Navigate to the PHP page
+    }
+  });
+  
 });
+
 
 
 

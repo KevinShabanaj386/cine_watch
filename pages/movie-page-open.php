@@ -65,7 +65,7 @@ $conn->close();
     </div>
     <div class="middle-section-1">
         <ul class="navbar">
-            <a href="../pages/home.php">Trending</a>
+            <a href="../pages/home.php">Up Comming</a>
             <a href="../pages/movie.php">Movies</a>
             <a href="../pages/shows.php">TV Series</a>
             <div class="dropdown">
@@ -151,9 +151,9 @@ $conn->close();
     <div class="footer-top">
         <div class="menut">
             <p>Menu</p>
-            <a href="/pages/home.php">Trending</a>
-            <a href="/pages/movie.php">Movies</a>
-            <a href="">TV Series</a>
+            <a href="../pages/home.php">Up Comming</a>
+            <a href="../pages/movie.php">Movies</a>
+            <a href="../pages/shows.php">TV Series</a>
         </div>
         <div class="informacion">
             <p>Get Help</p>

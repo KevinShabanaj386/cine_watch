@@ -28,7 +28,7 @@ if(isset($_SESSION['username'])){
     </div>
     <div class="middle-secion-1">
         <ul class="navbar">
-            <a href="../pages/home.php" class="home-active">Trending</a>
+            <a href="../pages/home.php" class="home-active">Up Comming</a>
             <a href="../pages/movie.php">Movies</a>
             <a href="../pages/shows.php">TV Series</a>
             
@@ -72,10 +72,7 @@ if(isset($_SESSION['username'])){
       </div>
       <div class="buttonat">
         <div class="watch-now">
-        <a href="movie-page-open.php?movie=<?= urlencode('Avengers: Infinity War'); ?>" class="watch-now-btn watch-now-red">Watch Now</a>
-        </div>
-        <div class="watch-now">
-          <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-white">Trailer</a>
+          <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-red">Trailer</a>
         </div>
       </div>
     </div>

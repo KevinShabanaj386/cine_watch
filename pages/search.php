@@ -58,7 +58,7 @@ $conn->close();
     </div>
     <div class="middle-secion-1">
         <ul class="navbar">
-            <a href="../pages/home.php">Trending</a>
+            <a href="../pages/home.php">Up Comming</a>
             <a href="../pages/movie.php">Movies</a>
             <a href="../pages/shows.php">TV Series</a>
             
