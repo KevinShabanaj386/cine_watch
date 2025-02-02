@@ -7,29 +7,32 @@ $dbname = "cinewhatch";
 
 $conn = new mysqli($host, $user, $password, $dbname);
 if ($conn->connect_error) {
-    die(json_encode(["error" => "Database connection failed"]));
+    die(json_encode(["error" => "❌ Database connection failed"]));
 }
 
-if (!isset($_GET['show'])) {
-    die("TV Show title not provided in URL.");
+
+if (!isset($_GET['show']) || empty(trim($_GET['show']))) {
+    die("❌ TV Show title not provided in URL.");
 }
+
 
 $showTitle = urldecode($_GET['show']);
-$showTitle = str_replace(' ', '', $showTitle);
+$showTitle = str_replace([' ', '-', ':', '.', '·'], '', $showTitle);
 
-$sql = "SELECT * FROM tv_shows WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(title, ' ', ''), ':', ''), '-', ''), '·', ''), '.', '') LIKE ?";
+
+$sql = "SELECT * FROM tv_shows WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(title), ' ', ''), ':', ''), '-', ''), '·', ''), '.', '') LIKE LOWER(?)";
 $stmt = $conn->prepare($sql);
 $searchTitle = "%" . $showTitle . "%";
 $stmt->bind_param("s", $searchTitle);
 $stmt->execute();
 $result = $stmt->get_result();
 
-
 if ($result->num_rows > 0) {
     $show = $result->fetch_assoc();
 } else {
     die("❌ TV Show not found.");
 }
+
 
 $castSql = "SELECT * FROM cast_tv_show WHERE tv_show_id = ?";
 $castStmt = $conn->prepare($castSql);
@@ -42,7 +45,8 @@ while ($cast = $castResult->fetch_assoc()) {
     $castMembers[] = $cast;
 }
 
-$seasonsSql = "SELECT * FROM seasons WHERE tv_show_id = ?";
+
+$seasonsSql = "SELECT * FROM seasons WHERE tv_show_id = ? ORDER BY season_number ASC";
 $seasonsStmt = $conn->prepare($seasonsSql);
 $seasonsStmt->bind_param("i", $show['id']);
 $seasonsStmt->execute();
@@ -52,7 +56,16 @@ $seasons = [];
 while ($season = $seasonsResult->fetch_assoc()) {
     $seasons[] = $season;
 }
+
+
+$stmt->close();
+$castStmt->close();
+$seasonsStmt->close();
+$conn->close();
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +85,7 @@ while ($season = $seasonsResult->fetch_assoc()) {
     </div>
     <div class="middle-section-1">
         <ul class="navbar">
-            <a href="../pages/home.php">Trending</a>
+            <a href="../pages/home.php">Up Comming</a>
             <a href="../pages/movie.php">Movies</a>
             <a href="../pages/shows.php">TV Series</a>
             <div class="dropdownn">
@@ -90,8 +103,10 @@ while ($season = $seasonsResult->fetch_assoc()) {
             </div>
         </ul>
     </div>
-    <div class="middle-section-2">
-        <input type="text" class="search-input" placeholder="| Search">
+    <div class="middle-secion-2">
+      <form id="searchForm" action="search.php" method="GET">
+        <input type="text" id="searchInput" name="query" class="search-input" placeholder="| Search">
+      </form>
     </div>
     <div class="right-section">
       <a class="sign-in" href="../register.php">Register</a>
@@ -176,9 +191,9 @@ while ($season = $seasonsResult->fetch_assoc()) {
     <div class="footer-top">
         <div class="menut">
             <p>Menu</p>
-            <a href="/pages/home.php">Trending</a>
-            <a href="/pages/movie.php">Movies</a>
-            <a href="">TV Series</a>
+            <a href="../pages/home.php">Up Comming</a>
+            <a href="../pages/movie.php">Movies</a>
+            <a href="../pages/shows.php">TV Series</a>
         </div>
         <div class="informacion">
             <p>Get Help</p>
@@ -211,5 +226,6 @@ while ($season = $seasonsResult->fetch_assoc()) {
         <h3>&#169; 2025 CineWatch. All rights reserved</h3>
     </div>
 </footer>
+<script src="search.js"></script>
 </body>
 </html>

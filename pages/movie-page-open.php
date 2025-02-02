@@ -1,35 +1,32 @@
 <?php
 session_start();
+
 $host = "localhost";
 $user = "root";
 $password = "";
-$dbname = "cinewhatch"; 
+$dbname = "cinewhatch";
 
 $conn = new mysqli($host, $user, $password, $dbname);
 if ($conn->connect_error) {
-    die(json_encode(["error" => "Database connection failed"]));
+    die(json_encode(["error" => "❌ Database connection failed"]));
 }
 
-if (!isset($_GET['movie'])) {
-    die("Movie title not provided in URL.");
+if (!isset($_GET['movie']) || empty(trim($_GET['movie']))) {
+    die(json_encode(["error" => "❌ Movie title not provided in URL."]));
 }
 
-$movieTitle = urldecode($_GET['movie']);
-$movieTitle = preg_replace('/[^a-zA-Z0-9\s]/', '', $movieTitle); 
-$movieTitle = str_replace(' ', '', $movieTitle); 
+$movieTitle = trim(urldecode($_GET['movie']));
 
-$sql = "SELECT * FROM movies WHERE REPLACE(REPLACE(REPLACE(REPLACE(title, ' ', ''), ':', ''), '-', ''), '·', '') LIKE ?";
+$sql = "SELECT * FROM movies WHERE BINARY title = ?";
 $stmt = $conn->prepare($sql);
-$searchTitle = "%" . $movieTitle . "%";
-$stmt->bind_param("s", $searchTitle);
-
+$stmt->bind_param("s", $movieTitle);
 $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     $movie = $result->fetch_assoc();
 } else {
-    die("❌ Movie not found.");
+    die(json_encode(["error" => "❌ Movie not found."]));
 }
 
 $castSql = "SELECT * FROM cast WHERE movie_id = ?";
@@ -42,7 +39,13 @@ $castMembers = [];
 while ($cast = $castResult->fetch_assoc()) {
     $castMembers[] = $cast;
 }
+
+$stmt->close();
+$castStmt->close();
+$conn->close();
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +65,7 @@ while ($cast = $castResult->fetch_assoc()) {
     </div>
     <div class="middle-section-1">
         <ul class="navbar">
-            <a href="../pages/home.php">Trending</a>
+            <a href="../pages/home.php">Up Comming</a>
             <a href="../pages/movie.php">Movies</a>
             <a href="../pages/shows.php">TV Series</a>
             <div class="dropdown">
@@ -80,8 +83,10 @@ while ($cast = $castResult->fetch_assoc()) {
             </div>
         </ul>
     </div>
-    <div class="middle-section-2">
-        <input type="text" class="search-input" placeholder="| Search">
+    <div class="middle-secion-2">
+      <form id="searchForm" action="search.php" method="GET">
+        <input type="text" id="searchInput" name="query" class="search-input" placeholder="| Search">
+      </form>
     </div>
     <div class="right-section">
       <a class="sign-in" href="../register.php">Register</a>
@@ -146,9 +151,9 @@ while ($cast = $castResult->fetch_assoc()) {
     <div class="footer-top">
         <div class="menut">
             <p>Menu</p>
-            <a href="/pages/home.php">Trending</a>
-            <a href="/pages/movie.php">Movies</a>
-            <a href="">TV Series</a>
+            <a href="../pages/home.php">Up Comming</a>
+            <a href="../pages/movie.php">Movies</a>
+            <a href="../pages/shows.php">TV Series</a>
         </div>
         <div class="informacion">
             <p>Get Help</p>
@@ -181,10 +186,8 @@ while ($cast = $castResult->fetch_assoc()) {
         <h3>&#169; 2025 CineWatch. All rights reserved</h3>
     </div>
 </footer>
-
+<script src="search.js"></script>
 </body>
 </html>
 
-<?php
-$conn->close();
-?>
+

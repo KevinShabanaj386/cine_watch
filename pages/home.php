@@ -20,7 +20,7 @@ if(isset($_SESSION['username'])){
   <script defer src="../dist/js/home.js"></script>
 </head>
 
-<body style="background-image: url(../dist/images/home/bck1.jpg);">
+<body style="background-image: url(../dist/images/home/bck2.jpg);">
 
 <header class="header">
     <div class="left-section">
@@ -28,7 +28,7 @@ if(isset($_SESSION['username'])){
     </div>
     <div class="middle-secion-1">
         <ul class="navbar">
-            <a href="../pages/home.php" class="home-active">Trending</a>
+            <a href="../pages/home.php" class="home-active">Up Comming</a>
             <a href="../pages/movie.php">Movies</a>
             <a href="../pages/shows.php">TV Series</a>
             
@@ -49,7 +49,9 @@ if(isset($_SESSION['username'])){
     </div>
     
     <div class="middle-secion-2">
-        <input type="text" class="search-input" placeholder="| Search">
+      <form id="searchForm" action="search.php" method="GET">
+        <input type="text" id="searchInput" name="query" class="search-input" placeholder="| Search">
+      </form>
     </div>
     
     <div class="right-section">
@@ -60,20 +62,17 @@ if(isset($_SESSION['username'])){
   <main id="content">
     <div class="card">
       <div class="title">
-        <img class="titulli" src="../dist/images/home/avangers.png" alt="avengers">
+        <img class="titulli" src="../dist/images/home/captainAmerica.png" alt="avengers">
       </div>
       <div class="movie-info">
-        <p class="kategorit">2023 | PG-13 | 2h 29min | Action/Sci-fi</p>
+        <p class="kategorit">February 14 2025 | PG-13 | Action-Adventure, Live Action, Science Fiction, Superhero</p>
       </div>
       <div class="description">
         <p class="pershkrimi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, optio, atque harum maiores odio cupiditate amet culpa quibusdam tenetur quam illum. Nobis dolorem aliquam laboriosam dolor ducimus necessitatibus, ullam minima!</p>
       </div>
       <div class="buttonat">
         <div class="watch-now">
-          <a href="../register.php" class="watch-now-btn watch-now-red">Watch Now</a>
-        </div>
-        <div class="watch-now">
-          <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" class="watch-now-btn watch-now-white">Trailer</a>
+          <a href="https://www.youtube.com/watch?v=1pHDWnXmK7Y" class="watch-now-btn watch-now-red">Trailer</a>
         </div>
       </div>
     </div>

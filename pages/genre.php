@@ -69,7 +69,7 @@ $conn->close();
     </div>
     <div class="middle-secion-1">
         <ul class="navbar">
-            <a href="../pages/home.php">Trending</a>
+            <a href="../pages/home.php">Up Comming</a>
             <a href="../pages/movie.php">Movies</a>
             <a href="../pages/shows.php">TV Series</a>
             <div class="dropdown">
@@ -88,7 +88,9 @@ $conn->close();
         </ul>
     </div>
     <div class="middle-secion-2">
-        <input type="text" class="search-input" placeholder="| Search">
+      <form id="searchForm" action="search.php" method="GET">
+        <input type="text" id="searchInput" name="query" class="search-input" placeholder="| Search">
+      </form>
     </div>
     <div class="right-section">
         <a class="sign-in" href="../register.php">Register</a>
@@ -111,7 +113,7 @@ $conn->close();
                   <p class="movie-description"><?php echo htmlspecialchars($movie['genre']); ?></p>
               </div>
               <div class="movie-play">
-              <a href="movie-page-open.php?movie=<?php echo urlencode(str_replace([' ', "'", ':', '-', '·', '.'], '', $movie['title'])); ?>" class="watch-btn">Watch</a>
+              <a href="movie-page-open.php?movie=<?php echo urlencode($movie['title']); ?>" class="watch-btn">Watch</a>
               </div>
           </div>
       <?php endforeach; ?>
@@ -135,9 +137,9 @@ $conn->close();
     <div class="footer-top">
         <div class="menut">
             <p>Menu</p>
-            <a href="../pages/home.php">Trending</a>
+            <a href="../pages/home.php">Up Comming</a>
             <a href="../pages/movie.php">Movies</a>
-            <a href="">TV Series</a>
+            <a href="../pages/shows.php">TV Series</a>
         </div>
         <div class="informacion">
             <p>Get Help</p>
