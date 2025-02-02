@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/dist/css/contact.css">
+    <script src="/dist/js/contact.js"></script>
+
 </head>
 <body>
-    <link rel="stylesheet" href="/dist/css/contact.css">
-    <section id="contact" class="contact hidden">
+   <div class="container">   
+    <section id="contact" class="contact">
         <h1>Contact Us</h1><br>
-    <div class="icons-container">
+        
+   
+       <div class="icons-container">
         <div class="icons">
             <i class="fas fa-phone"></i>
             <h3>Our number</h3>
@@ -22,9 +27,16 @@
             <a href="mailto:cinewatch@hotmail.com">cinewatch@hotmail.com</a>
             <a href="mailto:cinewatch@gmail.com">cinewatch@gmail.com</a>
         </div>
-    
-    <div class="message-form ">
-        <form action="contact.php" method="POST">
+       
+            <?php if (!empty($success_message)): ?>
+            <p class="success"><?= htmlspecialchars($success_message); ?></p>
+        <?php elseif (!empty($errors)): ?>
+            <?php foreach ($errors as $error): ?>
+                <p class="error"><?= htmlspecialchars($error); ?></p>
+            <?php endforeach; ?>
+        <?php endif; ?>
+        <div class="message-form ">
+            <form action="/pages/contact.php" method="POST">
             <h3>Get in touch</h3>
             <div class="inputBox">
             <input type="text" name="name" placeholder="Enter your name" class="box" required>
@@ -39,5 +51,7 @@
     
         </form>
     </div>
+</section>
+</div>
 </body>
 </html>

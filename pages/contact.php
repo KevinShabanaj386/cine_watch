@@ -54,10 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="/dist/css/contact.css">
 </head>
 <body>
-    <div class="logo-wrapper">
-        <img src="/dist/images/logo.png" class="logo" />
-    </div>
-
+    
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
