@@ -1,12 +1,35 @@
 <?php
-
 session_start();
-if(isset($_SESSION['username'])){
+if (isset($_SESSION['username'])) {
   $username = $_SESSION['username'];
-}else{
+} else {
   $username = null;
 }
 
+$host = 'localhost';
+$dbname = 'cineWhatch';
+$usernameDB = 'root';
+$passwordDB = '';
+
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $usernameDB, $passwordDB);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
+
+$page = isset($_GET['page']) ? $_GET['page'] : 2;
+$offset = ($page - 1) * 16; 
+
+$sql = "SELECT * FROM tv_shows ORDER BY id ASC LIMIT 16 OFFSET :offset";  
+$stmt = $conn->prepare($sql);
+$stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+$stmt->execute();
+$tv_shows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$sql = "SELECT * FROM tv_shows ORDER BY RAND() LIMIT 3";
+$stmt = $conn->query($sql);
+$randomShows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +37,7 @@ if(isset($_SESSION['username'])){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CineWhatch | Movies</title>
+  <title>CineWatch | TV Series</title>
   <script defer src="../dist/js/shows.js"></script>
   <link rel="stylesheet" href="../dist/css/header.css">
   <link rel="stylesheet" href="../dist/css/movie.css">
@@ -31,284 +54,110 @@ if(isset($_SESSION['username'])){
             <a href="../pages/home.php">Up Comming</a>
             <a href="../pages/movie.php">Movies</a>
             <a href="../pages/shows.php" class="home-active">TV Series</a>
-            
             <div class="dropdown">
                 <a href="#" class="dropbtn">Genre</a>
                 <div class="dropdown-content">
-                <a href="genre.php?name=Action">Action</a>
-                <a href="genre.php?name=Adventure">Adventure</a>
-                <a href="genre.php?name=Crime">Crime</a>
-                <a href="genre.php?name=Thriller">Thriller</a>
-                <a href="genre.php?name=Comedy">Comedy</a>
-                <a href="genre.php?name=Romance">Romance</a>
-                <a href="genre.php?name=Drama">Drama</a>
-                <a href="genre.php?name=Science Fiction">Science Fiction</a>
+                    <a href="genre.php?name=Action">Action</a>
+                    <a href="genre.php?name=Adventure">Adventure</a>
+                    <a href="genre.php?name=Crime">Crime</a>
+                    <a href="genre.php?name=Thriller">Thriller</a>
+                    <a href="genre.php?name=Comedy">Comedy</a>
+                    <a href="genre.php?name=Romance">Romance</a>
+                    <a href="genre.php?name=Drama">Drama</a>
+                    <a href="genre.php?name=Science Fiction">Science Fiction</a>
                 </div>
             </div>
         </ul>
     </div>
-    
     <div class="middle-secion-2">
       <form id="searchForm" action="search.php" method="GET">
         <input type="text" id="searchInput" name="query" class="search-input" placeholder="| Search">
       </form>
     </div>
-    
     <div class="right-section">
         <a class="sign-in" href="../register.php">Register</a>
     </div>
 </header>
-  
-    <div class="heading">
-      <h2 class="heading-title">TV Series Page 2</h2>
+
+<div class="heading">
+  <h2 class="heading-title">TV Series Page <?php echo htmlspecialchars($page, ENT_QUOTES); ?></h2>
+</div>
+
+<div class="movie-container">
+  <?php if (!empty($tv_shows)): ?>
+    <?php foreach ($tv_shows as $show): ?>
+      <div class="movie-card">
+        <img class="poster" 
+             src="<?php echo htmlspecialchars($show['image'], ENT_QUOTES); ?>" 
+             alt="<?php echo htmlspecialchars($show['title'], ENT_QUOTES); ?> poster">
+        
+        <div class="movie-info">
+          <h3 class="movie-title">
+            <?php echo htmlspecialchars($show['title'], ENT_QUOTES); ?>
+          </h3>
+          <p class="movie-description">
+            <?php echo htmlspecialchars($show['genre'], ENT_QUOTES); ?>
+          </p>
+        </div>
+        <div class="movie-play">
+          <a href="../pages/show-page.php?show=<?php echo urlencode($show['title']); ?>" class="watch-btn">
+            Watch Now
+          </a>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  <?php else: ?>
+    <p style="text-align: center;">No TV series found in the database.</p>
+  <?php endif; ?>
+</div>
+
+<div class="buttonat">
+  <button id="prev" class="page">Prev</button>
+  <button class="page page1">1</button>
+  <button class="page page2 <?php echo ($page == 2) ? 'highlighted' : ''; ?>">2</button>
+  <button class="page page3">3</button>
+  <button id="next" class="page">Next</button>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="menut">
+      <p>Menu</p>
+      <a href="../pages/home.php">Up Comming</a>
+      <a href="../pages/movie.php">Movies</a>
+      <a href="../pages/shows.php">TV Series</a>
     </div>
-    
-    <div class="movie-container">
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster17.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Better Call Saul</h3> 
-          <p class="movie-description">Crime</p>
-          <p>6 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=BetterCallSaul" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster18.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">The Spectacular Spider-Man</h3> 
-          <p class="movie-description">Action & Adventure</p>
-          <p>2 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=TheSpectacularSpiderMan" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster19.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Band of Brothers</h3> 
-          <p class="movie-description">Drama</p>
-          <p>1 season</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=BandofBrothers" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster20.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Teen Wolf</h3> 
-          <p class="movie-description">Sci-Fi & Fantasy</p>
-          <p>6 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=TeenWolf" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster21.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">The Good Doctor</h3> 
-          <p class="movie-description">Drama</p>
-          <p>7 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=TheGoodDoctor" id="watchLink">Watch Now</a>
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster22.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">The Queen's Gambit</h3> 
-          <p class="movie-description">Drama</p>
-          <p>1 season</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=TheQueensGambit" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster23.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">The Penguin</h3> 
-          <p class="movie-description">Drama</p>
-          <p>1 season</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=ThePenguin" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster24.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Lucifer</h3> 
-          <p class="movie-description">Sci-Fi & Fantasy</p>
-          <p>6 season</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=Lucifer" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster25.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Tulsa King</h3> 
-          <p class="movie-description">Crime</p>
-          <p>2 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=TulsaKing" id="watchLink">Watch Now</a>  
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster26.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Peacemaker</h3> 
-          <p class="movie-description">Action</p>
-          <p>1 season</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=Peacemaker" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster27.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Henry Danger</h3> 
-          <p class="movie-description">Comedy</p>
-          <p>5 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=HenryDanger" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster28.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Hannibal</h3> 
-          <p class="movie-description">Drama</p>
-          <p>3 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=Hannibal" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster29.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Mr. Robot</h3> 
-          <p class="movie-description">Crime</p>
-          <p>4 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=MrRobot" id="watchLink">Watch Now</a>  
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster30.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Money Heist</h3> 
-          <p class="movie-description">Crime</p>
-          <p>3 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=MoneyHeist" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster31.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">WandaVision</h3> 
-          <p class="movie-description">Sci-Fi & Fantasy</p>
-          <p>1 season</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=WandaVision" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <img class="poster" src="../dist/images/shows/poster32.jpg" alt="poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Brooklyn Nine-Nine</h3> 
-          <p class="movie-description">Comedy</p>
-          <p>7 seasons</p>
-        </div>
-        <div class="movie-play">
-          <a class="watch-link" href="../pages/show-page.php?show=BrooklynNineNine" id="watchLink">Watch Now</a> 
-        </div>
-      </div>
-
+    <div class="informacion">
+      <p>Get Help</p>
+      <a href="">About Us</a>
+      <a href="">Contact Us</a>
+      <a href="">Support Page</a>
+      <a href="">Survey</a>
     </div>
-    
-    <div class="buttonat">
-      <button id="prev" class="page">Prev</button>
-      <button class="page page1">1</button>
-      <button class="page page2">2</button>
-      <button class="page page3">3</button>
-      <button id="next" class="page">Next</button>
+    <div class="zhandrat">
+      <p>Genre</p>
+      <a href="genre.php?name=Action">Action</a>
+      <a href="genre.php?name=Adventure">Adventure</a>
+      <a href="genre.php?name=Crime">Crime</a>
+      <a href="genre.php?name=Thriller">Thriller</a>
+      <a href="genre.php?name=Comedy">Comedy</a>
+      <a href="genre.php?name=Romance">Romance</a>
+      <a href="genre.php?name=Drama">Drama</a>
+      <a href="genre.php?name=Science Fiction">Science Fiction</a>
     </div>
-    
-    <footer class="footer">
-      
-      <div class="footer-top">
-        <div class="menut">
-          <p>Menu</p>
-          <a href="../pages/home.php">Up Comming</a>
-          <a href="../pages/movie.php">Movies</a>
-          <a href="../pages/shows.php">TV Series</a>
-        </div>
-        <div class="informacion">
-          <p>Get Help</p>
-          <a href="">About Us</a>
-          <a href="">Contact Us</a>
-          <a href="">Support Page</a>
-          <a href="">Survey</a>
-        </div>
-        <div class="zhandrat">
-          <p>Gandre</p>
-          <a href="genre.php?name=Action">Action</a>
-          <a href="genre.php?name=Adventure">Adventure</a>
-          <a href="genre.php?name=Crime">Crime</a>
-          <a href="genre.php?name=Thriller">Thriller</a>
-          <a href="genre.php?name=Comedy">Comedy</a>
-          <a href="genre.php?name=Romance">Romance</a>
-          <a href="genre.php?name=Drama">Drama</a>
-          <a href="genre.php?name=Science Fiction">Science Fiction</a>
-        </div>
-        <div class="follow-us">
-          <p>Follow Us</p>
-          <a href="https://www.instagram.com/">Instagram</a>
-          <a href="https://www.facebook.com/">Facebook</a>
-          <a href="https://x.com/?lang=en&mx=2">Twitter</a>
-          <a href="https://www.tiktok.com/explore">TikTok</a>
-        </div>
-      </div>
+    <div class="follow-us">
+      <p>Follow Us</p>
+      <a href="https://www.instagram.com/">Instagram</a>
+      <a href="https://www.facebook.com/">Facebook</a>
+      <a href="https://x.com/?lang=en&mx=2">Twitter</a>
+      <a href="https://www.tiktok.com/explore">TikTok</a>
+    </div>
+  </div>
 
-      <div class="footer-bottom">
-        <h3>&#169 2025 CineWatch. All rights reserved </h3>
-      </div>
-      
-
-    </footer>
-    <script src="search.js"></script>
+  <div class="footer-bottom">
+    <h3>&#169 2025 CineWatch. All rights reserved</h3>
+  </div>
+</footer>
+<script src="search.js"></script>
 </body>
 </html>
